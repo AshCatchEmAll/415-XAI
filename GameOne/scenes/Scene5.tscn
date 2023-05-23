@@ -1,0 +1,167 @@
+[gd_scene load_steps=17 format=3 uid="uid://hc0auceu5dds"]
+
+[ext_resource type="Script" path="res://GameOne/scenes/Scene5.gd" id="1_x5dno"]
+[ext_resource type="Texture2D" uid="uid://ck2hfh1rsmrjc" path="res://assets/scene5/scene-5-bg.png" id="2_ym3v7"]
+[ext_resource type="Script" path="res://GameOne/scripts/TweenText.gd" id="3_knsy2"]
+[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/fonts/Varela_Round/VarelaRound-Regular.ttf" id="3_n2ebw"]
+[ext_resource type="Script" path="res://GameOne/scripts/game-label.gd" id="4_6lxem"]
+[ext_resource type="AudioStream" uid="uid://5lwkauul6bdr" path="res://assets/audio/gibberish.mp3" id="5_i4mg7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ogtb"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3ua0m"]
+font = ExtResource("3_n2ebw")
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7xw1"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_unr26"]
+font = ExtResource("3_n2ebw")
+font_size = 65
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1dt6h"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_08mtf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jy5l8"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_2scli"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8bmbw"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gibdb"]
+_data = {
+"RESET": SubResource("Animation_2scli"),
+"fade_in": SubResource("Animation_8bmbw")
+}
+
+[node name="Scene5" type="ColorRect"]
+custom_minimum_size = Vector2(3520, 1958)
+script = ExtResource("1_x5dno")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1760.0
+offset_top = -976.0
+offset_right = 1760.0
+offset_bottom = 976.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ym3v7")
+
+[node name="Crab-help-text" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1184.0
+offset_top = 168.0
+offset_right = 1872.0
+offset_bottom = 384.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ogtb")
+
+[node name="help-label" type="Label" parent="Crab-help-text"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 696.0
+offset_bottom = 224.0
+text = "I can't walk anymore. I hope you can help me."
+label_settings = SubResource("LabelSettings_3ua0m")
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_knsy2")
+
+[node name="Game-Text" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 1448.0
+offset_right = 3104.0
+offset_bottom = 1728.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a7xw1")
+
+[node name="game-label" type="Label" parent="Game-Text"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 2656.0
+offset_bottom = 339.0
+text = "Dear warrior , my child's legs were enchanted by demons, causing the sequence of eight legs to be reversed and unable to walk normally. Could you help us?"
+label_settings = SubResource("LabelSettings_unr26")
+autowrap_mode = 2
+script = ExtResource("4_6lxem")
+
+[node name="Click-To-Enter-Panel" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1760.0
+offset_top = 1736.0
+offset_right = 3304.0
+offset_bottom = 1872.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1dt6h")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.923
+anchor_top = 0.923
+anchor_right = 0.923
+anchor_bottom = 0.923
+offset_left = -56.9601
+offset_top = -55.2341
+offset_right = 47.0399
+offset_bottom = 56.7659
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_08mtf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jy5l8")
+
+[node name="Scene5Keyboard" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_i4mg7")
+
+[node name="FadeInAnimation" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_gibdb")
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="animation_finished" from="FadeInAnimation" to="." method="_on_fade_in_animation_animation_finished"]

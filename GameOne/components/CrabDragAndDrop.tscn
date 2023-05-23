@@ -1,0 +1,238 @@
+[gd_scene load_steps=15 format=3 uid="uid://cip6ca4e6smr8"]
+
+[ext_resource type="PackedScene" uid="uid://cj8u30ihaltpn" path="res://GameOne/components/CrabLegs/CrabLeg1.tscn" id="1_pthpg"]
+[ext_resource type="Texture2D" uid="uid://xpcgasnys3oa" path="res://assets/crab-body/crab-body.png" id="1_sabwe"]
+[ext_resource type="PackedScene" uid="uid://bkkkwhqjg2odv" path="res://GameOne/components/DropZone.tscn" id="2_nrj04"]
+[ext_resource type="PackedScene" uid="uid://dq8ofyoimt75g" path="res://GameOne/components/CrabLegs/CrabLeg4.tscn" id="3_sbwvq"]
+[ext_resource type="PackedScene" uid="uid://c8cierp54371m" path="res://GameOne/components/CrabLegs/CrabLeg3.tscn" id="5_elpx7"]
+[ext_resource type="PackedScene" uid="uid://ctc1vm2x01dg7" path="res://GameOne/components/CrabLegs/CrabLeg2.tscn" id="6_aimsq"]
+[ext_resource type="AudioStream" uid="uid://6s78q1t1o2gf" path="res://assets/audio/drag-correct.mp3" id="7_wrnec"]
+[ext_resource type="AudioStream" uid="uid://dqkody17uay2q" path="res://assets/audio/drag-wrong.mp3" id="8_4dvxf"]
+[ext_resource type="PackedScene" uid="uid://c36tjdequc2lt" path="res://GameOne/components/Snackbar.tscn" id="9_cmafr"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4owpg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33wcr"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="Animation" id="Animation_alwg8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Container/FadeOut:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_db6f4"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Container/FadeOut:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5u0mq"]
+_data = {
+"RESET": SubResource("Animation_alwg8"),
+"fade_out": SubResource("Animation_db6f4")
+}
+
+[node name="CrabDragAndDrop" type="Node2D"]
+material = SubResource("CanvasItemMaterial_4owpg")
+
+[node name="Container" type="Panel" parent="."]
+offset_left = -5.0
+offset_top = -27.0
+offset_right = 1162.0
+offset_bottom = 618.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_33wcr")
+
+[node name="Image-removebg-preview" type="Sprite2D" parent="Container"]
+position = Vector2(588, 308)
+texture = ExtResource("1_sabwe")
+
+[node name="leg-1-dz" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(479, 237)
+gizmo_extents = 0.1
+
+[node name="leg-1-rest-dz" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(102, 332)
+gizmo_extents = 0.1
+id = -3
+
+[node name="leg-4-dz" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(478, 313)
+gizmo_extents = 0.1
+id = 4
+
+[node name="leg-4-rest-dz" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(107, 191)
+gizmo_extents = 0.1
+id = -2
+
+[node name="leg-3-dz" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(481, 289)
+gizmo_extents = 0.1
+id = 3
+
+[node name="leg-3-rest-dz" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(106, 462)
+gizmo_extents = 0.1
+id = -4
+
+[node name="leg-2-dz" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(479, 263)
+gizmo_extents = 0.1
+id = 2
+
+[node name="leg-2-rest-dz" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(105, 67)
+gizmo_extents = 0.1
+id = -1
+
+[node name="CrabLeg1" parent="Container" instance=ExtResource("1_pthpg")]
+position = Vector2(104, 67)
+scale = Vector2(0.5, 0.5)
+success_msg = "Remember, lists are created with square brackets: my_list = [1, 2, 3]"
+
+[node name="CrabLeg4" parent="Container" instance=ExtResource("5_elpx7")]
+position = Vector2(105, 463)
+scale = Vector2(0.5, 0.5)
+correct_drop_zone = 4
+success_msg = "Sets are created with curly braces: my_set = {1, 2, 3} and they don't allow duplicates!"
+
+[node name="CrabLeg3" parent="Container" instance=ExtResource("3_sbwvq")]
+position = Vector2(102, 331)
+correct_drop_zone = 3
+success_msg = "Dictionaries are created with curly braces and use key-value pairs: my_dict = {'key1': 'value1', 'key2': 'value2'}"
+
+[node name="CrabLeg2" parent="Container" instance=ExtResource("6_aimsq")]
+position = Vector2(106, 191)
+scale = Vector2(0.6, 0.6)
+correct_drop_zone = 2
+success_msg = "Tuples are created with round brackets : my_tuple = (1, 2, 3) . Tuples are immutable"
+
+[node name="leg-1-dz2" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(694, 235)
+gizmo_extents = 0.1
+id = 5
+
+[node name="leg-1-rest-dz2" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(1051, 380)
+scale = Vector2(-1, 1)
+gizmo_extents = 0.1
+id = -7
+
+[node name="leg-4-dz2" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(696, 316)
+gizmo_extents = 0.1
+id = 8
+
+[node name="leg-4-rest-dz2" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(1046, 228)
+scale = Vector2(-1, 1)
+gizmo_extents = 0.1
+id = -6
+
+[node name="leg-3-dz2" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(692, 287)
+gizmo_extents = 0.1
+id = 7
+
+[node name="leg-3-rest-dz2" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(1057, 532)
+scale = Vector2(-1, 1)
+gizmo_extents = 0.1
+id = -8
+
+[node name="leg-2-dz2" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(694, 262)
+gizmo_extents = 0.1
+id = 6
+
+[node name="leg-2-rest-dz2" parent="Container" instance=ExtResource("2_nrj04")]
+position = Vector2(1035, 105)
+scale = Vector2(-1, 1)
+gizmo_extents = 0.1
+id = -5
+
+[node name="CrabLeg5" parent="Container" instance=ExtResource("1_pthpg")]
+position = Vector2(1036, 106)
+scale = Vector2(-0.5, 0.5)
+correct_drop_zone = 5
+success_msg = "Lists can hold elements of different types: my_list = ['apple', 10, 3.14]"
+
+[node name="CrabLeg6" parent="Container" instance=ExtResource("5_elpx7")]
+position = Vector2(1056, 532)
+scale = Vector2(-0.5, 0.5)
+correct_drop_zone = 8
+success_msg = "Sets are unordered. You can't access elements by index."
+
+[node name="CrabLeg7" parent="Container" instance=ExtResource("3_sbwvq")]
+position = Vector2(1049, 382)
+scale = Vector2(-1, 1)
+correct_drop_zone = 7
+success_msg = "You can access a dictionary value by its key: print(my_dict['key1'])"
+
+[node name="CrabLeg8" parent="Container" instance=ExtResource("6_aimsq")]
+position = Vector2(1046, 227)
+scale = Vector2(-0.6, 0.6)
+correct_drop_zone = 6
+success_msg = "A tuple with a single element requires a trailing comma: one_element_tuple = (1,)"
+
+[node name="success" type="AudioStreamPlayer2D" parent="Container"]
+unique_name_in_owner = true
+stream = ExtResource("7_wrnec")
+
+[node name="fail" type="AudioStreamPlayer2D" parent="Container"]
+unique_name_in_owner = true
+stream = ExtResource("8_4dvxf")
+volume_db = -9.043
+pitch_scale = 1.26
+max_distance = 3000.0
+
+[node name="Snackbar" parent="Container" instance=ExtResource("9_cmafr")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 414.0
+offset_top = 472.0
+offset_right = 773.0
+offset_bottom = 612.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="FadeOut" type="CanvasModulate" parent="Container"]
+unique_name_in_owner = true
+position = Vector2(5, 27)
+
+[node name="FadeOutAnimation" type="AnimationPlayer" parent="Container"]
+unique_name_in_owner = true
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_5u0mq")
+}
+
+[connection signal="animation_finished" from="Container/FadeOutAnimation" to="Container/CrabLeg5" method="_on_fade_out_animation_animation_finished"]
