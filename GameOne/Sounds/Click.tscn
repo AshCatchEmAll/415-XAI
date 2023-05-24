@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvevrom5w5iy4"]
+
+[ext_resource type="Script" path="res://GameOne/scripts/Click.gd" id="1_02bor"]
+[ext_resource type="AudioStream" uid="uid://cesinr3inijth" path="res://assets/Audio/Click/switch-150130.mp3" id="1_l06du"]
+
+[node name="Click" type="Node2D"]
+script = ExtResource("1_02bor")
+
+[node name="clickPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_l06du")
