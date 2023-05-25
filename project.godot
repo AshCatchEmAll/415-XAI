@@ -14,6 +14,11 @@ config/name="CMPT415_XAI_GAME"
 run/main_scene="res://GameOne/scenes/map.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
+<<<<<<<HEADconfig/name="415-XAI"
+
+[audio]
+
+buses/default_bus_layout="res://GameOne/Sounds/default_bus_layout.tres"
 
 [autoload]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bfi3pyqpqfp6k"]
+[gd_scene load_steps=13 format=3 uid="uid://ca33ax8y14vc"]
 
 [ext_resource type="Texture2D" uid="uid://bo7dmxabltpih" path="res://GameOne/assets/background/bg.png" id="1_byr04"]
 [ext_resource type="Texture2D" uid="uid://bgpj5enndek3d" path="res://GameOne/assets/background/bg_fish.png" id="2_ht326"]
