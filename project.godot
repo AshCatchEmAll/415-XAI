@@ -14,10 +14,25 @@ config/name="CMPT415_XAI_GAME"
 run/main_scene="res://GameOne/scenes/map.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
+<<<<<<<HEADconfig/name="415-XAI"
+
+[audio]
+
+buses/default_bus_layout="res://GameOne/Sounds/default_bus_layout.tres"
+
+[autoload]
+
+SceneTransition="*res://GameOne/TransitionAnimations/scene_transition.tscn"
+Click="*res://GameOne/Sounds/Click.tscn"
 
 [display]
 
 window/stretch/mode="canvas_items"
+
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
 
 [rendering]
 

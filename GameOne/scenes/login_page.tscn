@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://u7wb3d6c5mke"]
+
+[ext_resource type="Texture2D" uid="uid://ngi55f7ktsgw" path="res://assets/Backgrounds-Scene3/backgroundCanvas.png" id="1_dw3wn"]
+[ext_resource type="Texture2D" uid="uid://b2upnsnmtnhgv" path="res://assets/Background-loginPage/lP1.png" id="2_u5nxi"]
+[ext_resource type="Texture2D" uid="uid://chfvqt8ilp4e1" path="res://assets/Background-loginPage/lP3.png" id="3_mghek"]
+[ext_resource type="Texture2D" uid="uid://bffscf6berpre" path="res://assets/Background-loginPage/lP2.png" id="4_vpe7n"]
+[ext_resource type="Texture2D" uid="uid://b5dp1roiglt" path="res://assets/Backgrounds-Scene3/textBox1.png" id="5_ddiei"]
+[ext_resource type="Texture2D" uid="uid://b7jm8a0q6luik" path="res://assets/Backgrounds-Scene3/textBox2.png" id="6_uvdgf"]
+
+[node name="loginPage" type="Node2D"]
+
+[node name="Picture1" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_dw3wn")
+
+[node name="LP1" type="Sprite2D" parent="."]
+position = Vector2(294.5, 454.125)
+scale = Vector2(0.812354, 0.684744)
+texture = ExtResource("2_u5nxi")
+
+[node name="LP3" type="Sprite2D" parent="."]
+position = Vector2(907, 500.75)
+scale = Vector2(0.78012, 0.736332)
+texture = ExtResource("3_mghek")
+
+[node name="LP2" type="Sprite2D" parent="."]
+position = Vector2(644, 511.625)
+scale = Vector2(1.17797, 0.79931)
+texture = ExtResource("4_vpe7n")
+
+[node name="Picture6" type="Sprite2D" parent="."]
+position = Vector2(569, 289)
+scale = Vector2(0.0951027, 0.403134)
+texture = ExtResource("5_ddiei")
+
+[node name="Picture8" type="Sprite2D" parent="."]
+position = Vector2(568.5, 288.5)
+scale = Vector2(0.0945297, 0.417854)
+texture = ExtResource("6_uvdgf")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c36tjdequc2lt"]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://GameOne/scripts/Snackbar.gd" id="1_y65jr"]
 [ext_resource type="FontFile" uid="uid://c16j0xerxhdkw" path="res://assets/fonts/Fira_Code/static/FiraCode-Regular.ttf" id="2_mwkm5"]
