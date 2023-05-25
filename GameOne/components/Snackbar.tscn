@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://c36tjdequc2lt"]
+
+[ext_resource type="Script" path="res://GameOne/scripts/Snackbar.gd" id="1_y65jr"]
+[ext_resource type="FontFile" uid="uid://c16j0xerxhdkw" path="res://assets/fonts/Fira_Code/static/FiraCode-Regular.ttf" id="2_mwkm5"]
+[ext_resource type="Texture2D" uid="uid://rqwp2o4kkike" path="res://assets/cross.png" id="3_8chec"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k784l"]
+border_color = Color(0.8, 0.8, 0.8, 0)
+shadow_color = Color(0, 0, 0, 0.498039)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ty7y"]
+font = ExtResource("2_mwkm5")
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+
+[node name="Snackbar" type="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_k784l")
+script = ExtResource("1_y65jr")
+
+[node name="SnackbarBorder" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+offset_right = 360.0
+offset_bottom = 140.0
+
+[node name="SnackbarBg" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 352.0
+offset_bottom = 132.0
+
+[node name="SnackbarLabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 336.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_1ty7y")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CloseToastBtn" type="TextureButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 344.0
+offset_top = -12.0
+offset_right = 376.0
+offset_bottom = 20.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Sprite2D" parent="CloseToastBtn"]
+position = Vector2(16, 16)
+scale = Vector2(0.046875, 0.046875)
+texture = ExtResource("3_8chec")
+
+[connection signal="pressed" from="CloseToastBtn" to="." method="_on_close_toast_btn_pressed"]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://chg2psvsnq7k1"]
+
+[ext_resource type="PackedScene" uid="uid://bkkkwhqjg2odv" path="res://GameOne/components/DropZone.tscn" id="1_33840"]
+[ext_resource type="PackedScene" uid="uid://c5dacpmqkgbpr" path="res://GameOne/components/DraggableNode.tscn" id="2_156k0"]
+
+[node name="TestDragDrop" type="Node2D"]
+
+[node name="DropZone" parent="." instance=ExtResource("1_33840")]
+position = Vector2(70, 123)
+
+[node name="DraggableNode" parent="." instance=ExtResource("2_156k0")]
+position = Vector2(226, 76)

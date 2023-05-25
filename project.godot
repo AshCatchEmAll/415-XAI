@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="415-XAI"
-run/main_scene="res://GameOne/scenes/scene_3.tscn"
+config/name="CMPT415_XAI_GAME"
+run/main_scene="res://GameOne/scenes/map.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
+config/icon="res://icon.svg"
 
 [autoload]
 
