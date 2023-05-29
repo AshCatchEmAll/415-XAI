@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://ca33ax8y14vc"]
+
+[ext_resource type="Texture2D" uid="uid://bo7dmxabltpih" path="res://GameOne/assets/background/bg.png" id="1_byr04"]
+[ext_resource type="Texture2D" uid="uid://bgpj5enndek3d" path="res://GameOne/assets/background/bg_fish.png" id="2_ht326"]
+[ext_resource type="Texture2D" uid="uid://cl20uy84fvbri" path="res://GameOne/assets/background/bg_middle.png" id="3_mbin1"]
+[ext_resource type="Texture2D" uid="uid://c4sdgnc6qoco0" path="res://GameOne/assets/background/bg_coral_left.png" id="4_3ce65"]
+[ext_resource type="Texture2D" uid="uid://bmj813knsfx1n" path="res://GameOne/assets/textbox/textbox_back.png" id="5_e7ve7"]
+[ext_resource type="Texture2D" uid="uid://dxrtln1flio50" path="res://GameOne/assets/textbox/textbox.png" id="6_ie56n"]
+[ext_resource type="Texture2D" uid="uid://b1qwndm7x5yqt" path="res://GameOne/assets/whale/whale.png" id="7_in2vm"]
+[ext_resource type="Texture2D" uid="uid://dboew2ki21teh" path="res://GameOne/assets/background/bg_bubble.png" id="8_du6l8"]
+[ext_resource type="Texture2D" uid="uid://dacdhujtow3ej" path="res://GameOne/assets/textbox/button_next.png" id="9_nblox"]
+[ext_resource type="Texture2D" uid="uid://qq6gmxymn82i" path="res://GameOne/assets/bubble/bubble_map.png" id="10_k7b3s"]
+[ext_resource type="Texture2D" uid="uid://dg42dvgy7csfw" path="res://GameOne/assets/bubble/bubble_shell.png" id="11_tg8c7"]
+[ext_resource type="FontFile" uid="uid://cf618o4f2wu2y" path="res://GameOne/assets/font/Varela_Round/VarelaRound-Regular.ttf" id="12_deai7"]
+
+[node name="ParallaxBackground" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-408.0]
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(741, 306)
+texture = ExtResource("1_byr04")
+
+[node name="BgFish" type="Sprite2D" parent="."]
+position = Vector2(189.25, 131.25)
+scale = Vector2(0.272961, 0.317687)
+texture = ExtResource("2_ht326")
+
+[node name="BgMiddle" type="Sprite2D" parent="."]
+position = Vector2(70, 4.99998)
+scale = Vector2(0.271523, 0.218519)
+texture = ExtResource("3_mbin1")
+centered = false
+
+[node name="BgCoralLeft" type="Sprite2D" parent="."]
+position = Vector2(1090, 79)
+scale = Vector2(0.184106, 0.184106)
+texture = ExtResource("4_3ce65")
+
+[node name="TextboxBack" type="Sprite2D" parent="."]
+position = Vector2(576.1, 523.5)
+scale = Vector2(0.177563, 0.160256)
+texture = ExtResource("5_e7ve7")
+
+[node name="Textbox" type="Sprite2D" parent="."]
+position = Vector2(576, 522)
+scale = Vector2(0.177498, 0.157446)
+texture = ExtResource("6_ie56n")
+
+[node name="Whale" type="Sprite2D" parent="."]
+position = Vector2(899.076, 357.625)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("7_in2vm")
+
+[node name="BgBubble" type="Sprite2D" parent="."]
+position = Vector2(833, 264)
+scale = Vector2(0.984127, 0.817901)
+texture = ExtResource("8_du6l8")
+
+[node name="ButtonNext" type="Sprite2D" parent="."]
+position = Vector2(1070.38, 577.316)
+scale = Vector2(0.512295, 0.512295)
+texture = ExtResource("9_nblox")
+
+[node name="BubbleMap" type="Sprite2D" parent="."]
+position = Vector2(191.668, 180.75)
+scale = Vector2(0.167336, 0.167335)
+texture = ExtResource("10_k7b3s")
+
+[node name="BubbleShell" type="Sprite2D" parent="."]
+position = Vector2(468, 182.469)
+scale = Vector2(0.170997, 0.170997)
+texture = ExtResource("11_tg8c7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 73.0
+offset_top = 466.0
+offset_right = 1214.0
+offset_bottom = 627.0
+theme_override_fonts/normal_font = ExtResource("12_deai7")
+theme_override_font_sizes/normal_font_size = 24
+text = "Welcome to Whale Island! To obtain the treasure of Whale Island, you need 
+to follow this map to find and help the residents here. They will give you 
+different shells and bring them to the whale sculpture, where there will be
+what you want.
+"

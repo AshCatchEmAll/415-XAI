@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://cvsenf61850jn"]
+
+[ext_resource type="Texture2D" uid="uid://bo7dmxabltpih" path="res://GameOne/assets/background/bg.png" id="1_kgeph"]
+[ext_resource type="Texture2D" uid="uid://cl20uy84fvbri" path="res://GameOne/assets/background/bg_middle.png" id="2_w4w8y"]
+[ext_resource type="Texture2D" uid="uid://dfoai64tf4yjw" path="res://GameOne/assets/background/bg_left.png" id="3_2tfx5"]
+[ext_resource type="Texture2D" uid="uid://daw4yt6w5ucsh" path="res://GameOne/assets/background/bg_right.png" id="4_4dsfl"]
+[ext_resource type="Texture2D" uid="uid://b4amcjmomedr7" path="res://GameOne/assets/background/bg_coral_bot.png" id="5_8re3m"]
+[ext_resource type="Texture2D" uid="uid://c4sdgnc6qoco0" path="res://GameOne/assets/background/bg_coral_left.png" id="6_qnb6v"]
+[ext_resource type="Texture2D" uid="uid://dboew2ki21teh" path="res://GameOne/assets/background/bg_bubble.png" id="7_e65kd"]
+[ext_resource type="Texture2D" uid="uid://b1qwndm7x5yqt" path="res://GameOne/assets/whale/whale.png" id="8_x07bo"]
+[ext_resource type="Texture2D" uid="uid://bgpj5enndek3d" path="res://GameOne/assets/background/bg_fish.png" id="9_p2rua"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(452.5, 397)
+scale = Vector2(1.07344, 1.01852)
+texture = ExtResource("1_kgeph")
+
+[node name="BgMiddle" type="Sprite2D" parent="."]
+position = Vector2(420.125, 223)
+scale = Vector2(0.270012, 0.24963)
+texture = ExtResource("2_w4w8y")
+
+[node name="BgLeft" type="Sprite2D" parent="."]
+position = Vector2(326.5, 501.375)
+scale = Vector2(0.882284, 0.880511)
+texture = ExtResource("3_2tfx5")
+
+[node name="BgRight" type="Sprite2D" parent="."]
+position = Vector2(935, 499)
+scale = Vector2(0.824172, 0.779872)
+texture = ExtResource("4_4dsfl")
+
+[node name="BgCoralBot" type="Sprite2D" parent="."]
+position = Vector2(631, 516)
+scale = Vector2(0.766949, 0.791913)
+texture = ExtResource("5_8re3m")
+
+[node name="BgCoralLeft" type="Sprite2D" parent="."]
+position = Vector2(1100, 61)
+scale = Vector2(0.213659, 0.226647)
+texture = ExtResource("6_qnb6v")
+
+[node name="BgBubble" type="Sprite2D" parent="."]
+position = Vector2(860, 372)
+scale = Vector2(0.844444, 0.854938)
+texture = ExtResource("7_e65kd")
+
+[node name="Whale" type="Sprite2D" parent="."]
+position = Vector2(598, 285)
+scale = Vector2(0.200573, 0.224367)
+texture = ExtResource("8_x07bo")
+
+[node name="BgFish" type="Sprite2D" parent="."]
+position = Vector2(125.375, 69.375)
+scale = Vector2(0.184607, 0.184014)
+texture = ExtResource("9_p2rua")

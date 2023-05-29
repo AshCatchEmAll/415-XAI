@@ -1,0 +1,164 @@
+[gd_scene load_steps=22 format=3 uid="uid://cauqhrnvpsnik"]
+
+[ext_resource type="Script" path="res://GameOne/scripts/scene_3.gd" id="1_vk4ve"]
+[ext_resource type="Texture2D" uid="uid://cqjwcevkwxnat" path="res://assets/Backgrounds-Scene3/whale.png" id="2_8c2bs"]
+[ext_resource type="Texture2D" uid="uid://bs5efgyeaviaq" path="res://assets/Backgrounds-Scene3/map.png" id="3_cn71o"]
+[ext_resource type="Texture2D" uid="uid://ngi55f7ktsgw" path="res://assets/Backgrounds-Scene3/backgroundCanvas.png" id="4_6eoe6"]
+[ext_resource type="Texture2D" uid="uid://cl553wk1hgq3h" path="res://assets/Backgrounds-Scene3/fishes.png" id="5_7mvcs"]
+[ext_resource type="Texture2D" uid="uid://di8lup6lx4f6e" path="res://assets/Backgrounds-Scene3/waves.png" id="6_wk5ge"]
+[ext_resource type="Texture2D" uid="uid://c0c6ajkjgf3kb" path="res://assets/Backgrounds-Scene3/bubbles.png" id="7_cmrb3"]
+[ext_resource type="Texture2D" uid="uid://d1yu4kfbt84om" path="res://assets/Backgrounds-Scene3/seaPlant.png" id="8_c8fke"]
+[ext_resource type="Texture2D" uid="uid://b5dp1roiglt" path="res://assets/Backgrounds-Scene3/textBox1.png" id="9_7aeqi"]
+[ext_resource type="Texture2D" uid="uid://b7jm8a0q6luik" path="res://assets/Backgrounds-Scene3/textBox2.png" id="10_0tldp"]
+[ext_resource type="Texture2D" uid="uid://c0s2fhvw57qyd" path="res://assets/Backgrounds-Scene3/boy.png" id="11_g3cit"]
+[ext_resource type="Texture2D" uid="uid://c4ltbwerg822t" path="res://assets/Backgrounds-Scene3/mapBubble.png" id="12_ia3w0"]
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="13_v1nix"]
+[ext_resource type="Script" path="res://GameOne/scripts/RichTextLabel.gd" id="14_jt72u"]
+[ext_resource type="Script" path="res://GameOne/scripts/RichTextLabel2.gd" id="15_stfen"]
+[ext_resource type="Texture2D" uid="uid://coioi3msaep3o" path="res://assets/Button/icon.png" id="16_1vmlc"]
+[ext_resource type="Texture2D" uid="uid://chs5o404auhb2" path="res://assets/Button/iconPressed.png" id="17_xw0lr"]
+[ext_resource type="Texture2D" uid="uid://pv282ilq1l7h" path="res://assets/Button/iconHover.png" id="18_ruby2"]
+
+[sub_resource type="Animation" id="Animation_i438x"]
+resource_name = "MapAnimation"
+
+[sub_resource type="Animation" id="Animation_7tuo1"]
+resource_name = "WhaleAndMap"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/whale:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(815.25, 206.25), Vector2(815.25, 206.25), Vector2(815.25, 181.25), Vector2(815.25, 206.25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/map:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.851675, 0.78481), Vector2(0.751196, 0.708861), Vector2(0.851675, 0.78481)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3hg4"]
+_data = {
+"MapAnimation": SubResource("Animation_i438x"),
+"WhaleAndMap": SubResource("Animation_7tuo1")
+}
+
+[node name="Scene3" type="Node2D"]
+script = ExtResource("1_vk4ve")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_e3hg4")
+}
+
+[node name="whale" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(815.25, 184.535)
+scale = Vector2(0.183739, 0.181604)
+texture = ExtResource("2_8c2bs")
+
+[node name="map" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(327.5, 194)
+scale = Vector2(0.7644, 0.718841)
+texture = ExtResource("3_cn71o")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_right = -1.0
+
+[node name="backgroundCanvas" type="Sprite2D" parent="Background"]
+position = Vector2(577, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_6eoe6")
+
+[node name="fishes" type="Sprite2D" parent="Background"]
+position = Vector2(118, 70)
+scale = Vector2(0.171381, 0.188095)
+texture = ExtResource("5_7mvcs")
+
+[node name="waves" type="Sprite2D" parent="Background"]
+position = Vector2(411, 197)
+scale = Vector2(0.174942, 0.19353)
+texture = ExtResource("6_wk5ge")
+
+[node name="bubbles" type="Sprite2D" parent="Background"]
+position = Vector2(970, 262)
+scale = Vector2(0.779365, 0.807099)
+texture = ExtResource("7_cmrb3")
+
+[node name="seaPlant" type="Sprite2D" parent="Background"]
+position = Vector2(1064, 98.9844)
+scale = Vector2(0.210579, 0.195111)
+texture = ExtResource("8_c8fke")
+
+[node name="textBox1" type="Sprite2D" parent="Background"]
+position = Vector2(574, 506.938)
+scale = Vector2(0.175355, 0.169605)
+texture = ExtResource("9_7aeqi")
+
+[node name="textBox2" type="Sprite2D" parent="Background"]
+position = Vector2(573.5, 506.5)
+scale = Vector2(0.176104, 0.171793)
+texture = ExtResource("10_0tldp")
+
+[node name="boy" type="Sprite2D" parent="Background"]
+position = Vector2(139, 409)
+scale = Vector2(0.456545, 0.427702)
+texture = ExtResource("11_g3cit")
+
+[node name="mapBubble" type="Sprite2D" parent="Background"]
+position = Vector2(321.5, 198)
+scale = Vector2(0.849265, 0.816176)
+texture = ExtResource("12_ia3w0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 300.0
+offset_top = 413.0
+offset_right = 1057.0
+offset_bottom = 501.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 390
+theme_override_fonts/normal_font = ExtResource("13_v1nix")
+theme_override_font_sizes/normal_font_size = 30
+text = "Thank you, dear Whale Elder. I will definitely complete the task well！
+"
+script = ExtResource("14_jt72u")
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 382.0
+offset_top = 540.0
+offset_right = 964.0
+offset_bottom = 608.0
+theme_override_colors/default_color = Color(0.00392157, 0.196078, 0.858824, 0.964706)
+theme_override_fonts/normal_font = ExtResource("13_v1nix")
+theme_override_font_sizes/normal_font_size = 21
+text = "Click to pick up the map to embark on a journey to Whale Island.
+"
+script = ExtResource("15_stfen")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 978.0
+offset_top = 535.0
+offset_right = 1039.0
+offset_bottom = 597.0
+texture_normal = ExtResource("16_1vmlc")
+texture_pressed = ExtResource("17_xw0lr")
+texture_hover = ExtResource("18_ruby2")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cip6ca4e6smr8"]
+[gd_scene load_steps=15 format=3]
 
 [ext_resource type="PackedScene" uid="uid://cj8u30ihaltpn" path="res://GameOne/components/CrabLegs/CrabLeg1.tscn" id="1_pthpg"]
 [ext_resource type="Texture2D" uid="uid://xpcgasnys3oa" path="res://assets/crab-body/crab-body.png" id="1_sabwe"]

@@ -1,12 +1,12 @@
-[gd_scene load_steps=31 format=3 uid="uid://ch4truf8n8waa"]
+[gd_scene load_steps=31 format=3 uid="uid://cmhdbyax6f3fl"]
 
 [ext_resource type="Script" path="res://GameOne/scripts/Scene7.gd" id="1_p0ve2"]
 [ext_resource type="Texture2D" uid="uid://wfbjc58us1un" path="res://assets/scene7/scene7.png" id="2_mr88t"]
-[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/fonts/Varela_Round/VarelaRound-Regular.ttf" id="3_6g3b2"]
+[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/fonts/Varela_Round/VarelaRound-Regular.ttf" id="3_7psla"]
 [ext_resource type="Script" path="res://GameOne/scripts/TweenText.gd" id="3_o5c3n"]
-[ext_resource type="AudioStream" uid="uid://5lwkauul6bdr" path="res://assets/audio/gibberish.mp3" id="5_1g6ol"]
+[ext_resource type="AudioStream" uid="uid://5lwkauul6bdr" path="res://assets/audio/gibberish.mp3" id="5_jxsrr"]
 [ext_resource type="Texture2D" uid="uid://cuvvllp01ycg5" path="res://assets/scene7/game-1-shell.png" id="6_pduuv"]
-[ext_resource type="AudioStream" uid="uid://esb40fx8l4wq" path="res://assets/audio/shellpicked.mp3" id="7_nbihv"]
+[ext_resource type="AudioStream" uid="uid://esb40fx8l4wq" path="res://assets/audio/shellpicked.mp3" id="7_4c2re"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ogtb"]
 bg_color = Color(1, 1, 1, 1)
@@ -215,7 +215,7 @@ offset_left = 32.0
 offset_top = 8.0
 offset_right = 712.0
 offset_bottom = 266.0
-theme_override_fonts/font = ExtResource("3_6g3b2")
+theme_override_fonts/font = ExtResource("3_7psla")
 text = "Yeah! I can walk normally now, thank you very much!"
 label_settings = SubResource("LabelSettings_3ua0m")
 horizontal_alignment = 1
@@ -237,7 +237,7 @@ offset_left = 168.0
 offset_top = -32.0
 offset_right = 2824.0
 offset_bottom = 344.0
-theme_override_fonts/font = ExtResource("3_6g3b2")
+theme_override_fonts/font = ExtResource("3_7psla")
 text = "You have helped us with your knowledge of creating data strucures , thank you very much! This is the shell I have gaurded. Now I will give it to you. When you have gathered all four shells, you can open the whale sculpture and get the treasure you want. Now go find the jellyfish general!"
 label_settings = SubResource("LabelSettings_unr26")
 autowrap_mode = 2
@@ -270,7 +270,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_jy5l8")
 
 [node name="Scene5Keyboard" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("5_1g6ol")
+stream = ExtResource("5_jxsrr")
 
 [node name="d" type="Panel" parent="."]
 layout_mode = 0
@@ -348,7 +348,7 @@ offset_right = 3426.0
 offset_bottom = 285.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_6g3b2")
+theme_override_fonts/font = ExtResource("3_7psla")
 theme_override_font_sizes/font_size = 55
 text = "Map"
 
@@ -361,7 +361,7 @@ libraries = {
 
 [node name="ShellPicked" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("7_nbihv")
+stream = ExtResource("7_4c2re")
 
 [node name="FadeIn" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
