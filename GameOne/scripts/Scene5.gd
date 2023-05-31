@@ -16,7 +16,7 @@ var bounce_animation_played = false
 
 var fade_in_complete = false
 func _ready():
-	DisplayServer.window_set_size(Vector2i(3520,1958))
+#	DisplayServer.window_set_size(Vector2i(3520,1958))
 	help_label = get_node("%help-label")
 	game_label = get_node("%game-label")
 	help_label.set_visible_ratio(0)
@@ -73,8 +73,8 @@ func _on_fade_in_animation_animation_finished(anim_name):
 
 func on_fade_in_complete(anim_name):
 	fade_in_complete = true
-	var custom_cursor = preload("res://assets/cursor.png")
-	Input.set_custom_mouse_cursor(custom_cursor, Input.CURSOR_ARROW, Vector2())
+#	var custom_cursor = preload("res://assets/cursor.png")
+#	Input.set_custom_mouse_cursor(custom_cursor, Input.CURSOR_ARROW, Vector2(50,50))
 	
 	
 	help_label.set_total_animation_time(0.0059)

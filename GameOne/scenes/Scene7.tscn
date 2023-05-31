@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cmhdbyax6f3fl"]
+[gd_scene load_steps=36 format=3 uid="uid://cmhdbyax6f3fl"]
 
 [ext_resource type="Script" path="res://GameOne/scripts/Scene7.gd" id="1_p0ve2"]
 [ext_resource type="Texture2D" uid="uid://wfbjc58us1un" path="res://assets/scene7/scene7.png" id="2_mr88t"]
@@ -12,14 +12,14 @@
 bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ua0m"]
-font_size = 60
+font_size = 15
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7xw1"]
 bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_unr26"]
-font_size = 65
+font_size = 20
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="GDScript" id="GDScript_kxuaa"]
@@ -78,19 +78,19 @@ corner_radius_bottom_left = 100
 
 [sub_resource type="Animation" id="Animation_yerpd"]
 resource_name = "bounce"
-length = 4.0
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1248, 824), Vector2(1248, 784), Vector2(1248, 720), Vector2(1248, 816), Vector2(1248, 824), Vector2(1248, 776), Vector2(1248, 824), Vector2(1248, 752), Vector2(1248, 816)]
+"values": [Vector2(410, 267), Vector2(410, 246), Vector2(410, 234), Vector2(411, 265), Vector2(411, 252), Vector2(411, 268), Vector2(410.971, 267.971), Vector2(410.789, 270.939), Vector2(410.189, 275.589), Vector2(410, 267)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7fawm"]
@@ -181,8 +181,19 @@ _data = {
 "fade_in": SubResource("Animation_f6gia")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15fc1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mkemj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hcru3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0kqya"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fj76a"]
+
 [node name="Scene7" type="ColorRect"]
-custom_minimum_size = Vector2(3520, 1958)
+offset_right = 1160.0
+offset_bottom = 640.0
 script = ExtResource("1_p0ve2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -192,29 +203,31 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1760.0
-offset_top = -976.0
-offset_right = 1760.0
-offset_bottom = 976.0
+offset_left = -580.0
+offset_top = -320.0
+offset_right = 580.0
+offset_bottom = 320.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_mr88t")
+expand_mode = 1
 
 [node name="Crab-help-text" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 1496.0
-offset_top = 152.0
-offset_right = 2184.0
-offset_bottom = 408.0
+offset_left = 504.0
+offset_top = 52.0
+offset_right = 716.0
+offset_bottom = 131.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_3ogtb")
+metadata/_edit_group_ = true
 
 [node name="help-label" type="Label" parent="Crab-help-text"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 32.0
+offset_left = 4.0
 offset_top = 8.0
-offset_right = 712.0
-offset_bottom = 266.0
+offset_right = 219.0
+offset_bottom = 68.0
 theme_override_fonts/font = ExtResource("3_7psla")
 text = "Yeah! I can walk normally now, thank you very much!"
 label_settings = SubResource("LabelSettings_3ua0m")
@@ -224,19 +237,19 @@ script = ExtResource("3_o5c3n")
 
 [node name="Game-Text" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 152.0
-offset_top = 1384.0
-offset_right = 3240.0
-offset_bottom = 1760.0
+offset_left = 46.0
+offset_top = 454.0
+offset_right = 1098.0
+offset_bottom = 584.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_a7xw1")
 
 [node name="game-label" type="Label" parent="Game-Text"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 168.0
-offset_top = -32.0
-offset_right = 2824.0
-offset_bottom = 344.0
+offset_left = 37.0
+offset_top = 11.0
+offset_right = 1049.0
+offset_bottom = 138.0
 theme_override_fonts/font = ExtResource("3_7psla")
 text = "You have helped us with your knowledge of creating data strucures , thank you very much! This is the shell I have gaurded. Now I will give it to you. When you have gathered all four shells, you can open the whale sculpture and get the treasure you want. Now go find the jellyfish general!"
 label_settings = SubResource("LabelSettings_unr26")
@@ -246,10 +259,10 @@ script = SubResource("GDScript_kxuaa")
 [node name="Click-To-Enter-Panel" type="Panel" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 1760.0
-offset_top = 1736.0
-offset_right = 3344.0
-offset_bottom = 1872.0
+offset_left = 660.0
+offset_top = 573.0
+offset_right = 1100.0
+offset_bottom = 613.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1dt6h")
 
 [node name="Button" type="Button" parent="."]
@@ -274,50 +287,50 @@ stream = ExtResource("5_jxsrr")
 
 [node name="d" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 3336.0
-offset_top = 328.0
-offset_right = 3488.0
-offset_bottom = 464.0
+offset_left = 1081.0
+offset_top = 103.0
+offset_right = 1153.0
+offset_bottom = 157.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6ra4l")
 
 [node name="d2" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 1416.0
-offset_top = 992.0
-offset_right = 1656.0
-offset_bottom = 1200.0
+offset_left = 452.0
+offset_top = 324.0
+offset_right = 534.0
+offset_bottom = 395.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_fbx02")
 
 [node name="d3" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 1616.0
-offset_top = 984.0
-offset_right = 2360.0
-offset_bottom = 1168.0
+offset_left = 496.0
+offset_top = 308.0
+offset_right = 787.0
+offset_bottom = 380.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_fbx02")
 
 [node name="shell1" type="Panel" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 1104.0
-offset_top = 696.0
-offset_right = 1384.0
-offset_bottom = 968.0
+offset_left = 358.0
+offset_top = 225.0
+offset_right = 464.0
+offset_bottom = 319.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_fbx02")
 
 [node name="Shell1" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(1248, 819.467)
-scale = Vector2(1.86264, 1.86264)
+position = Vector2(410.789, 270.939)
+scale = Vector2(0.684067, 0.684067)
 texture = ExtResource("6_pduuv")
 
 [node name="shell2" type="Panel" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 1024.0
-offset_top = 616.0
-offset_right = 1480.0
-offset_bottom = 1048.0
+offset_left = 331.0
+offset_top = 200.0
+offset_right = 481.0
+offset_bottom = 342.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_fbx02")
 
 [node name="ShellBounce" type="AnimationPlayer" parent="."]
@@ -330,10 +343,10 @@ libraries = {
 [node name="shellbtn" type="Button" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 1040.0
-offset_top = 648.0
-offset_right = 1440.0
-offset_bottom = 1000.0
+offset_left = 375.0
+offset_top = 240.0
+offset_right = 449.0
+offset_bottom = 312.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_6mvc5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fqrij")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_njvst")
@@ -342,14 +355,14 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_qe0xs")
 
 [node name="maplabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 3296.0
-offset_top = 208.0
-offset_right = 3426.0
-offset_bottom = 285.0
+offset_left = 1090.0
+offset_top = 70.0
+offset_right = 1123.0
+offset_bottom = 92.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_7psla")
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 15
 text = "Map"
 
 [node name="ShellFade" type="AnimationPlayer" parent="."]
@@ -364,6 +377,7 @@ unique_name_in_owner = true
 stream = ExtResource("7_4c2re")
 
 [node name="FadeIn" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="FadeInAnimation" type="AnimationPlayer" parent="."]
@@ -372,7 +386,25 @@ libraries = {
 "": SubResource("AnimationLibrary_d1om6")
 }
 
+[node name="GoToMapBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.953
+anchor_top = 0.057
+anchor_right = 0.953
+anchor_bottom = 0.057
+offset_left = -38.4801
+offset_top = -27.48
+offset_right = 37.5199
+offset_bottom = 27.52
+theme_override_styles/normal = SubResource("StyleBoxTexture_15fc1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mkemj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hcru3")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0kqya")
+theme_override_styles/focus = SubResource("StyleBoxTexture_fj76a")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="shellbtn" to="." method="_on_shellbtn_pressed"]
 [connection signal="animation_finished" from="ShellFade" to="." method="_on_shell_fade_animation_finished"]
 [connection signal="animation_finished" from="FadeInAnimation" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="GoToMapBtn" to="." method="_on_go_to_map_btn_pressed"]

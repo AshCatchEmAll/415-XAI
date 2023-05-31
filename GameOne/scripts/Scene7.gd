@@ -3,6 +3,8 @@ extends ColorRect
 @onready var shell_picked_audio = %ShellPicked
 # Called when the node enters the scene tree for the first time.
 @onready var fade_in = %FadeInAnimation
+
+var map_scene = preload("res://GameOne/scenes/map.tscn")
 var help_label
 var game_label
 
@@ -16,7 +18,7 @@ var bounce_animation_played = false
 
 var fade_in_complete = false
 func _ready():
-	DisplayServer.window_set_size(Vector2i(3520,1958))
+	
 	help_label = get_node("%help-label")
 	game_label = get_node("%game-label")
 	help_label.set_visible_ratio(0)
@@ -83,10 +85,23 @@ func _on_fade_in_animation_animation_finished(anim_name):
 
 func on_fade_in_complete(anim_name):
 	fade_in_complete = true
-	var custom_cursor = preload("res://assets/cursor.png")
-	Input.set_custom_mouse_cursor(custom_cursor, Input.CURSOR_ARROW, Vector2())
+#	var custom_cursor = preload("res://assets/cursor.png")
+#	Input.set_custom_mouse_cursor(custom_cursor, Input.CURSOR_ARROW, Vector2())
 	
 	
 	help_label.set_total_animation_time(0.006)
 	
 	help_label.start_text_animation(0.8)
+
+
+	
+func _on_go_to_map_btn_pressed():
+	var params = {
+   
+	"show_route_two": true,
+	"show_route_one":false
+	}
+	SceneTransition.change_to_map_scene( params)
+	
+
+

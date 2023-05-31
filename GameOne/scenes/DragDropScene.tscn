@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://ci0yp324x2gy7"]
+[gd_scene load_steps=9 format=3 uid="uid://ci0yp324x2gy7"]
 
 [ext_resource type="Script" path="res://GameOne/scripts/DragDropScene.gd" id="1_un44e"]
-[ext_resource type="PackedScene" uid="uid://cip6ca4e6smr8" path="res://GameOne/components/CrabDragAndDrop.tscn" id="2_eqaxk"]
+[ext_resource type="PackedScene" uid="uid://bpdffa42w0uhi" path="res://GameOne/components/CrabDragAndDrop.tscn" id="2_eqaxk"]
 [ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/fonts/Varela_Round/VarelaRound-Regular.ttf" id="3_avpus"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ewhvd"]
@@ -18,52 +18,54 @@ corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
 [sub_resource type="LabelSettings" id="LabelSettings_qx1r6"]
-font_size = 60
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_74ywx"]
 font_color = Color(0, 0, 0, 1)
 
 [node name="DragDropScene" type="ColorRect"]
-custom_minimum_size = Vector2(101, 2.08165e-12)
-offset_right = 3519.0
-offset_bottom = 1965.0
+offset_right = 1160.0
+offset_bottom = 640.0
 mouse_filter = 1
 script = ExtResource("1_un44e")
 
 [node name="WaterPanel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 3520.0
-offset_bottom = 360.0
+offset_right = 1168.0
+offset_bottom = 144.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_ewhvd")
 
 [node name="SandPanel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 368.0
-offset_right = 3512.0
-offset_bottom = 1968.0
+offset_top = 144.0
+offset_right = 1168.0
+offset_bottom = 648.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_evn5b")
 
 [node name="CrabDragAndDrop" parent="." instance=ExtResource("2_eqaxk")]
 unique_name_in_owner = true
-position = Vector2(296, 416)
-scale = Vector2(2.5, 2.5)
+position = Vector2(232, 232)
+scale = Vector2(0.6, 0.6)
 
 [node name="TextPanel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 528.0
-offset_top = 128.0
-offset_right = 2928.0
-offset_bottom = 480.0
+offset_left = 168.0
+offset_top = 72.0
+offset_right = 992.0
+offset_bottom = 240.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_cc4v3")
 
 [node name="Label" type="Label" parent="TextPanel"]
+visible = false
 layout_mode = 0
 offset_left = 88.0
-offset_top = 48.0
-offset_right = 2320.0
-offset_bottom = 306.0
+offset_top = 64.0
+offset_right = 776.0
+offset_bottom = 104.0
 mouse_filter = 1
 theme_override_fonts/font = ExtResource("3_avpus")
 theme_override_font_sizes/font_size = 50
@@ -71,12 +73,22 @@ text = "Drag the crab feet corresponding to their creation method to the correct
 label_settings = SubResource("LabelSettings_qx1r6")
 autowrap_mode = 2
 
+[node name="Label2" type="Label" parent="TextPanel"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 56.0
+offset_right = 736.0
+offset_bottom = 134.0
+text = "Drag the crab feet corresponding to their creation method to the correct position based on the data structure of each group of crab feet, to help the little crab walk normally !"
+label_settings = SubResource("LabelSettings_74ywx")
+autowrap_mode = 2
+
 [node name="set-q" type="Label" parent="."]
 layout_mode = 0
-offset_left = 352.0
-offset_top = 1616.0
-offset_right = 768.0
-offset_bottom = 1788.0
+offset_left = 256.0
+offset_top = 536.0
+offset_right = 352.0
+offset_bottom = 576.0
 mouse_filter = 1
 theme_override_font_sizes/font_size = 50
 text = "Create with
@@ -87,10 +99,10 @@ autowrap_mode = 2
 
 [node name="set-a" type="Label" parent="."]
 layout_mode = 0
-offset_left = 2792.0
-offset_top = 1736.0
-offset_right = 2960.0
-offset_bottom = 1840.0
+offset_left = 856.0
+offset_top = 568.0
+offset_right = 904.0
+offset_bottom = 600.0
 mouse_filter = 1
 theme_override_font_sizes/font_size = 50
 text = "set()"
@@ -100,10 +112,10 @@ autowrap_mode = 2
 
 [node name="list-q" type="Label" parent="."]
 layout_mode = 0
-offset_left = 368.0
-offset_top = 576.0
-offset_right = 744.0
-offset_bottom = 748.0
+offset_left = 248.0
+offset_top = 288.0
+offset_right = 352.0
+offset_bottom = 328.0
 mouse_filter = 1
 theme_override_font_sizes/font_size = 50
 text = "Create with
@@ -114,10 +126,10 @@ autowrap_mode = 2
 
 [node name="list-a" type="Label" parent="."]
 layout_mode = 0
-offset_left = 2792.0
-offset_top = 680.0
-offset_right = 2952.0
-offset_bottom = 792.0
+offset_left = 864.0
+offset_top = 312.0
+offset_right = 904.0
+offset_bottom = 336.0
 mouse_filter = 1
 theme_override_font_sizes/font_size = 50
 text = "list()"
@@ -126,10 +138,10 @@ autowrap_mode = 2
 
 [node name="tuple-q" type="Label" parent="."]
 layout_mode = 0
-offset_left = 352.0
-offset_top = 888.0
-offset_right = 768.0
-offset_bottom = 984.0
+offset_left = 264.0
+offset_top = 368.0
+offset_right = 344.0
+offset_bottom = 408.0
 mouse_filter = 1
 theme_override_font_sizes/font_size = 50
 text = "Create with 
@@ -140,10 +152,10 @@ autowrap_mode = 2
 
 [node name="tuple-a" type="Label" parent="."]
 layout_mode = 0
-offset_left = 2792.0
-offset_top = 968.0
-offset_right = 3000.0
-offset_bottom = 1064.0
+offset_left = 856.0
+offset_top = 384.0
+offset_right = 904.0
+offset_bottom = 416.0
 mouse_filter = 1
 theme_override_font_sizes/font_size = 50
 text = "tuple()"
@@ -152,10 +164,10 @@ autowrap_mode = 2
 
 [node name="dict-q" type="Label" parent="."]
 layout_mode = 0
-offset_left = 344.0
-offset_top = 1232.0
-offset_right = 760.0
-offset_bottom = 1404.0
+offset_left = 264.0
+offset_top = 440.0
+offset_right = 336.0
+offset_bottom = 500.0
 mouse_filter = 1
 theme_override_font_sizes/font_size = 50
 text = "Create with
@@ -166,10 +178,10 @@ autowrap_mode = 2
 
 [node name="dict-a" type="Label" parent="."]
 layout_mode = 0
-offset_left = 2760.0
-offset_top = 1344.0
-offset_right = 3016.0
-offset_bottom = 1440.0
+offset_left = 856.0
+offset_top = 472.0
+offset_right = 912.0
+offset_bottom = 504.0
 mouse_filter = 1
 theme_override_font_sizes/font_size = 50
 text = "dict()"

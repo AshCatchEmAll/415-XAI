@@ -11,6 +11,15 @@ func _process(_delta):
 	pass
 
 func _on_texture_button_pressed():
+	
+#	Click.play()
+#
+#	SceneTransition.change_scene_to_file("res://GameOne/scenes/map.tscn")
+	pass
+	
+
+
+func _on_go_to_scene_four_btn_pressed():
 	Click.play()
-	SceneTransition.change_scene_to_file("res://GameOne/scenes/scene4.tscn")
-	pass # Replace with function body.
+
+	SceneTransition.change_scene_to_file("res://GameOne/scenes/map.tscn")

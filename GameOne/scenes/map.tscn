@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://boc4mfjbyw8jr"]
+[gd_scene load_steps=23 format=3 uid="uid://8lgggid3e2hm"]
 
 [ext_resource type="Texture2D" uid="uid://bw5avcyaeonuo" path="res://assets/Map Background.png" id="1_7qf1t"]
 [ext_resource type="Script" path="res://GameOne/scripts/map.gd" id="1_ntx2s"]
@@ -77,13 +77,134 @@ animations = [{
 [sub_resource type="Animation" id="Animation_krlga"]
 resource_name = "whale_animation"
 
+[sub_resource type="Animation" id="Animation_ho1pq"]
+resource_name = "location_one"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CrabGeneralButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1011, 430), Vector2(1011, 420), Vector2(1011, 407), Vector2(1011, 430), Vector2(1011, 425), Vector2(1011, 430)]
+}
+
+[sub_resource type="Animation" id="Animation_mnc81"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CrabGeneralButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1011, 430)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../JellyfishGeneralButton:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(236, 27)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TurtleGeneralButton:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(905, 150)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../WhaleSculptureButton:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(39, 480)]
+}
+
+[sub_resource type="Animation" id="Animation_4c1hn"]
+resource_name = "location_two"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../JellyfishGeneralButton:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(236, 27), Vector2(236, 5), Vector2(236, 27), Vector2(236, 10), Vector2(236, 27)]
+}
+
+[sub_resource type="Animation" id="Animation_df7cd"]
+resource_name = "location_three"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TurtleGeneralButton:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(905, 150), Vector2(905, 130), Vector2(905, 150), Vector2(905, 140), Vector2(905, 150)]
+}
+
+[sub_resource type="Animation" id="Animation_oldna"]
+resource_name = "location_four"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../WhaleSculptureButton:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(39, 480), Vector2(39, 460), Vector2(39, 480), Vector2(39, 470), Vector2(39, 480)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mnrkr"]
 _data = {
+"RESET": SubResource("Animation_mnc81"),
+"location_four": SubResource("Animation_oldna"),
+"location_one": SubResource("Animation_ho1pq"),
+"location_three": SubResource("Animation_df7cd"),
+"location_two": SubResource("Animation_4c1hn"),
 "whale_animation": SubResource("Animation_krlga")
 }
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ntx2s")
+show_route_one = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1152.0
@@ -100,9 +221,9 @@ script = ExtResource("12_ntd2h")
 
 [node name="CrabGeneralButton" type="TextureButton" parent="."]
 offset_left = 1011.0
-offset_top = 439.0
-offset_right = 1066.0
-offset_bottom = 534.0
+offset_top = 430.0
+offset_right = 1065.98
+offset_bottom = 524.998
 texture_normal = ExtResource("12_xwpr2")
 texture_hover = ExtResource("13_djgjh")
 ignore_texture_size = true
@@ -132,14 +253,20 @@ stretch_mode = 0
 offset_left = 39.0
 offset_top = 480.0
 offset_right = 94.0
-offset_bottom = 575.0
+offset_bottom = 574.999
 texture_normal = ExtResource("12_xwpr2")
 texture_hover = ExtResource("13_djgjh")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 root_node = NodePath("../WhaleAnimation")
 libraries = {
 "": SubResource("AnimationLibrary_mnrkr")
 }
+
+[connection signal="pressed" from="CrabGeneralButton" to="." method="_on_game_one_btn_pressed"]
+[connection signal="pressed" from="TurtleGeneralButton" to="." method="_on_game_three_btn_pressed"]
+[connection signal="pressed" from="JellyfishGeneralButton" to="." method="_on_game_two_btn_pressed"]
+[connection signal="pressed" from="WhaleSculptureButton" to="." method="_on_game_four_btn_pressed"]
