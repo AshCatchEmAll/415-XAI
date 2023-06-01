@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cesinr3inijth"
-path="res://.godot/imported/switch-150130.mp3-c41c7931f57dc800b91bbece29e8cab7.mp3str"
+path="res://.godot/imported/switch-150130.mp3-3f5f1feb3a4580db4c7ad914c65a522f.mp3str"
 
 [deps]
 
-source_file="res://assets/audio/Click/switch-150130.mp3"
-dest_files=["res://.godot/imported/switch-150130.mp3-c41c7931f57dc800b91bbece29e8cab7.mp3str"]
+source_file="res://assets/Audio/Click/switch-150130.mp3"
+dest_files=["res://.godot/imported/switch-150130.mp3-3f5f1feb3a4580db4c7ad914c65a522f.mp3str"]
 
 [params]
 
