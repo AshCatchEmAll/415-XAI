@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd3b4he5tllmd"]
+
+[ext_resource type="Script" path="res://GameOne/Sounds/wrong.gd" id="1_y2m6m"]
+[ext_resource type="AudioStream" uid="uid://dqkody17uay2q" path="res://assets/Audio/drag-wrong.mp3" id="2_cbxsq"]
+
+[node name="wrong" type="Node2D"]
+script = ExtResource("1_y2m6m")
+
+[node name="wrongPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cbxsq")

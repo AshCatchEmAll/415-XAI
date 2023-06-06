@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dq8ofyoimt75g" path="res://GameOne/components/CrabLegs/CrabLeg4.tscn" id="3_sbwvq"]
 [ext_resource type="PackedScene" uid="uid://c8cierp54371m" path="res://GameOne/components/CrabLegs/CrabLeg3.tscn" id="5_elpx7"]
 [ext_resource type="PackedScene" uid="uid://ctc1vm2x01dg7" path="res://GameOne/components/CrabLegs/CrabLeg2.tscn" id="6_aimsq"]
-[ext_resource type="AudioStream" uid="uid://6s78q1t1o2gf" path="res://assets/audio/drag-correct.mp3" id="7_wrnec"]
-[ext_resource type="AudioStream" uid="uid://dqkody17uay2q" path="res://assets/audio/drag-wrong.mp3" id="8_4dvxf"]
-[ext_resource type="PackedScene" uid="uid://c36tjdequc2lt" path="res://GameOne/components/Snackbar.tscn" id="9_cmafr"]
+[ext_resource type="AudioStream" uid="uid://6s78q1t1o2gf" path="res://assets/Audio/drag-correct.mp3" id="7_wrnec"]
+[ext_resource type="AudioStream" uid="uid://dqkody17uay2q" path="res://drag-wrong.mp3" id="8_4dvxf"]
+[ext_resource type="PackedScene" path="res://GameOne/components/Snackbar.tscn" id="9_cmafr"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4owpg"]
 

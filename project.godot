@@ -24,6 +24,8 @@ buses/default_bus_layout="res://GameOne/Sounds/default_bus_layout.tres"
 
 SceneTransition="*res://GameOne/TransitionAnimations/scene_transition.tscn"
 Click="*res://GameOne/Sounds/Click.tscn"
+Success="*res://GameOne/Sounds/success.tscn"
+Wrong="*res://GameOne/Sounds/wrong.tscn"
 
 [display]
 

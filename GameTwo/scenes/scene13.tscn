@@ -1,0 +1,215 @@
+[gd_scene load_steps=26 format=3 uid="uid://178rl2vrj1ld"]
+
+[ext_resource type="Texture2D" uid="uid://co7115meeaxjx" path="res://assets/scene13/background.png" id="1_2o2hq"]
+[ext_resource type="Script" path="res://GameTwo/scripts/scene13.gd" id="1_me0s3"]
+[ext_resource type="Texture2D" uid="uid://b4sf0f2uafiie" path="res://assets/scene13/seaPlants2.png" id="2_yumjs"]
+[ext_resource type="Texture2D" uid="uid://5g0ch4tk87ty" path="res://assets/scene13/seaPlants.png" id="3_smfur"]
+[ext_resource type="Texture2D" uid="uid://kxscuvv2wl8" path="res://assets/scene13/SinglePlant.png" id="4_x34o4"]
+[ext_resource type="Texture2D" uid="uid://bbutqndugmr4t" path="res://assets/scene13/singlePlantGreen.png" id="5_uve3b"]
+[ext_resource type="Texture2D" uid="uid://dwliuxr3gkugd" path="res://assets/scene13/bubbles.png" id="6_c2nqa"]
+[ext_resource type="Texture2D" uid="uid://hkqbn617w30f" path="res://assets/scene13/purpleJellyFish.png" id="7_42f1t"]
+[ext_resource type="Texture2D" uid="uid://cfd5wgseuhmnr" path="res://assets/scene13/yellowJellyFish.png" id="8_5x7mg"]
+[ext_resource type="Texture2D" uid="uid://cen3osvf05m70" path="res://assets/scene13/redPurpleJellyFish.png" id="9_ni5wp"]
+[ext_resource type="Texture2D" uid="uid://diru85sy7tpex" path="res://assets/scene13/greenOrangeJellyFish.png" id="10_7qfgl"]
+[ext_resource type="Texture2D" uid="uid://b5fachqk5ky2g" path="res://assets/scene13/blueTextBox.png" id="11_pykt4"]
+[ext_resource type="Texture2D" uid="uid://cup7xpve3v8ry" path="res://assets/scene13/whiteTextBox.png" id="12_h4b2e"]
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="13_semad"]
+[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/Fonts/Varela_Round/VarelaRound-Regular.ttf" id="14_cjqwf"]
+[ext_resource type="Texture2D" uid="uid://coioi3msaep3o" path="res://assets/Button/icon.png" id="15_r1hry"]
+[ext_resource type="Script" path="res://GameTwo/scripts/scene13Description.gd" id="15_vpuqy"]
+[ext_resource type="Texture2D" uid="uid://chs5o404auhb2" path="res://assets/Button/iconPressed.png" id="16_bils2"]
+[ext_resource type="Script" path="res://GameTwo/scripts/scene13ClickNext.gd" id="17_lntu6"]
+[ext_resource type="Texture2D" uid="uid://pv282ilq1l7h" path="res://assets/Button/iconHover.png" id="17_oa1cb"]
+[ext_resource type="Texture2D" uid="uid://dvgg2if5yalsg" path="res://assets/scene13/jellyFishAnimated.png" id="18_c4bkq"]
+[ext_resource type="Texture2D" uid="uid://bt0lncblflhvy" path="res://assets/scene13/shellBubble.png" id="19_qc2r6"]
+[ext_resource type="Texture2D" uid="uid://uaxbv388stni" path="res://assets/scene13/shell.png" id="20_mnxb7"]
+
+[sub_resource type="Animation" id="Animation_4qxbx"]
+resource_name = "jellyFishAnimation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PurpleJellyFish:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(237, 377), Vector2(237, 418), Vector2(237, 377)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("YellowJellyFish:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(484, 538), Vector2(484, 502), Vector2(484, 538)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RedPurpleJellyFish:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(682, 528), Vector2(682, 518), Vector2(682, 528)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GreenOrangeJellyFish:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(861, 382), Vector2(861, 395), Vector2(861, 382)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shell:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.532609, 0.40748), Vector2(0.782609, 0.564961), Vector2(0.532609, 0.40748)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2cvo2"]
+_data = {
+"jellyFishAnimation": SubResource("Animation_4qxbx")
+}
+
+[node name="scene13" type="Node2D"]
+script = ExtResource("1_me0s3")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_2o2hq")
+
+[node name="SeaPlants2" type="Sprite2D" parent="."]
+position = Vector2(879, 603)
+scale = Vector2(0.185625, 0.217391)
+texture = ExtResource("2_yumjs")
+
+[node name="SeaPlants" type="Sprite2D" parent="."]
+position = Vector2(259.562, 527.625)
+scale = Vector2(0.205601, 0.195976)
+texture = ExtResource("3_smfur")
+
+[node name="SinglePlant" type="Sprite2D" parent="."]
+position = Vector2(564, 590)
+scale = Vector2(1, 0.85942)
+texture = ExtResource("4_x34o4")
+
+[node name="SinglePlantGreen" type="Sprite2D" parent="."]
+position = Vector2(623, 549)
+texture = ExtResource("5_uve3b")
+
+[node name="Bubbles" type="Sprite2D" parent="."]
+position = Vector2(665, 322.5)
+scale = Vector2(0.188776, 0.182593)
+texture = ExtResource("6_c2nqa")
+
+[node name="PurpleJellyFish" type="Sprite2D" parent="."]
+position = Vector2(237, 410.926)
+scale = Vector2(0.166871, 0.148146)
+texture = ExtResource("7_42f1t")
+
+[node name="YellowJellyFish" type="Sprite2D" parent="."]
+position = Vector2(484, 508.211)
+scale = Vector2(0.141954, 0.130079)
+texture = ExtResource("8_5x7mg")
+
+[node name="RedPurpleJellyFish" type="Sprite2D" parent="."]
+position = Vector2(682, 519.725)
+scale = Vector2(0.142992, 0.129363)
+texture = ExtResource("9_ni5wp")
+
+[node name="GreenOrangeJellyFish" type="Sprite2D" parent="."]
+position = Vector2(861, 392.757)
+scale = Vector2(0.168709, 0.15324)
+texture = ExtResource("10_7qfgl")
+
+[node name="BlueTextBox" type="Sprite2D" parent="."]
+position = Vector2(567, 140.75)
+scale = Vector2(0.169853, 0.196937)
+texture = ExtResource("11_pykt4")
+
+[node name="WhiteTextBox" type="Sprite2D" parent="."]
+position = Vector2(565.5, 137.875)
+scale = Vector2(0.170665, 0.194444)
+texture = ExtResource("12_h4b2e")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 42.0
+offset_top = 41.0
+offset_right = 1016.0
+offset_bottom = 133.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("13_semad")
+theme_override_font_sizes/normal_font_size = 28
+text = "We have finally changed back to our original color, thank you very much! 
+This is the second shell.Please take it to find the turtle general.
+"
+script = ExtResource("15_vpuqy")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 348.0
+offset_top = 181.0
+offset_right = 867.0
+offset_bottom = 221.0
+theme_override_colors/default_color = Color(0.0156863, 0.247059, 1, 1)
+theme_override_fonts/normal_font = ExtResource("14_cjqwf")
+theme_override_font_sizes/normal_font_size = 25
+text = "Click on the map to go to the next location
+"
+script = ExtResource("17_lntu6")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 874.0
+offset_top = 173.0
+offset_right = 922.0
+offset_bottom = 219.0
+texture_normal = ExtResource("15_r1hry")
+texture_pressed = ExtResource("16_bils2")
+texture_hover = ExtResource("17_oa1cb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="JellyFishAnimated" type="Sprite2D" parent="."]
+position = Vector2(1053, 222)
+scale = Vector2(0.164218, 0.192308)
+texture = ExtResource("18_c4bkq")
+
+[node name="ShellBubble" type="Sprite2D" parent="."]
+position = Vector2(581, 361)
+scale = Vector2(0.387333, 0.382165)
+texture = ExtResource("19_qc2r6")
+
+[node name="Shell" type="Sprite2D" parent="."]
+position = Vector2(587, 357.125)
+scale = Vector2(0.739477, 0.537791)
+texture = ExtResource("20_mnxb7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2cvo2")
+}
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

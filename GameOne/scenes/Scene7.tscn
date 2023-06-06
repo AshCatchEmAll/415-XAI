@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://GameOne/scripts/Scene7.gd" id="1_p0ve2"]
 [ext_resource type="Texture2D" uid="uid://wfbjc58us1un" path="res://assets/scene7/scene7.png" id="2_mr88t"]
-[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/fonts/Varela_Round/VarelaRound-Regular.ttf" id="3_7psla"]
+[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/Fonts/Varela_Round/VarelaRound-Regular.ttf" id="3_7psla"]
 [ext_resource type="Script" path="res://GameOne/scripts/TweenText.gd" id="3_o5c3n"]
-[ext_resource type="AudioStream" uid="uid://5lwkauul6bdr" path="res://assets/audio/gibberish.mp3" id="5_jxsrr"]
+[ext_resource type="AudioStream" uid="uid://5lwkauul6bdr" path="res://assets/Audio/gibberish.mp3" id="5_jxsrr"]
 [ext_resource type="Texture2D" uid="uid://cuvvllp01ycg5" path="res://assets/scene7/game-1-shell.png" id="6_pduuv"]
-[ext_resource type="AudioStream" uid="uid://esb40fx8l4wq" path="res://assets/audio/shellpicked.mp3" id="7_4c2re"]
+[ext_resource type="AudioStream" uid="uid://esb40fx8l4wq" path="res://assets/Audio/shellpicked.mp3" id="7_4c2re"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ogtb"]
 bg_color = Color(1, 1, 1, 1)
