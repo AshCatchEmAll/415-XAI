@@ -1,0 +1,112 @@
+[gd_scene load_steps=13 format=3 uid="uid://cegjefrdr46x0"]
+
+[ext_resource type="Script" path="res://GameTwo/scenes/scene11.gd" id="1_1frk7"]
+[ext_resource type="Texture2D" uid="uid://lmpnb7uns4da" path="res://assets/scene10/background.png" id="2_3x4tx"]
+[ext_resource type="Texture2D" uid="uid://bnr6tog304yo6" path="res://assets/scene10/sister_jellyfish.png" id="2_vtisk"]
+[ext_resource type="Texture2D" uid="uid://bi52k7vk7upnv" path="res://assets/scene10/sister_jellyfish_colored.png" id="3_curte"]
+[ext_resource type="Texture2D" uid="uid://bnp3qxtkhlehf" path="res://assets/scene10/purple_color.png" id="7_nq11m"]
+[ext_resource type="Texture2D" uid="uid://kl762yrnh42t" path="res://assets/scene10/blue_color.png" id="8_epail"]
+[ext_resource type="Texture2D" uid="uid://bw8khkborecng" path="res://assets/scene10/yellow_color.png" id="9_xmo0q"]
+[ext_resource type="Texture2D" uid="uid://bvvjixxgl37c6" path="res://assets/scene10/pink_color.png" id="10_qp5ii"]
+[ext_resource type="Texture2D" uid="uid://pdwy3stug1e0" path="res://assets/scene10/green_color.png" id="11_xy5ox"]
+[ext_resource type="Texture2D" uid="uid://ivn0c8poh4" path="res://assets/scene10/red_color.png" id="12_38d63"]
+[ext_resource type="Texture2D" uid="uid://bll52ovyxy2yu" path="res://assets/scene10/orange_color.png" id="13_slson"]
+[ext_resource type="Texture2D" uid="uid://bnit5kxcj03y2" path="res://assets/scene10/back_button.png" id="14_7kblc"]
+
+[node name="scene11" type="Node2D"]
+script = ExtResource("1_1frk7")
+
+[node name="scene10_background" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_3x4tx")
+expand_mode = 1
+
+[node name="m_jelly_purple" type="TextureRect" parent="."]
+visible = false
+offset_left = 211.0
+offset_top = 91.0
+offset_right = 413.0
+offset_bottom = 439.0
+texture = ExtResource("3_curte")
+expand_mode = 1
+
+[node name="m_jelly_uncolored" type="TextureRect" parent="."]
+offset_left = 211.0
+offset_top = 91.0
+offset_right = 413.0
+offset_bottom = 439.0
+texture = ExtResource("2_vtisk")
+expand_mode = 1
+
+[node name="purple_button" type="TextureButton" parent="."]
+offset_left = 18.0
+offset_top = 365.0
+offset_right = 93.0
+offset_bottom = 412.0
+texture_normal = ExtResource("7_nq11m")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="blue_button" type="TextureButton" parent="."]
+offset_left = 18.0
+offset_top = 310.0
+offset_right = 93.0
+offset_bottom = 357.0
+texture_normal = ExtResource("8_epail")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="yellow_button" type="TextureButton" parent="."]
+offset_left = 18.0
+offset_top = 255.0
+offset_right = 93.0
+offset_bottom = 302.0
+texture_normal = ExtResource("9_xmo0q")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="pink_button" type="TextureButton" parent="."]
+offset_left = 18.0
+offset_top = 200.0
+offset_right = 93.0
+offset_bottom = 247.0
+texture_normal = ExtResource("10_qp5ii")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="green_button" type="TextureButton" parent="."]
+offset_left = 18.0
+offset_top = 420.0
+offset_right = 93.0
+offset_bottom = 467.0
+texture_normal = ExtResource("11_xy5ox")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="red_button" type="TextureButton" parent="."]
+offset_left = 18.0
+offset_top = 145.0
+offset_right = 93.0
+offset_bottom = 192.0
+texture_normal = ExtResource("12_38d63")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="orange_button" type="TextureButton" parent="."]
+offset_left = 18.0
+offset_top = 475.0
+offset_right = 93.0
+offset_bottom = 522.0
+texture_normal = ExtResource("13_slson")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="back_button" type="TextureButton" parent="."]
+offset_left = 22.0
+offset_top = 30.0
+offset_right = 73.0
+offset_bottom = 80.0
+texture_normal = ExtResource("14_7kblc")
+ignore_texture_size = true
+stretch_mode = 0

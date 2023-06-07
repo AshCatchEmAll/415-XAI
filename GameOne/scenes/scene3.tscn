@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b7jm8a0q6luik" path="res://assets/Backgrounds-Scene3/textBox2.png" id="10_0tldp"]
 [ext_resource type="Texture2D" uid="uid://c0s2fhvw57qyd" path="res://assets/Backgrounds-Scene3/boy.png" id="11_g3cit"]
 [ext_resource type="Texture2D" uid="uid://c4ltbwerg822t" path="res://assets/Backgrounds-Scene3/mapBubble.png" id="12_ia3w0"]
-[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="13_v1nix"]
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="13_v1nix"]
 [ext_resource type="Script" path="res://GameOne/scripts/RichTextLabel.gd" id="14_jt72u"]
 [ext_resource type="Script" path="res://GameOne/scripts/RichTextLabel2.gd" id="15_stfen"]
 [ext_resource type="Texture2D" uid="uid://coioi3msaep3o" path="res://assets/Button/icon.png" id="16_1vmlc"]
