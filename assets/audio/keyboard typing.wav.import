@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://e36om4j3fvuo"
-path="res://.godot/imported/keyboard typing.wav-ab42b88dca5aca25acc74e264b5b66b6.sample"
+path="res://.godot/imported/keyboard typing.wav-001f13bc52370f8dc1df66dd25dae66d.sample"
 
 [deps]
 
-source_file="res://assets/audio/keyboard typing.wav"
-dest_files=["res://.godot/imported/keyboard typing.wav-ab42b88dca5aca25acc74e264b5b66b6.sample"]
+source_file="res://assets/Audio/keyboard typing.wav"
+dest_files=["res://.godot/imported/keyboard typing.wav-001f13bc52370f8dc1df66dd25dae66d.sample"]
 
 [params]
 

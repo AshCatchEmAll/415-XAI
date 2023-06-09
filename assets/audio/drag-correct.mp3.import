@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://6s78q1t1o2gf"
-path="res://.godot/imported/drag-correct.mp3-b0eecbdfa0b0cee21745917041650833.mp3str"
+path="res://.godot/imported/drag-correct.mp3-588aad227426b8ab9c0b1eab9c70850f.mp3str"
 
 [deps]
 
-source_file="res://assets/audio/drag-correct.mp3"
-dest_files=["res://.godot/imported/drag-correct.mp3-b0eecbdfa0b0cee21745917041650833.mp3str"]
+source_file="res://assets/Audio/drag-correct.mp3"
+dest_files=["res://.godot/imported/drag-correct.mp3-588aad227426b8ab9c0b1eab9c70850f.mp3str"]
 
 [params]
 

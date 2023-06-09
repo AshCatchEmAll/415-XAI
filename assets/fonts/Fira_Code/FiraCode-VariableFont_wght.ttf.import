@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://mmcnpshksryq"
-path="res://.godot/imported/FiraCode-VariableFont_wght.ttf-f0ca2efc9a744d1a7aafcc6ffd3c4e1a.fontdata"
+path="res://.godot/imported/FiraCode-VariableFont_wght.ttf-d1607c0a3b21fa90513a71f34e6ede5a.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/FiraCode-VariableFont_wght.ttf-f0ca2efc9a744d1a7aafcc6ffd3c4e1a.fontdata"]
+source_file="res://assets/Fonts/Fira_Code/FiraCode-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/FiraCode-VariableFont_wght.ttf-d1607c0a3b21fa90513a71f34e6ede5a.fontdata"]
 
 [params]
 

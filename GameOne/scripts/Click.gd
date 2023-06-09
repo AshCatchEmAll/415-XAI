@@ -11,4 +11,5 @@ func _process(delta):
 	pass
 
 func play():
-	$clickPlayer.play()
+	#$clickPlayer.play()
+	pass

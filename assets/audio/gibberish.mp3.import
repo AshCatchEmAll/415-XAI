@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://5lwkauul6bdr"
-path="res://.godot/imported/gibberish.mp3-9059a40e852e50bd9ac468181783095b.mp3str"
+path="res://.godot/imported/gibberish.mp3-b31b691eb37830af787c01cac877f391.mp3str"
 
 [deps]
 
-source_file="res://assets/audio/gibberish.mp3"
-dest_files=["res://.godot/imported/gibberish.mp3-9059a40e852e50bd9ac468181783095b.mp3str"]
+source_file="res://assets/Audio/gibberish.mp3"
+dest_files=["res://.godot/imported/gibberish.mp3-b31b691eb37830af787c01cac877f391.mp3str"]
 
 [params]
 
