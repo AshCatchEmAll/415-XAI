@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cauqhrnvpsnik"]
+[gd_scene load_steps=27 format=3 uid="uid://b8d0wa0k313hk"]
 
 [ext_resource type="Script" path="res://GameOne/scripts/scene_3.gd" id="1_vk4ve"]
 [ext_resource type="Texture2D" uid="uid://cqjwcevkwxnat" path="res://assets/Backgrounds-Scene3/whale.png" id="2_8c2bs"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b7jm8a0q6luik" path="res://assets/Backgrounds-Scene3/textBox2.png" id="10_0tldp"]
 [ext_resource type="Texture2D" uid="uid://c0s2fhvw57qyd" path="res://assets/Backgrounds-Scene3/boy.png" id="11_g3cit"]
 [ext_resource type="Texture2D" uid="uid://c4ltbwerg822t" path="res://assets/Backgrounds-Scene3/mapBubble.png" id="12_ia3w0"]
-[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="13_v1nix"]
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="13_v1nix"]
 [ext_resource type="Script" path="res://GameOne/scripts/RichTextLabel.gd" id="14_jt72u"]
 [ext_resource type="Script" path="res://GameOne/scripts/RichTextLabel2.gd" id="15_stfen"]
 [ext_resource type="Texture2D" uid="uid://coioi3msaep3o" path="res://assets/Button/icon.png" id="16_1vmlc"]
@@ -56,6 +56,16 @@ _data = {
 "MapAnimation": SubResource("Animation_i438x"),
 "WhaleAndMap": SubResource("Animation_7tuo1")
 }
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0yvt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_agrjf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n4hej"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j48cb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_64r21"]
 
 [node name="Scene3" type="Node2D"]
 script = ExtResource("1_vk4ve")
@@ -152,6 +162,7 @@ script = ExtResource("15_stfen")
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureButton" type="TextureButton" parent="."]
+visible = false
 offset_left = 978.0
 offset_top = 535.0
 offset_right = 1039.0
@@ -161,4 +172,16 @@ texture_pressed = ExtResource("17_xw0lr")
 texture_hover = ExtResource("18_ruby2")
 metadata/_edit_use_anchors_ = true
 
+[node name="GoToSceneFourBtn" type="Button" parent="."]
+offset_left = 240.0
+offset_top = 144.0
+offset_right = 416.0
+offset_bottom = 248.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_m0yvt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_agrjf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n4hej")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_j48cb")
+theme_override_styles/focus = SubResource("StyleBoxTexture_64r21")
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="GoToSceneFourBtn" to="." method="_on_go_to_scene_four_btn_pressed"]
