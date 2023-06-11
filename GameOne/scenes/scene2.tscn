@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://ca33ax8y14vc"]
+[gd_scene load_steps=19 format=3 uid="uid://ca33ax8y14vc"]
 
 [ext_resource type="Texture2D" uid="uid://bo7dmxabltpih" path="res://GameOne/assets/background/bg.png" id="1_byr04"]
+[ext_resource type="Script" path="res://GameOne/scripts/scene2.gd" id="1_i5g6b"]
 [ext_resource type="Texture2D" uid="uid://bgpj5enndek3d" path="res://GameOne/assets/background/bg_fish.png" id="2_ht326"]
 [ext_resource type="Texture2D" uid="uid://cl20uy84fvbri" path="res://GameOne/assets/background/bg_middle.png" id="3_mbin1"]
 [ext_resource type="Texture2D" uid="uid://c4sdgnc6qoco0" path="res://GameOne/assets/background/bg_coral_left.png" id="4_3ce65"]
@@ -13,7 +14,18 @@
 [ext_resource type="Texture2D" uid="uid://dg42dvgy7csfw" path="res://GameOne/assets/bubble/bubble_shell.png" id="11_tg8c7"]
 [ext_resource type="FontFile" uid="uid://cf618o4f2wu2y" path="res://GameOne/assets/font/Varela_Round/VarelaRound-Regular.ttf" id="12_deai7"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f3pj6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pq3te"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o6p8n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y8aas"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jyk5t"]
+
 [node name="ParallaxBackground" type="Node2D"]
+script = ExtResource("1_i5g6b")
 metadata/_edit_vertical_guides_ = [-408.0]
 
 [node name="Bg" type="Sprite2D" parent="."]
@@ -84,3 +96,18 @@ to follow this map to find and help the residents here. They will give you
 different shells and bring them to the whale sculpture, where there will be
 what you want.
 "
+
+[node name="GoToScene3" type="Button" parent="."]
+offset_left = 1056.0
+offset_top = 560.0
+offset_right = 1088.0
+offset_bottom = 592.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_f3pj6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pq3te")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_o6p8n")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_y8aas")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jyk5t")
+
+[connection signal="pressed" from="GoToScene3" to="." method="_on_go_to_scene_3_pressed"]

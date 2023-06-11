@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvsenf61850jn"]
+[gd_scene load_steps=11 format=3 uid="uid://0h1b0ktmo2dh"]
 
 [ext_resource type="Texture2D" uid="uid://bo7dmxabltpih" path="res://GameOne/assets/background/bg.png" id="1_kgeph"]
+[ext_resource type="Script" path="res://GameOne/scripts/scene1.gd" id="1_l3rb0"]
 [ext_resource type="Texture2D" uid="uid://cl20uy84fvbri" path="res://GameOne/assets/background/bg_middle.png" id="2_w4w8y"]
 [ext_resource type="Texture2D" uid="uid://dfoai64tf4yjw" path="res://GameOne/assets/background/bg_left.png" id="3_2tfx5"]
 [ext_resource type="Texture2D" uid="uid://daw4yt6w5ucsh" path="res://GameOne/assets/background/bg_right.png" id="4_4dsfl"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bgpj5enndek3d" path="res://GameOne/assets/background/bg_fish.png" id="9_p2rua"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_l3rb0")
 
 [node name="Bg" type="Sprite2D" parent="."]
 position = Vector2(452.5, 397)

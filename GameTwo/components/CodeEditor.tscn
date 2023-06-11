@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://d1f3yhnql3qqp"]
 
-[ext_resource type="FontFile" uid="uid://twvo7ar3jg2d" path="res://assets/fonts/Fira_Code/static/FiraCode-Medium.ttf" id="1_p3326"]
+[ext_resource type="FontFile" uid="uid://twvo7ar3jg2d" path="res://assets/Fonts/Fira_Code/static/FiraCode-Medium.ttf" id="1_p3326"]
 [ext_resource type="Script" path="res://GameTwo/scripts/CodeEditor-TextEdit.gd" id="2_3n4y5"]
 
 [sub_resource type="Theme" id="Theme_lg3yw"]

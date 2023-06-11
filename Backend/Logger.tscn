@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://lw5w1ithr6uv"]
+
+[ext_resource type="Script" path="res://Backend/Logger.gd" id="1_4nmfw"]
+
+[node name="Logger" type="Node2D"]
+script = ExtResource("1_4nmfw")
+
+[node name="EventLogger" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+
+[connection signal="request_completed" from="EventLogger" to="." method="_on_event_logger_request_completed"]

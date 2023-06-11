@@ -1,6 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://cjrjlelcrqm82"]
+[gd_scene load_steps=20 format=3 uid="uid://bk1mnk4pbpuux"]
 
-[ext_resource type="Script" path="res://GameOne/scenes/Scene5.gd" id="1_x5dno"]
+[ext_resource type="Script" path="res://GameOne/scripts/Scene5.gd" id="1_txxsq"]
 [ext_resource type="Texture2D" uid="uid://ck2hfh1rsmrjc" path="res://assets/scene5/scene-5-bg.png" id="2_ym3v7"]
 [ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/Fonts/Varela_Round/VarelaRound-Regular.ttf" id="3_g6tdq"]
 [ext_resource type="Script" path="res://GameOne/scripts/TweenText.gd" id="3_knsy2"]
@@ -12,7 +12,7 @@ bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ua0m"]
 font = ExtResource("3_g6tdq")
-font_size = 60
+font_size = 18
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7xw1"]
@@ -20,7 +20,7 @@ bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_unr26"]
 font = ExtResource("3_g6tdq")
-font_size = 65
+font_size = 20
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1dt6h"]
@@ -28,8 +28,13 @@ bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_08mtf"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jy5l8"]
-bg_color = Color(0, 0, 0, 0)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ucp2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vsd1x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h2rym"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_78tk8"]
 
 [sub_resource type="Animation" id="Animation_2scli"]
 length = 0.001
@@ -69,7 +74,9 @@ _data = {
 
 [node name="Scene5" type="ColorRect"]
 custom_minimum_size = Vector2(3520, 1958)
-script = ExtResource("1_x5dno")
+offset_right = 3520.0
+offset_bottom = 1958.0
+script = ExtResource("1_txxsq")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -80,27 +87,29 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -1760.0
 offset_top = -976.0
-offset_right = 1760.0
-offset_bottom = 976.0
+offset_right = -616.0
+offset_bottom = -331.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_ym3v7")
+expand_mode = 1
 
 [node name="Crab-help-text" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 1184.0
-offset_top = 168.0
-offset_right = 1872.0
-offset_bottom = 384.0
+offset_left = 384.0
+offset_top = 56.0
+offset_right = 616.0
+offset_bottom = 128.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_3ogtb")
+metadata/_edit_group_ = true
 
 [node name="help-label" type="Label" parent="Crab-help-text"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 16.0
 offset_top = 24.0
-offset_right = 696.0
-offset_bottom = 224.0
+offset_right = 216.0
+offset_bottom = 88.0
 text = "I can't walk anymore. I hope you can help me."
 label_settings = SubResource("LabelSettings_3ua0m")
 horizontal_alignment = 1
@@ -109,17 +118,18 @@ script = ExtResource("3_knsy2")
 
 [node name="Game-Text" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 544.0
-offset_top = 1448.0
-offset_right = 3104.0
-offset_bottom = 1728.0
+offset_left = 176.0
+offset_top = 480.0
+offset_right = 1008.0
+offset_bottom = 576.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_a7xw1")
+metadata/_edit_group_ = true
 
 [node name="game-label" type="Label" parent="Game-Text"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_right = 2656.0
-offset_bottom = 339.0
+offset_right = 816.0
+offset_bottom = 64.0
 text = "Dear warrior , my child's legs were enchanted by demons, causing the sequence of eight legs to be reversed and unable to walk normally. Could you help us?"
 label_settings = SubResource("LabelSettings_unr26")
 autowrap_mode = 2
@@ -128,27 +138,31 @@ script = ExtResource("4_6lxem")
 [node name="Click-To-Enter-Panel" type="Panel" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 1760.0
-offset_top = 1736.0
-offset_right = 3304.0
-offset_bottom = 1872.0
+offset_left = 568.0
+offset_top = 576.0
+offset_right = 1072.0
+offset_bottom = 624.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1dt6h")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.923
-anchor_top = 0.923
-anchor_right = 0.923
-anchor_bottom = 0.923
-offset_left = -56.9601
-offset_top = -55.2341
-offset_right = 47.0399
-offset_bottom = 56.7659
+anchor_left = 0.3
+anchor_top = 0.306
+anchor_right = 0.3
+anchor_bottom = 0.306
+offset_left = -16.0
+offset_top = -15.148
+offset_right = 16.0
+offset_bottom = 16.852
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_08mtf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_jy5l8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8ucp2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vsd1x")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h2rym")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78tk8")
+metadata/_edit_group_ = true
 
 [node name="Scene5Keyboard" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
@@ -161,6 +175,7 @@ libraries = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

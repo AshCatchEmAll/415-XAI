@@ -50,9 +50,10 @@ func _physics_process(delta):
 
 func _input(event):
 	if event is InputEventMouseButton:
-#		print(event)
+#		
 		
 		if event.button_index == 1 and not event.pressed:
+			print("eventCLicked drad")
 			selected = false
 			modulate = Color(1,1,1,1)
 			lerp_to_closest_dropzone()
@@ -99,6 +100,7 @@ func lerp_to_closest_dropzone():
 			%fail.play()
 	if(all_correctly_selected()==true):
 		print("ALl done")
+		await delay(3)
 		fade_out.play("fade_out")
 		
 
@@ -117,3 +119,15 @@ func load_random_failed_msg():
 	var random_element = failed_msg[random_index]
 	current_failed_msg = random_element
 	
+
+func delay(wait_time):
+	var timer = Timer.new()
+	timer.wait_time = wait_time
+	timer.one_shot = true
+	add_child(timer)
+	timer.start()
+	
+	
+	await timer.timeout
+	
+	timer.queue_free()

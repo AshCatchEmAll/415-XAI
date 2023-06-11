@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene load_steps=15 format=3 uid="uid://bpdffa42w0uhi"]
 
 [ext_resource type="PackedScene" uid="uid://cj8u30ihaltpn" path="res://GameOne/components/CrabLegs/CrabLeg1.tscn" id="1_pthpg"]
 [ext_resource type="Texture2D" uid="uid://xpcgasnys3oa" path="res://assets/crab-body/crab-body.png" id="1_sabwe"]
@@ -57,10 +57,9 @@ _data = {
 material = SubResource("CanvasItemMaterial_4owpg")
 
 [node name="Container" type="Panel" parent="."]
-offset_left = -5.0
-offset_top = -27.0
-offset_right = 1162.0
-offset_bottom = 618.0
+offset_top = 2.0
+offset_right = 1148.0
+offset_bottom = 649.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_33wcr")
 
