@@ -177,7 +177,7 @@ scale = Vector2(0.69469, 0.604126)
 texture = ExtResource("2_bc6ma")
 
 [node name="ColorBoard" type="Sprite2D" parent="."]
-position = Vector2(-88, 323.344)
+position = Vector2(34, 323.344)
 scale = Vector2(0.132859, 0.199446)
 texture = ExtResource("4_8fgdf")
 
@@ -258,36 +258,36 @@ text = "Recalling the accessing operation of the dict, what is the output result
 "
 
 [node name="redButton" type="TextureButton" parent="."]
-offset_left = -110.0
+offset_left = 12.0
 offset_top = 119.0
-offset_right = -42.0
+offset_right = 80.0
 offset_bottom = 170.0
 texture_normal = ExtResource("11_e14i8")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="pinkButton" type="TextureButton" parent="."]
-offset_left = -108.0
+offset_left = 14.0
 offset_top = 181.0
-offset_right = -40.0
+offset_right = 82.0
 offset_bottom = 233.0
 texture_normal = ExtResource("12_k0131")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="yellowButton" type="TextureButton" parent="."]
-offset_left = -107.0
+offset_left = 15.0
 offset_top = 244.0
-offset_right = -40.0
+offset_right = 82.0
 offset_bottom = 291.0
 texture_normal = ExtResource("13_1llig")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="blueButton" type="TextureButton" parent="."]
-offset_left = -108.0
+offset_left = 14.0
 offset_top = 298.0
-offset_right = -41.0
+offset_right = 81.0
 offset_bottom = 351.0
 texture_normal = ExtResource("14_h7c1c")
 ignore_texture_size = true
@@ -295,18 +295,18 @@ stretch_mode = 0
 
 [node name="purpleButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
-offset_left = -109.0
+offset_left = 13.0
 offset_top = 359.0
-offset_right = -42.0
+offset_right = 80.0
 offset_bottom = 411.0
 texture_normal = ExtResource("15_5get7")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="greenButton" type="TextureButton" parent="."]
-offset_left = -111.0
+offset_left = 11.0
 offset_top = 420.0
-offset_right = -42.0
+offset_right = 80.0
 offset_bottom = 470.0
 texture_normal = ExtResource("16_l1ntv")
 ignore_texture_size = true
@@ -314,9 +314,9 @@ stretch_mode = 0
 
 [node name="orangeButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
-offset_left = -109.0
+offset_left = 13.0
 offset_top = 483.0
-offset_right = -42.0
+offset_right = 80.0
 offset_bottom = 531.0
 texture_normal = ExtResource("17_7dybl")
 ignore_texture_size = true
@@ -360,7 +360,7 @@ libraries = {
 
 [node name="Shell" type="Sprite2D" parent="shellAnimation"]
 position = Vector2(1022.01, 550.508)
-scale = Vector2(0.707825, 0.67752)
+scale = Vector2(0.566666, 0.481482)
 texture = ExtResource("10_t41a2")
 
 [node name="TextureButton" type="TextureButton" parent="."]
@@ -458,9 +458,9 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="colorButton" type="TextureButton" parent="."]
-offset_left = -6.0
+offset_left = -176.0
 offset_top = 230.0
-offset_right = 171.0
+offset_right = 1.0
 offset_bottom = 407.0
 texture_normal = ExtResource("24_wuxrm")
 ignore_texture_size = true
