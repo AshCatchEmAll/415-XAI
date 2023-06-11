@@ -33,8 +33,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if pink_jelly.visible == false && red_jelly.visible == false:
+<<<<<<< HEAD
 		await get_tree().create_timer(1.0).timeout
 		SceneTransition.get_tree().change_scene_to_file("res://GameTwo/scenes/scene11.tscn")
+=======
+		get_tree().change_scene_to_file("res://GameTwo/scenes/scene11.tscn")
+>>>>>>> 651252b06639e413e944aa65546e88c4488d329e
 	pass
 
 

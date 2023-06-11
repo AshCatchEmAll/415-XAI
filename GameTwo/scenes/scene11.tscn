@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=22 format=3 uid="uid://cegjefrdr46x0"]
 
 [ext_resource type="Script" path="res://GameTwo/scripts/scene11.gd" id="1_1t0ri"]
@@ -10,12 +11,21 @@
 [ext_resource type="Texture2D" uid="uid://dyclyufpercc0" path="res://assets/scene10/whiteTextBox.png" id="5_mh5vs"]
 [ext_resource type="Texture2D" uid="uid://b3i7a77v3weeu" path="res://assets/scene10/textBoxBlueDesign.png" id="6_c1n81"]
 [ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="7_gmohb"]
+=======
+[gd_scene load_steps=13 format=3 uid="uid://cegjefrdr46x0"]
+
+[ext_resource type="Script" path="res://GameTwo/scenes/scene11.gd" id="1_1frk7"]
+[ext_resource type="Texture2D" uid="uid://lmpnb7uns4da" path="res://assets/scene10/background.png" id="2_3x4tx"]
+[ext_resource type="Texture2D" uid="uid://bnr6tog304yo6" path="res://assets/scene10/sister_jellyfish.png" id="2_vtisk"]
+[ext_resource type="Texture2D" uid="uid://bi52k7vk7upnv" path="res://assets/scene10/sister_jellyfish_colored.png" id="3_curte"]
+>>>>>>> 651252b06639e413e944aa65546e88c4488d329e
 [ext_resource type="Texture2D" uid="uid://bnp3qxtkhlehf" path="res://assets/scene10/purple_color.png" id="7_nq11m"]
 [ext_resource type="Texture2D" uid="uid://kl762yrnh42t" path="res://assets/scene10/blue_color.png" id="8_epail"]
 [ext_resource type="Texture2D" uid="uid://bw8khkborecng" path="res://assets/scene10/yellow_color.png" id="9_xmo0q"]
 [ext_resource type="Texture2D" uid="uid://bvvjixxgl37c6" path="res://assets/scene10/pink_color.png" id="10_qp5ii"]
 [ext_resource type="Texture2D" uid="uid://pdwy3stug1e0" path="res://assets/scene10/green_color.png" id="11_xy5ox"]
 [ext_resource type="Texture2D" uid="uid://ivn0c8poh4" path="res://assets/scene10/red_color.png" id="12_38d63"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://cub88co05g3t8" path="res://assets/scene10/shell_bubble.png" id="13_bk3aa"]
 [ext_resource type="Texture2D" uid="uid://bll52ovyxy2yu" path="res://assets/scene10/orange_color.png" id="13_slson"]
 [ext_resource type="Texture2D" uid="uid://bnit5kxcj03y2" path="res://assets/scene10/back_button.png" id="14_7kblc"]
@@ -108,6 +118,19 @@ offset_bottom = 206.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 18
 text = "Recalling the accessing operation of the dict, what is the output result of the above program? Based on the results, pick up a paintbrush and dip it in the correct paint to help the jellyfish  sister paint the colors!"
+=======
+[ext_resource type="Texture2D" uid="uid://bll52ovyxy2yu" path="res://assets/scene10/orange_color.png" id="13_slson"]
+[ext_resource type="Texture2D" uid="uid://bnit5kxcj03y2" path="res://assets/scene10/back_button.png" id="14_7kblc"]
+
+[node name="scene11" type="Node2D"]
+script = ExtResource("1_1frk7")
+
+[node name="scene10_background" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_3x4tx")
+expand_mode = 1
+>>>>>>> 651252b06639e413e944aa65546e88c4488d329e
 
 [node name="m_jelly_purple" type="TextureRect" parent="."]
 visible = false
@@ -197,6 +220,7 @@ offset_bottom = 80.0
 texture_normal = ExtResource("14_7kblc")
 ignore_texture_size = true
 stretch_mode = 0
+<<<<<<< HEAD
 
 [node name="shell_button" type="TextureButton" parent="."]
 offset_left = 978.0
@@ -236,3 +260,5 @@ stream = ExtResource("20_bjopa")
 [connection signal="pressed" from="red_button" to="." method="_on_red_button_pressed"]
 [connection signal="pressed" from="orange_button" to="." method="_on_orange_button_pressed"]
 [connection signal="pressed" from="shell_button" to="." method="_on_shell_button_pressed"]
+=======
+>>>>>>> 651252b06639e413e944aa65546e88c4488d329e
