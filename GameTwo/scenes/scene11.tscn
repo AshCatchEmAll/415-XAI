@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cegjefrdr46x0"]
+[gd_scene load_steps=22 format=3 uid="uid://x35dqtkx46t5"]
 
 [ext_resource type="Script" path="res://GameTwo/scripts/scene11.gd" id="1_1t0ri"]
 [ext_resource type="Texture2D" uid="uid://c7g6sqnbtii8d" path="res://assets/scene10/white.png" id="2_galky"]
