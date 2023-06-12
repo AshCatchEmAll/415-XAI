@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dveqf54pshdii"
-path="res://.godot/imported/jellyfish_father_colored.png-012d50c30b76662b67d562f2943e438e.ctex"
+path="res://.godot/imported/Jellyfish_father_colored.png-85d28a0e709b972eb50fcac26ca32027.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/scene9/jellyfish_father_colored.png"
-dest_files=["res://.godot/imported/jellyfish_father_colored.png-012d50c30b76662b67d562f2943e438e.ctex"]
+source_file="res://assets/scene9/Jellyfish_father_colored.png"
+dest_files=["res://.godot/imported/Jellyfish_father_colored.png-85d28a0e709b972eb50fcac26ca32027.ctex"]
 
 [params]
 
