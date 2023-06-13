@@ -5,4 +5,4 @@ extends Node2D
 
 
 func _on_btn_next_pressed():
-	get_tree().change_scene_to_file("res://GameTwo/scenes/scene9.tscn")
+	SceneTransition.change_scene_to_file("res://GameTwo/scenes/scene9.tscn")

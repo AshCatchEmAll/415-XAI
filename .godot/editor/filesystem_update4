@@ -5,3 +5,9 @@ res://GameOne/scenes/scene2.tscn
 res://GameTwo/scenes/scene12.tscn
 res://GameTwo/scenes/scene13.tscn
 res://GameTwo/scenes/scene11.tscn
+res://GameTwo/scripts/scene11.gd
+res://GameTwo/scripts/scene10.gd
+res://GameOne/scripts/map.gd
+res://GameTwo/scenes/scene9.tscn
+res://GameTwo/scripts/scene8.gd
+res://GameTwo/scripts/scene9.gd
