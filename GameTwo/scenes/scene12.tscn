@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://kpmlor52ly0"]
+[gd_scene load_steps=31 format=3 uid="uid://kpmlor52ly0"]
 
 [ext_resource type="Script" path="res://GameTwo/scripts/scene12.gd" id="1_3v4lc"]
 [ext_resource type="Texture2D" uid="uid://djjie4fvlti3e" path="res://assets/scene12/white.png" id="1_5hf1s"]
@@ -24,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://boms8hq3b4v38" path="res://assets/scene12/jellyFishFace.png" id="22_fy450"]
 [ext_resource type="Texture2D" uid="uid://e1sdpaiuuu6i" path="res://assets/scene12/readyButton.png" id="23_8kbge"]
 [ext_resource type="Texture2D" uid="uid://bcnw2w5l4myl3" path="res://assets/scene12/colorIcon.png" id="24_wuxrm"]
+[ext_resource type="AudioStream" uid="uid://dqkody17uay2q" path="res://assets/Audio/drag-wrong.mp3" id="25_pr6q2"]
+[ext_resource type="AudioStream" uid="uid://6s78q1t1o2gf" path="res://assets/Audio/drag-correct.mp3" id="26_l78r3"]
 
 [sub_resource type="Animation" id="Animation_1xbvi"]
 resource_name = "ShellAnimation"
@@ -470,6 +472,12 @@ stretch_mode = 0
 libraries = {
 "": SubResource("AnimationLibrary_g8qrp")
 }
+
+[node name="wrong" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("25_pr6q2")
+
+[node name="correct" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("26_l78r3")
 
 [connection signal="pressed" from="redButton" to="." method="_on_red_button_pressed"]
 [connection signal="pressed" from="pinkButton" to="." method="_on_pink_button_pressed"]

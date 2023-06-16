@@ -1,3 +1,4 @@
+res://bg_music.tscn
 res://GameOne/scenes/map.tscn
 res://GameTwo/scenes/scene8.tscn
 res://GameTwo/scenes/scene10.tscn
@@ -5,3 +6,22 @@ res://GameOne/scenes/scene2.tscn
 res://GameTwo/scenes/scene12.tscn
 res://GameTwo/scenes/scene13.tscn
 res://GameTwo/scenes/scene11.tscn
+res://GameOne/scenes/scene3.tscn
+res://GameOne/scenes/Scene5.tscn
+res://GameOne/scenes/scene1.tscn
+res://GameOne/scenes/Scene7.tscn
+res://GameOne/TransitionAnimations/scene_transition.tscn
+res://GameTwo/scenes/scene9.tscn
+res://GameOne/scripts/scene1.gd
+res://assets/Audio/Bgm/bg_music.tscn
+res://GameOne/scenes/BGMcontroller.gd
+res://assets/Audio/Bgm/bg_music.gd
+res://GameOne/Sounds/Click.tscn
+res://GameOne/components/CrabLegs/CrabLeg1.tscn
+res://GameOne/components/DropZone.tscn
+res://GameOne/scenes/TestDragDrop.tscn
+res://GameOne/scenes/DragDropScene.tscn
+res://GameOne/Sounds/success.tscn
+res://GameOne/Sounds/wrong.tscn
+res://GameTwo/scripts/scene9.gd
+res://GameTwo/scripts/scene12.gd

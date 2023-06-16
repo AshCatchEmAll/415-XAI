@@ -1,9 +1,13 @@
 extends Node2D
 
 
+var backgroundMusic: AudioStreamPlayer2D
+var musicPosition: float = 0.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 #	DisplayServer.window_set_size(Vector2i(3520,1958))
+	backgroundMusic = get_node("/root/BgMusic")
 	await delay(3)
 	get_tree().change_scene_to_file("res://GameOne/scenes/scene2.tscn")
 
@@ -25,3 +29,14 @@ func delay(wait_time):
 	await timer.timeout
 	
 	timer.queue_free()
+
+
+func _on_texture_button_toggled(bgm_button):
+	if backgroundMusic.playing:
+		musicPosition = backgroundMusic.get_playback_position();
+		backgroundMusic.stop()
+		print("the music:", musicPosition)
+	else:
+		backgroundMusic.play(musicPosition)
+	
+	pass

@@ -1,5 +1,7 @@
-TextureRect
-TextureButton
-RichTextLabel
+AudioStreamPlayer2D
+AudioListener2D
 Button
+TextureButton
+TextureRect
+RichTextLabel
 TextEdit

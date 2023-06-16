@@ -29,7 +29,7 @@ script = ExtResource("1_i5g6b")
 metadata/_edit_vertical_guides_ = [-408.0]
 
 [node name="Bg" type="Sprite2D" parent="."]
-position = Vector2(741, 306)
+position = Vector2(745, 179)
 texture = ExtResource("1_byr04")
 
 [node name="BgFish" type="Sprite2D" parent="."]
