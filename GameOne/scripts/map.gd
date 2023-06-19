@@ -8,6 +8,9 @@ extends Node2D
 @export var show_route_four = false
 
 
+var backgroundMusic: AudioStreamPlayer2D
+var musicPosition: float = 0.0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
