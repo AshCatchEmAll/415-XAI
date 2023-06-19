@@ -16,18 +16,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	
-	
-
-
 
 func _on_game_one_btn_pressed():
-	if(show_route_one==false):return
 	SceneTransition.change_scene_to_file("res://GameOne/scenes/Scene5.tscn")
 
 
 func _on_game_two_btn_pressed():
-	if(show_route_two==false):return
+	SceneTransition.change_scene_to_file("res://GameTwo/scenes/scene8.tscn")
 	pass # Replace with function body.
 
 

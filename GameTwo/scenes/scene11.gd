@@ -13,7 +13,7 @@ var showPurple = func():
 
 
 var go_back = func():
-	SceneTransition.change_scene_to_file("res://GameTwo/scenes/scene10.tscn")
+	SceneTransition.get_tree().change_scene_to_file("res://GameTwo/scenes/scene10.tscn")
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,7 +29,7 @@ func _ready():
 func _process(delta):
 	if no_color_jelly.visible == false && purple_jelly.visible == true:
 		await get_tree().create_timer(1.0).timeout
-		SceneTransition.change_scene_to_file("res://GameTwo/scenes/scene12.tscn")
+		SceneTransition.get_tree().change_scene_to_file("res://GameTwo/scenes/scene12.tscn")
 	pass
 
 
