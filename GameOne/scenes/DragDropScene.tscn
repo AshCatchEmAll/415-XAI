@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GameOne/scripts/DragDropScene.gd" id="1_un44e"]
 [ext_resource type="PackedScene" uid="uid://bpdffa42w0uhi" path="res://GameOne/components/CrabDragAndDrop.tscn" id="2_eqaxk"]
-[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/fonts/Varela_Round/VarelaRound-Regular.ttf" id="3_avpus"]
+[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/Fonts/Varela_Round/VarelaRound-Regular.ttf" id="3_avpus"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ewhvd"]
 bg_color = Color(0.227451, 0.682353, 0.913725, 1)

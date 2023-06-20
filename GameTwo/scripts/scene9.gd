@@ -13,31 +13,11 @@ func _on_yellow_button_pressed():
 	
 
 
-func _on_orange_button_pressed():
-	$wrong_sound.play()
+func _on_wrong_button_high_pressed():
+	$"wrong".play()
 	pass # Replace with function body.
 
 
-func _on_red_button_pressed():
-	$wrong_sound.play()
-	pass # Replace with function body.
-
-
-func _on_green_button_pressed():
-	$wrong_sound.play()
-	pass # Replace with function body.
-
-
-func _on_pink_button_pressed():
-	$wrong_sound.play()
-	pass # Replace with function body.
-
-
-func _on_blue_button_pressed():
-	$wrong_sound.play()
-	pass # Replace with function body.
-
-
-func _on_purple_button_pressed():
-	$wrong_sound.play()
+func _on_wrong_button_low_pressed():
+	$"wrong".play()
 	pass # Replace with function body.

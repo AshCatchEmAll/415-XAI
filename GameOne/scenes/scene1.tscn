@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://0h1b0ktmo2dh"]
+[gd_scene load_steps=13 format=3 uid="uid://0h1b0ktmo2dh"]
 
 [ext_resource type="Texture2D" uid="uid://bo7dmxabltpih" path="res://GameOne/assets/background/bg.png" id="1_kgeph"]
 [ext_resource type="Script" path="res://GameOne/scripts/scene1.gd" id="1_l3rb0"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dboew2ki21teh" path="res://GameOne/assets/background/bg_bubble.png" id="7_e65kd"]
 [ext_resource type="Texture2D" uid="uid://b1qwndm7x5yqt" path="res://GameOne/assets/whale/whale.png" id="8_x07bo"]
 [ext_resource type="Texture2D" uid="uid://bgpj5enndek3d" path="res://GameOne/assets/background/bg_fish.png" id="9_p2rua"]
+[ext_resource type="Texture2D" uid="uid://din1qiqptj0kg" path="res://assets/Audio/Bgm/sound-full-icon.svg" id="11_7ry3e"]
+[ext_resource type="Texture2D" uid="uid://oh0jlhvmweu4" path="res://assets/Audio/Bgm/sound-off-icon.svg" id="12_pyqag"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_l3rb0")
@@ -58,3 +60,16 @@ texture = ExtResource("8_x07bo")
 position = Vector2(125.375, 69.375)
 scale = Vector2(0.184607, 0.184014)
 texture = ExtResource("9_p2rua")
+
+[node name="bgm_button" type="TextureButton" parent="."]
+offset_left = 10.0
+offset_top = 13.0
+offset_right = 65.0
+offset_bottom = 66.0
+toggle_mode = true
+texture_normal = ExtResource("11_7ry3e")
+texture_pressed = ExtResource("12_pyqag")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="toggled" from="bgm_button" to="." method="_on_texture_button_toggled"]
