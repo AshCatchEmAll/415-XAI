@@ -28,7 +28,7 @@ func _on_back_button_pressed():
 func _on_green_button_pressed():
 	if errorDialogBox.visible != true && helpDialogBox.visible != true:
 		if greenHalfJelly.visible == false:
-			$correct.play()
+			$"/root/Success".play()
 			greenHalfJelly.visible = true
 		else: 
 			errorDialogBox.visible = true
@@ -39,7 +39,7 @@ func _on_green_button_pressed():
 func _on_orange_button_pressed():
 	if errorDialogBox.visible != true && helpDialogBox.visible != true:
 		if greenHalfJelly.visible == true && orangeHalfJelly.visible == false:
-			$correct.play()
+			$"/root/Success".play()
 			orangeHalfJelly.visible = true
 			await get_tree().create_timer(1.0).timeout
 			Click.play()
@@ -53,7 +53,7 @@ func _on_orange_button_pressed():
 func _on_red_button_pressed():
 	# print Error dialog
 	if errorDialogBox.visible != true && helpDialogBox.visible != true:
-		$wrong.play()
+		$"/root/Wrong".play()
 		errorDialogBox.visible = true
 	pass # Replace with function body.
 
@@ -61,7 +61,7 @@ func _on_red_button_pressed():
 func _on_pink_button_pressed():
 	# print Error dialog
 	if errorDialogBox.visible != true && helpDialogBox.visible != true:
-		$wrong.play()
+		$"/root/Wrong".play()
 		errorDialogBox.visible = true
 	pass # Replace with function body.
 
@@ -69,7 +69,7 @@ func _on_pink_button_pressed():
 func _on_yellow_button_pressed():
 	# print Error dialog
 	if errorDialogBox.visible != true && helpDialogBox.visible != true:
-		$wrong.play()
+		$"/root/Wrong".play()
 		errorDialogBox.visible = true
 	pass # Replace with function body.
 
@@ -77,7 +77,7 @@ func _on_yellow_button_pressed():
 func _on_blue_button_pressed():
 	# print Error dialog
 	if errorDialogBox.visible != true && helpDialogBox.visible != true:
-		$wrong.play()
+		$"/root/Wrong".play()
 		errorDialogBox.visible = true
 	pass # Replace with function body.
 
@@ -85,7 +85,7 @@ func _on_blue_button_pressed():
 func _on_purple_button_pressed():
 	# print Error dialog
 	if errorDialogBox.visible != true && helpDialogBox.visible != true:
-		$wrong.play()
+		$"/root/Wrong".play()
 		errorDialogBox.visible = true
 	pass # Replace with function body.
 

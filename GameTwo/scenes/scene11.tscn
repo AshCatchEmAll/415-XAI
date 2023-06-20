@@ -61,14 +61,14 @@ scale = Vector2(0.134238, 0.137658)
 texture = ExtResource("6_c1n81")
 
 [node name="JellyFishLabel" type="RichTextLabel" parent="."]
-offset_left = 764.0
+offset_left = 794.0
 offset_top = 304.0
-offset_right = 949.0
+offset_right = 919.0
 offset_bottom = 333.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("7_gmohb")
 theme_override_font_sizes/normal_font_size = 18
-text = "The Jellyfish Sister"
+text = "Jellyfish Sister"
 
 [node name="Procedure" type="RichTextLabel" parent="."]
 offset_left = 627.0
@@ -106,6 +106,7 @@ offset_top = 69.0
 offset_right = 1077.0
 offset_bottom = 206.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_gmohb")
 theme_override_font_sizes/normal_font_size = 18
 text = "Recalling the accessing operation of the dict, what is the output result of the above program? Based on the results, pick up a paintbrush and dip it in the correct paint to help the jellyfish  sister paint the colors!"
 
@@ -190,6 +191,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="back_button" type="TextureButton" parent="."]
+visible = false
 offset_left = 22.0
 offset_top = 30.0
 offset_right = 73.0

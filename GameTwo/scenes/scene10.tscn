@@ -64,14 +64,14 @@ scale = Vector2(0.128876, 0.188753)
 texture = ExtResource("7_j22xn")
 
 [node name="JellyFishLabel" type="RichTextLabel" parent="."]
-offset_left = 764.0
+offset_left = 783.0
 offset_top = 304.0
-offset_right = 949.0
+offset_right = 968.0
 offset_bottom = 333.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("7_y338j")
 theme_override_font_sizes/normal_font_size = 18
-text = "The Jellyfish Mother"
+text = "Jellyfish Mother"
 
 [node name="Procedure" type="RichTextLabel" parent="."]
 offset_left = 627.0
@@ -108,6 +108,7 @@ offset_top = 69.0
 offset_right = 1077.0
 offset_bottom = 206.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_y338j")
 theme_override_font_sizes/normal_font_size = 18
 text = "Recalling the slicing operation of the tuple, what is the output result of the above program? Based on the results, pick up a paintbrush and dip it in the correct paint to help the jellyfish  mather paint the colors!
 "
@@ -215,6 +216,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="back_button" type="TextureButton" parent="."]
+visible = false
 offset_left = 22.0
 offset_top = 30.0
 offset_right = 73.0
