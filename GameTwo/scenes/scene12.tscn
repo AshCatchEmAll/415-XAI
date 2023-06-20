@@ -335,6 +335,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="backButton" type="TextureButton" parent="."]
+visible = false
 offset_left = 22.0
 offset_top = 30.0
 offset_right = 73.0
