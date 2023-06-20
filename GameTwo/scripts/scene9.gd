@@ -7,7 +7,7 @@ func _on_yellow_button_pressed():
 	var answer = load("res://assets/scene9/jellyfish_father_colored.png")
 	var jellyfish_father = get_node("Jellyfish_father")
 	jellyfish_father.texture = answer
-	$correct_sound.play()
+	$correct.play()
 	await get_tree().create_timer(1.0).timeout
 	SceneTransition.change_scene_to_file("res://GameTwo/scenes/Scene10.tscn")
 	

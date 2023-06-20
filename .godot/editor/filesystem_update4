@@ -1,14 +1,3 @@
-res://GameOne/scenes/login_page.tscn
 res://GameOne/scenes/scene1.tscn
-res://GameOne/scenes/map.tscn
-res://GameTwo/scenes/scene8.tscn
-res://GameTwo/scenes/scene10.tscn
-res://GameOne/scenes/scene2.tscn
-res://GameTwo/scenes/scene12.tscn
-res://GameTwo/scenes/scene13.tscn
-res://GameTwo/scenes/scene11.tscn
 res://GameTwo/scenes/scene9.tscn
-res://GameOne/scenes/login_page.tscn
-res://GameOne/scenes/scene1.tscn
-res://GameOne/scenes/scene3.tscn
-res://GameOne/scenes/Scene5.tscn
+res://GameTwo/scripts/scene9.gd
