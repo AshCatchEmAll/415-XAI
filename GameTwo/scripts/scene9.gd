@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var errorDialogBox = $errorDialogBox
 
 
 
@@ -14,10 +15,19 @@ func _on_yellow_button_pressed():
 
 
 func _on_wrong_button_high_pressed():
-	$"wrong".play()
+	if errorDialogBox.visible != true:
+		$wrong.play()
+		errorDialogBox.visible = true
 	pass # Replace with function body.
 
 
 func _on_wrong_button_low_pressed():
-	$"wrong".play()
+	if errorDialogBox.visible != true:
+		$wrong.play()
+		errorDialogBox.visible = true
+	pass # Replace with function body.
+
+
+func _on_close_dialog_button_pressed():
+	errorDialogBox.visible = false
 	pass # Replace with function body.

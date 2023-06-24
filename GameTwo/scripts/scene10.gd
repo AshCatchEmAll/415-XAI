@@ -7,6 +7,8 @@ extends Node2D
 @onready var back_button = $back_button
 @onready var hint_box = $hint_box
 @onready var hint_text = $hint_text
+@onready var errorDialogBox = $errorDialogBox
+
 var showRed = func():
 	red_jelly.visible = false
 	$correct_sound.play()
@@ -25,7 +27,7 @@ func _ready():
 	red_button.pressed.connect(showRed)
 	pink_button.pressed.connect(showPink)
 	back_button.pressed.connect(go_back)
-	
+	errorDialogBox.visible = false
 	pass # Replace with function body.
 
 
@@ -38,7 +40,6 @@ func _process(delta):
 
 	pass
 
-
 func _on_shell_button_pressed():
 	hint_box.visible = true
 	hint_text.visible = true
@@ -46,26 +47,41 @@ func _on_shell_button_pressed():
 
 
 func _on_orange_button_pressed():
-	$wrong_sound.play()
+	if errorDialogBox.visible != true:
+		$wrong_sound.play()
+		errorDialogBox.visible = true
 	pass # Replace with function body.
 
 
 
 func _on_green_button_pressed():
-	$wrong_sound.play()
+	if errorDialogBox.visible != true:
+		$wrong_sound.play()
+		errorDialogBox.visible = true
 	pass # Replace with function body.
 
 
 func _on_yellow_button_pressed():
-	$wrong_sound.play()
+	if errorDialogBox.visible != true:
+		$wrong_sound.play()
+		errorDialogBox.visible = true
 	pass # Replace with function body.
 
 
 func _on_blue_button_pressed():
-	$wrong_sound.play()
+	if errorDialogBox.visible != true:
+		$wrong_sound.play()
+		errorDialogBox.visible = true
 	pass # Replace with function body.
 
 
 func _on_purple_button_pressed():
-	$wrong_sound.play()
+	if errorDialogBox.visible != true:
+		$wrong_sound.play()
+		errorDialogBox.visible = true
+	pass # Replace with function body.
+
+
+func _on_close_dialog_button_pressed():
+	errorDialogBox.visible = false
 	pass # Replace with function body.
