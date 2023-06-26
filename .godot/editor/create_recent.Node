@@ -1,7 +1,7 @@
 TextureButton
+TextureRect
 AudioStreamPlayer2D
 AudioListener2D
 Button
-TextureRect
 RichTextLabel
 TextEdit

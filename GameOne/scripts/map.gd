@@ -48,3 +48,13 @@ func start_animations():
 		%AnimationPlayer.play("location_three")
 	if(show_route_four==true):
 		%AnimationPlayer.play("location_four")
+
+
+
+func _on_texture_button_toggled(button_pressed):
+	if $"/root/BgMusic".playing:
+		musicPosition = $"/root/BgMusic".get_playback_position();
+		$"/root/BgMusic".stop()
+	else:
+		$"/root/BgMusic".play(musicPosition)
+		

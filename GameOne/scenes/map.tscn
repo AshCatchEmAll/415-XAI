@@ -1,19 +1,21 @@
-[gd_scene load_steps=23 format=3 uid="uid://boc4mfjbyw8jr"]
+[gd_scene load_steps=25 format=3 uid="uid://boc4mfjbyw8jr"]
 
 [ext_resource type="Texture2D" uid="uid://bw5avcyaeonuo" path="res://assets/Map Background.png" id="1_7qf1t"]
 [ext_resource type="Script" path="res://GameOne/scripts/map.gd" id="1_ntx2s"]
 [ext_resource type="Texture2D" uid="uid://db04mj10vcfly" path="res://Whale_Animation/Whale.png" id="2_06uol"]
 [ext_resource type="Texture2D" uid="uid://4g8jbbndbgsw" path="res://Whale_Animation/Whale_tilt_5.png" id="3_w81l0"]
-[ext_resource type="Texture2D" uid="uid://5f5ibwky7fea" path="res://Whale_Animation/Whale_tilt_10.png" id="4_f5kpr"]
-[ext_resource type="Texture2D" uid="uid://gx20rom604rg" path="res://Whale_Animation/Whale_tilt_15.png" id="5_3t7t2"]
-[ext_resource type="Texture2D" uid="uid://bau4w5usujw4k" path="res://Whale_Animation/Whale_tilt_20.png" id="6_rb1e2"]
-[ext_resource type="Texture2D" uid="uid://c6ygv7nk8l1od" path="res://Whale_Animation/Whale_tilt_cw5.png" id="7_nmf7f"]
+[ext_resource type="Texture2D" uid="uid://5f5ibwky7fea" path="res://assets/Whale_Animation/Whale_tilt_10.png" id="4_f5kpr"]
+[ext_resource type="Texture2D" uid="uid://gx20rom604rg" path="res://assets/Whale_Animation/Whale_tilt_15.png" id="5_3t7t2"]
+[ext_resource type="Texture2D" uid="uid://bau4w5usujw4k" path="res://assets/Whale_Animation/Whale_tilt_20.png" id="6_rb1e2"]
+[ext_resource type="Texture2D" uid="uid://c6ygv7nk8l1od" path="res://assets/Whale_Animation/Whale_tilt_cw5.png" id="7_nmf7f"]
 [ext_resource type="Texture2D" uid="uid://bbs1nbbhpqm22" path="res://Whale_Animation/Whale_tilt_cw10.png" id="8_samce"]
 [ext_resource type="Texture2D" uid="uid://dr34y34l8ctc0" path="res://Whale_Animation/Whale_tilt_cw15.png" id="9_m7goq"]
-[ext_resource type="Texture2D" uid="uid://dxv7ovkc6rmx4" path="res://Whale_Animation/Whale_tilt_cw20.png" id="10_saalg"]
+[ext_resource type="Texture2D" uid="uid://dxv7ovkc6rmx4" path="res://assets/Whale_Animation/Whale_tilt_cw20.png" id="10_saalg"]
 [ext_resource type="Script" path="res://GameOne/scripts/WhaleAnimation.gd" id="12_ntd2h"]
 [ext_resource type="Texture2D" uid="uid://cc4fc4k5khojy" path="res://assets/Drop_pin.png" id="12_xwpr2"]
 [ext_resource type="Texture2D" uid="uid://b5yrtcpr7k8fx" path="res://assets/Drop_Pin_Hover.png" id="13_djgjh"]
+[ext_resource type="Texture2D" uid="uid://din1qiqptj0kg" path="res://assets/Audio/Bgm/sound-full-icon.svg" id="15_g10lm"]
+[ext_resource type="Texture2D" uid="uid://oh0jlhvmweu4" path="res://assets/Audio/Bgm/sound-off-icon.svg" id="16_m53iv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_doihv"]
 animations = [{
@@ -265,7 +267,19 @@ libraries = {
 "": SubResource("AnimationLibrary_mnrkr")
 }
 
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 20.0
+offset_top = 12.0
+offset_right = 86.0
+offset_bottom = 63.0
+toggle_mode = true
+texture_normal = ExtResource("15_g10lm")
+texture_pressed = ExtResource("16_m53iv")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="CrabGeneralButton" to="." method="_on_game_one_btn_pressed"]
 [connection signal="pressed" from="TurtleGeneralButton" to="." method="_on_game_three_btn_pressed"]
 [connection signal="pressed" from="JellyfishGeneralButton" to="." method="_on_game_two_btn_pressed"]
 [connection signal="pressed" from="WhaleSculptureButton" to="." method="_on_game_four_btn_pressed"]
+[connection signal="toggled" from="TextureButton" to="." method="_on_texture_button_toggled"]

@@ -6,6 +6,7 @@ res://GameTwo/scenes/scene12.tscn
 res://GameTwo/scenes/scene13.tscn
 res://GameTwo/scenes/scene11.tscn
 res://GameTwo/scenes/scene9.tscn
-res://GameOne/Sounds/Click.tscn
-res://GameTwo/scripts/scene12.gd
-res://GameOne/Sounds/success.tscn
+res://GameOne/scripts/map.gd
+res://GameOne/scenes/scene1.tscn
+res://GameThree/scenes/scene14.tscn
+res://GameTwo/scripts/scene13ClickNext.gd
