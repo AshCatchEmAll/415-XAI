@@ -1,171 +1,116 @@
-[gd_scene load_steps=16 format=3 uid="uid://lbultt0q42rm"]
+[gd_scene load_steps=21 format=3 uid="uid://lbultt0q42rm"]
 
 [ext_resource type="Script" path="res://GameTwo/scripts/scene9.gd" id="1_cfo7w"]
-[ext_resource type="Texture2D" uid="uid://clt5vetm0yfoe" path="res://assets/scene9/background.png" id="1_xxs24"]
 [ext_resource type="Texture2D" uid="uid://bnp3qxtkhlehf" path="res://assets/scene10/purple_color.png" id="2_gj5lh"]
+[ext_resource type="Texture2D" uid="uid://c7g6sqnbtii8d" path="res://assets/scene10/white.png" id="2_oba33"]
 [ext_resource type="Texture2D" uid="uid://kl762yrnh42t" path="res://assets/scene10/blue_color.png" id="3_5ig5r"]
+[ext_resource type="Texture2D" uid="uid://c5bofss8umg2g" path="res://assets/scene10/DrawingBoard.png" id="3_6qmq6"]
 [ext_resource type="Texture2D" uid="uid://bw8khkborecng" path="res://assets/scene10/yellow_color.png" id="4_nvdp5"]
+[ext_resource type="Texture2D" uid="uid://b1174vta4ct08" path="res://assets/scene10/TextBox1.png" id="4_qi2y6"]
+[ext_resource type="Texture2D" uid="uid://dyclyufpercc0" path="res://assets/scene10/whiteTextBox.png" id="5_5s6he"]
 [ext_resource type="Texture2D" uid="uid://bvvjixxgl37c6" path="res://assets/scene10/pink_color.png" id="5_x63or"]
 [ext_resource type="Texture2D" uid="uid://pdwy3stug1e0" path="res://assets/scene10/green_color.png" id="6_ibmis"]
+[ext_resource type="Texture2D" uid="uid://b3i7a77v3weeu" path="res://assets/scene10/textBoxBlueDesign.png" id="6_j5bi0"]
 [ext_resource type="Texture2D" uid="uid://ivn0c8poh4" path="res://assets/scene10/red_color.png" id="7_4b502"]
+[ext_resource type="Texture2D" uid="uid://du33ninhslthq" path="res://assets/scene10/ColorBoard.png" id="7_c1cvv"]
 [ext_resource type="Texture2D" uid="uid://bll52ovyxy2yu" path="res://assets/scene10/orange_color.png" id="8_4gsbk"]
 [ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="9_0jgh3"]
-[ext_resource type="FontFile" uid="uid://cf618o4f2wu2y" path="res://GameOne/assets/font/Varela_Round/VarelaRound-Regular.ttf" id="10_hrq1y"]
-[ext_resource type="Texture2D" uid="uid://bthcaheimc3to" path="res://assets/scene9/shell.png" id="11_3e2tr"]
 [ext_resource type="Texture2D" uid="uid://dfodv3hpuy3e4" path="res://assets/scene9/jellyfish_father.png" id="12_rd045"]
 [ext_resource type="AudioStream" uid="uid://6s78q1t1o2gf" path="res://assets/Audio/drag-correct.mp3" id="14_nxb46"]
 [ext_resource type="AudioStream" uid="uid://dqkody17uay2q" path="res://assets/Audio/drag-wrong.mp3" id="14_rhi6e"]
+[ext_resource type="Texture2D" uid="uid://bnit5kxcj03y2" path="res://assets/scene10/back_button.png" id="20_nyje7"]
+[ext_resource type="Texture2D" uid="uid://cub88co05g3t8" path="res://assets/scene10/shell_bubble.png" id="21_ok3t6"]
 
 [node name="scene9" type="Node2D"]
 script = ExtResource("1_cfo7w")
 
-[node name="Background" type="TextureRect" parent="."]
-offset_left = -75.0
-offset_top = 6.0
-offset_right = 1135.0
-offset_bottom = 659.0
-texture = ExtResource("1_xxs24")
-expand_mode = 1
-stretch_mode = 4
+[node name="White" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(581, 320)
+scale = Vector2(1.65766, 1.63387)
+texture = ExtResource("2_oba33")
 
-[node name="purple_button" type="TextureButton" parent="Background"]
-layout_mode = 0
-offset_left = 93.0
-offset_top = 355.0
-offset_right = 168.0
-offset_bottom = 402.0
-texture_normal = ExtResource("2_gj5lh")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="DrawingBoard" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(307, 325)
+scale = Vector2(0.69469, 0.604126)
+texture = ExtResource("3_6qmq6")
 
-[node name="blue_button" type="TextureButton" parent="Background"]
-layout_mode = 0
-offset_left = 93.0
-offset_top = 300.0
-offset_right = 168.0
-offset_bottom = 347.0
-texture_normal = ExtResource("3_5ig5r")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="TextBox1" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(855, 435.063)
+scale = Vector2(0.15036, 0.15583)
+texture = ExtResource("4_qi2y6")
 
-[node name="yellow_button" type="TextureButton" parent="Background"]
-layout_mode = 0
-offset_left = 93.0
-offset_top = 245.0
-offset_right = 168.0
-offset_bottom = 292.0
-texture_normal = ExtResource("4_nvdp5")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="TextBox2" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(854.375, 133.344)
+scale = Vector2(0.150285, 0.0859122)
+texture = ExtResource("4_qi2y6")
 
-[node name="pink_button" type="TextureButton" parent="Background"]
-layout_mode = 0
-offset_left = 93.0
-offset_top = 190.0
-offset_right = 168.0
-offset_bottom = 237.0
-texture_normal = ExtResource("5_x63or")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="WhiteTextBox" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(853, 473)
+scale = Vector2(0.150462, 0.167852)
+texture = ExtResource("5_5s6he")
 
-[node name="green_button" type="TextureButton" parent="Background"]
-layout_mode = 0
-offset_left = 93.0
-offset_top = 410.0
-offset_right = 168.0
-offset_bottom = 457.0
-texture_normal = ExtResource("6_ibmis")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="TextBoxBlueDesign" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(853.5, 317.25)
+scale = Vector2(0.134238, 0.137658)
+texture = ExtResource("6_j5bi0")
 
-[node name="red_button" type="TextureButton" parent="Background"]
-layout_mode = 0
-offset_left = 93.0
-offset_top = 135.0
-offset_right = 168.0
-offset_bottom = 182.0
-texture_normal = ExtResource("7_4b502")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="ColorBoard" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(43, 331)
+scale = Vector2(0.128876, 0.188753)
+texture = ExtResource("7_c1cvv")
 
-[node name="orange_button" type="TextureButton" parent="Background"]
-layout_mode = 0
-offset_left = 93.0
-offset_top = 465.0
-offset_right = 168.0
-offset_bottom = 512.0
-texture_normal = ExtResource("8_4gsbk")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Question" type="RichTextLabel" parent="Background"]
-modulate = Color(0, 0, 0, 1)
-layout_mode = 0
-offset_left = 652.0
-offset_top = 423.0
-offset_right = 1193.0
-offset_bottom = 579.0
+[node name="Introuction" type="RichTextLabel" parent="."]
+offset_left = 789.0
+offset_top = 305.0
+offset_right = 926.0
+offset_bottom = 332.0
 theme_override_fonts/normal_font = ExtResource("9_0jgh3")
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 18
+text = "Jellyfish Father"
+
+[node name="Question" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 629.0
+offset_top = 417.0
+offset_right = 1088.0
+offset_bottom = 503.0
+theme_override_font_sizes/normal_font_size = 16
 text = "father=list[’red’,’pink’,’yellow’,’blue’,’purple’,’green’,’orange’]
 
 print(father[2])
 "
 
-[node name="Introuction" type="RichTextLabel" parent="Background"]
-layout_mode = 0
-offset_left = 840.0
-offset_top = 282.0
-offset_right = 1004.0
-offset_bottom = 316.0
-theme_override_fonts/normal_font = ExtResource("9_0jgh3")
-theme_override_font_sizes/normal_font_size = 22
-text = "Jellyfish Father"
-
 [node name="Procedure" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 575.0
+offset_left = 621.0
 offset_top = 371.0
-offset_right = 694.0
+offset_right = 756.0
 offset_bottom = 406.0
-theme_override_fonts/normal_font = ExtResource("9_0jgh3")
-theme_override_font_sizes/normal_font_size = 22
 text = "Procedure:
-"
-
-[node name="hint" type="RichTextLabel" parent="."]
-modulate = Color(0, 0, 1, 1)
-offset_left = 713.0
-offset_top = 540.0
-offset_right = 1037.0
-offset_bottom = 587.0
-theme_override_fonts/normal_font = ExtResource("10_hrq1y")
-text = "If you don't know the answer, click on this shell and it will prompt you!
 "
 
 [node name="Instruction" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 568.0
-offset_top = 39.0
-offset_right = 1109.0
-offset_bottom = 195.0
+offset_left = 623.0
+offset_top = 70.0
+offset_right = 1092.0
+offset_bottom = 201.0
 theme_override_fonts/normal_font = ExtResource("9_0jgh3")
-theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/normal_font_size = 19
 text = "Recalling the indexing operation of the list, what is the output result of the above program? Based on the results, pick up a paintbrush and dip it in the correct paint to help the jellyfish father paint the colors!
 "
 
-[node name="btn_shell" type="TextureButton" parent="."]
-offset_left = 1030.0
-offset_top = 521.0
-offset_right = 1574.0
-offset_bottom = 974.0
-scale = Vector2(0.159997, 0.159997)
-texture_normal = ExtResource("11_3e2tr")
-
 [node name="Jellyfish_father" type="TextureRect" parent="."]
-offset_left = 217.0
+offset_left = 199.0
 offset_top = 102.0
-offset_right = 454.0
+offset_right = 436.0
 offset_bottom = 440.0
 rotation = -0.0526594
 texture = ExtResource("12_rd045")
@@ -193,6 +138,108 @@ stream = ExtResource("14_rhi6e")
 [node name="correct" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_nxb46")
 
-[connection signal="pressed" from="Background/yellow_button" to="." method="_on_yellow_button_pressed"]
+[node name="purple_button" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 18.0
+offset_top = 365.0
+offset_right = 93.0
+offset_bottom = 412.0
+texture_normal = ExtResource("2_gj5lh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="blue_button" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 18.0
+offset_top = 310.0
+offset_right = 93.0
+offset_bottom = 357.0
+texture_normal = ExtResource("3_5ig5r")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="yellow_button" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 18.0
+offset_top = 255.0
+offset_right = 93.0
+offset_bottom = 302.0
+texture_normal = ExtResource("4_nvdp5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="pink_button" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 18.0
+offset_top = 200.0
+offset_right = 93.0
+offset_bottom = 247.0
+texture_normal = ExtResource("5_x63or")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="green_button" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 18.0
+offset_top = 420.0
+offset_right = 93.0
+offset_bottom = 467.0
+texture_normal = ExtResource("6_ibmis")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="red_button" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 18.0
+offset_top = 145.0
+offset_right = 93.0
+offset_bottom = 192.0
+texture_normal = ExtResource("7_4b502")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="orange_button" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 18.0
+offset_top = 475.0
+offset_right = 93.0
+offset_bottom = 522.0
+texture_normal = ExtResource("8_4gsbk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="back_button" type="TextureButton" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 22.0
+offset_top = 30.0
+offset_right = 73.0
+offset_bottom = 80.0
+texture_normal = ExtResource("20_nyje7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="shell_button" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 972.0
+offset_top = 509.0
+offset_right = 1056.0
+offset_bottom = 580.0
+texture_normal = ExtResource("21_ok3t6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="instructionText" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+offset_left = 727.0
+offset_top = 528.0
+offset_right = 989.0
+offset_bottom = 574.0
+theme_override_colors/default_color = Color(0.152941, 0.317647, 0.670588, 1)
+theme_override_font_sizes/normal_font_size = 12
+text = "If you don't know the answer, click on this shell and it will prompt you!
+"
+
 [connection signal="pressed" from="wrong_button_high" to="." method="_on_wrong_button_high_pressed"]
 [connection signal="pressed" from="wrong_button_low" to="." method="_on_wrong_button_low_pressed"]
+[connection signal="pressed" from="yellow_button" to="." method="_on_yellow_button_pressed"]

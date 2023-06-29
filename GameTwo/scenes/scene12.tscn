@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://kpmlor52ly0"]
+[gd_scene load_steps=33 format=3 uid="uid://kpmlor52ly0"]
 
 [ext_resource type="Script" path="res://GameTwo/scripts/scene12.gd" id="1_3v4lc"]
 [ext_resource type="Texture2D" uid="uid://djjie4fvlti3e" path="res://assets/scene12/white.png" id="1_5hf1s"]
@@ -11,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://c5bofss8umg2g" path="res://assets/scene10/DrawingBoard.png" id="8_pvbv1"]
 [ext_resource type="Texture2D" uid="uid://cpst5lklwvyyi" path="res://assets/scene12/shellBubble.png" id="9_4a1ix"]
 [ext_resource type="Texture2D" uid="uid://bqiuq6nsp786d" path="res://assets/scene12/shell.png" id="10_t41a2"]
+[ext_resource type="Texture2D" uid="uid://dpuyjj6114rm2" path="res://assets/scene12/hintDialogBox.png" id="12_imdxh"]
+[ext_resource type="Texture2D" uid="uid://cfmhbvab0k6d5" path="res://assets/scene12/hint_scene12.png" id="13_jr52w"]
+[ext_resource type="Texture2D" uid="uid://cnvbt1d5tomib" path="res://assets/scene12/whiteTextBox.png" id="13_ml04w"]
+[ext_resource type="Texture2D" uid="uid://6fpqg6vm8laa" path="res://assets/scene12/whiteForShell.png" id="14_0dygb"]
 [ext_resource type="Texture2D" uid="uid://du33ninhslthq" path="res://assets/scene10/ColorBoard.png" id="15_x5yvm"]
 [ext_resource type="Texture2D" uid="uid://bnp3qxtkhlehf" path="res://assets/scene10/purple_color.png" id="16_v20oy"]
 [ext_resource type="Texture2D" uid="uid://kl762yrnh42t" path="res://assets/scene10/blue_color.png" id="17_iqmtk"]
@@ -25,6 +29,63 @@
 [ext_resource type="Texture2D" uid="uid://bll52ovyxy2yu" path="res://assets/scene10/orange_color.png" id="22_tl68m"]
 [ext_resource type="Texture2D" uid="uid://e1sdpaiuuu6i" path="res://assets/scene12/readyButton.png" id="23_8kbge"]
 
+[sub_resource type="Animation" id="Animation_a3ney"]
+resource_name = "hintBoxPosition"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hintDialog/HintDialogBox:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.1, 5, 7, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1048.5, 551), Vector2(885.5, 551), Vector2(885.5, 551), Vector2(885.5, 551), Vector2(1027.5, 551)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hintDialog/HintDialogBox:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.1, 5, 7, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.00463508, 0.257812), Vector2(0.464658, 0.257812), Vector2(0.464658, 0.257812), Vector2(0.464658, 0.257812), Vector2(0.00463508, 0.257812)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("hintDialog/HintScene12:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.1, 5, 7, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.00128662, 0.541666), Vector2(0.396477, 0.541666), Vector2(0.396477, 0.541666), Vector2(0.396477, 0.541666), Vector2(-0.00128662, 0.541666)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("hintDialog/HintScene12:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.1, 5, 7, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1043.68, 552), Vector2(840.679, 552), Vector2(840.679, 552), Vector2(840.679, 552), Vector2(1034.68, 552)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_djsja"]
+_data = {
+"hintBoxPosition": SubResource("Animation_a3ney")
+}
+
 [sub_resource type="Animation" id="Animation_1xbvi"]
 resource_name = "ShellAnimation"
 length = 3.0
@@ -32,14 +93,14 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("shellAnimation/Shell:scale")
+tracks/0/path = NodePath("hintDialog/shellAnimation/Shell:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5, 3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(0.566666, 0.481482), Vector2(0.766467, 0.758961), Vector2(0.566666, 0.481482)]
+"values": [Vector2(0.566501, 0.564667), Vector2(0.766501, 0.76837), Vector2(0.566501, 0.564667)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8xq22"]
@@ -84,14 +145,14 @@ scale = Vector2(0.150462, 0.167852)
 texture = ExtResource("6_7jo0h")
 
 [node name="JellyFishLabel" type="RichTextLabel" parent="."]
-offset_left = 786.0
+offset_left = 783.0
 offset_top = 304.0
-offset_right = 921.0
+offset_right = 931.0
 offset_bottom = 333.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("8_c8kre")
 theme_override_font_sizes/normal_font_size = 18
-text = "jellyfish brother"
+text = "Jellyfish Brother"
 
 [node name="Procedure" type="RichTextLabel" parent="."]
 offset_left = 627.0
@@ -123,11 +184,6 @@ theme_override_colors/default_color = Color(0.152941, 0.317647, 0.670588, 1)
 theme_override_font_sizes/normal_font_size = 12
 text = "If you don't know the answer, click on this shell and it will prompt you!
 "
-
-[node name="ShellBubble" type="Sprite2D" parent="."]
-position = Vector2(1019.75, 551.5)
-scale = Vector2(0.424312, 0.412088)
-texture = ExtResource("9_4a1ix")
 
 [node name="description" type="RichTextLabel" parent="."]
 offset_left = 630.0
@@ -162,14 +218,45 @@ position = Vector2(355, 267.5)
 scale = Vector2(1.11364, 1.03916)
 texture = ExtResource("21_l1toj")
 
-[node name="shellAnimation" type="AnimationPlayer" parent="."]
+[node name="hintDialog" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_djsja")
+}
+
+[node name="HintDialogBox" type="Sprite2D" parent="hintDialog"]
+position = Vector2(1027.5, 551)
+scale = Vector2(0.00463508, 0.257812)
+texture = ExtResource("12_imdxh")
+
+[node name="HintScene12" type="Sprite2D" parent="hintDialog"]
+position = Vector2(1034.68, 552)
+scale = Vector2(-0.00128662, 0.541666)
+texture = ExtResource("13_jr52w")
+
+[node name="WhiteTextBox" type="Sprite2D" parent="hintDialog"]
+position = Vector2(1042.38, 549.5)
+scale = Vector2(0.0208001, 0.0519204)
+texture = ExtResource("13_ml04w")
+
+[node name="WhiteForShell" type="Sprite2D" parent="hintDialog"]
+position = Vector2(1024, 551.5)
+scale = Vector2(0.131944, 0.163482)
+texture = ExtResource("14_0dygb")
+
+[node name="shellAnimation" type="AnimationPlayer" parent="hintDialog"]
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_8xq22")
 }
 
-[node name="Shell" type="Sprite2D" parent="shellAnimation"]
-position = Vector2(1022.01, 550.508)
-scale = Vector2(0.566666, 0.481482)
+[node name="ShellBubble" type="Sprite2D" parent="hintDialog/shellAnimation"]
+position = Vector2(1019.75, 551.5)
+scale = Vector2(0.424312, 0.412088)
+texture = ExtResource("9_4a1ix")
+
+[node name="Shell" type="Sprite2D" parent="hintDialog/shellAnimation"]
+position = Vector2(1022, 551.754)
+scale = Vector2(0.68354, 0.683873)
 texture = ExtResource("10_t41a2")
 
 [node name="TextureButton" type="TextureButton" parent="."]

@@ -10,7 +10,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$shellAnimation.play("ShellAnimation")
+	$hintDialog/shellAnimation.play("ShellAnimation")
 	pass # Replace with function body.
 
 
@@ -92,8 +92,9 @@ func _on_purple_button_pressed():
 
 func _on_texture_button_pressed():
 	# dialog box of Help
-	if errorDialogBox.visible != true && helpDialogBox.visible != true:
-		helpDialogBox.visible = true
+	#if errorDialogBox.visible != true && helpDialogBox.visible != true:
+	#	helpDialogBox.visible = true
+	$hintDialog.play('hintBoxPosition')
 	pass # Replace with function body.
 
 

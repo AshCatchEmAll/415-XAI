@@ -1,0 +1,136 @@
+[gd_scene load_steps=21 format=3 uid="uid://dt10ona1lv1xs"]
+
+[ext_resource type="Texture2D" uid="uid://cae0asoq3avpj" path="res://assets/scene19/background_scene19.png" id="1_ciagk"]
+[ext_resource type="Texture2D" uid="uid://cdqv070gpb6et" path="res://assets/scene19/boy.png" id="2_ynhwg"]
+[ext_resource type="Texture2D" uid="uid://dreigcs5icbn8" path="res://assets/scene19/shellBubble.png" id="3_biwb8"]
+[ext_resource type="Texture2D" uid="uid://d3f8ya44njs8h" path="res://assets/scene19/shell1.png" id="4_uikrl"]
+[ext_resource type="Texture2D" uid="uid://c27p407jom6x0" path="res://assets/scene19/shell2.png" id="5_37ogv"]
+[ext_resource type="Texture2D" uid="uid://1hbwog2tdrn4" path="res://assets/scene19/tortoise.png" id="6_n7qpl"]
+[ext_resource type="Texture2D" uid="uid://t3sapueln80x" path="res://assets/scene19/starfish.png" id="7_t8j62"]
+[ext_resource type="Texture2D" uid="uid://bjdn8o1cdf7oi" path="res://assets/scene19/textBox.png" id="8_110qi"]
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="9_has1q"]
+[ext_resource type="Script" path="res://GameThree/scripts/scene19_text.gd" id="10_4n7yl"]
+[ext_resource type="Texture2D" uid="uid://0xj47h0at5lo" path="res://assets/scene19/hand.png" id="10_ejrdn"]
+[ext_resource type="Script" path="res://GameThree/scripts/scene19_text2.gd" id="11_jrrbv"]
+[ext_resource type="Texture2D" uid="uid://cc7rp8pdwe02q" path="res://assets/scene19/map.png" id="11_puh64"]
+[ext_resource type="Texture2D" uid="uid://dpmifv7d5m68j" path="res://assets/scene19/mapTextDialogBox.png" id="12_gv3qq"]
+[ext_resource type="Script" path="res://GameThree/scripts/scene19.gd" id="13_pflsm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uay5u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h28ti"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8s0bu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l4kug"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1mfn3"]
+
+[node name="scene19" type="Node2D"]
+
+[node name="BackgroundScene19" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_ciagk")
+
+[node name="Boy" type="Sprite2D" parent="."]
+position = Vector2(173, 359.5)
+scale = Vector2(0.530909, 0.478691)
+texture = ExtResource("2_ynhwg")
+
+[node name="ShellBubble" type="Sprite2D" parent="."]
+position = Vector2(352, 396)
+scale = Vector2(0.779817, 0.769231)
+texture = ExtResource("3_biwb8")
+
+[node name="ShellBubble2" type="Sprite2D" parent="."]
+position = Vector2(514, 396)
+scale = Vector2(0.754587, 0.771978)
+texture = ExtResource("3_biwb8")
+
+[node name="Shell1" type="Sprite2D" parent="."]
+position = Vector2(362, 396)
+texture = ExtResource("4_uikrl")
+
+[node name="Shell2" type="Sprite2D" parent="."]
+position = Vector2(520, 392)
+texture = ExtResource("5_37ogv")
+
+[node name="Tortoise" type="Sprite2D" parent="."]
+position = Vector2(883.5, 388.563)
+scale = Vector2(0.630042, 0.615725)
+texture = ExtResource("6_n7qpl")
+
+[node name="Starfish" type="Sprite2D" parent="."]
+position = Vector2(1061.75, 577)
+scale = Vector2(0.781246, 0.711109)
+texture = ExtResource("7_t8j62")
+
+[node name="TextBox" type="Sprite2D" parent="."]
+position = Vector2(675.312, 144.75)
+scale = Vector2(0.474829, 0.490691)
+texture = ExtResource("8_110qi")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 482.0
+offset_top = 66.0
+offset_right = 874.0
+offset_bottom = 173.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("9_has1q")
+theme_override_font_sizes/normal_font_size = 16
+text = "Thanks for your help. All the barnacles on my body have been uprooted. I'm relaxed now! Please take these two shells and go to the Whale Sculpture. Place them in the correct position and you can get the help you want!
+"
+script = ExtResource("10_4n7yl")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 452.0
+offset_top = 496.0
+offset_right = 687.0
+offset_bottom = 557.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("9_has1q")
+theme_override_font_sizes/normal_font_size = 16
+text = "Click to collect shells and put them back on the map to go to the Whale Sculpture"
+script = ExtResource("11_jrrbv")
+
+[node name="Hand" type="Sprite2D" parent="."]
+position = Vector2(412, 458)
+scale = Vector2(0.730769, 0.721311)
+texture = ExtResource("10_ejrdn")
+
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(1091, 44)
+texture = ExtResource("11_puh64")
+
+[node name="MapTextDialogBox" type="Sprite2D" parent="."]
+position = Vector2(1090, 94)
+scale = Vector2(0.204646, 0.164216)
+texture = ExtResource("12_gv3qq")
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 1074.0
+offset_top = 83.0
+offset_right = 1109.0
+offset_bottom = 105.0
+theme_override_fonts/normal_font = ExtResource("9_has1q")
+text = "map"
+
+[node name="GoToMapBtn" type="Button" parent="."]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_top = 0.057
+anchor_right = 0.953
+anchor_bottom = 0.057
+offset_left = 1051.0
+offset_top = 14.0
+offset_right = 1132.0
+offset_bottom = 75.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_uay5u")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h28ti")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8s0bu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l4kug")
+theme_override_styles/focus = SubResource("StyleBoxTexture_1mfn3")
+script = ExtResource("13_pflsm")
+
+[connection signal="pressed" from="GoToMapBtn" to="GoToMapBtn" method="_on_pressed"]
