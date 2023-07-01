@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c4314tkad8w2l"]
+[gd_scene load_steps=30 format=3 uid="uid://c4314tkad8w2l"]
 
 [ext_resource type="Texture2D" uid="uid://lmpnb7uns4da" path="res://assets/scene10/background.png" id="1_d1k4x"]
 [ext_resource type="Script" path="res://GameTwo/scripts/scene10.gd" id="1_pc0gs"]
@@ -22,8 +22,68 @@
 [ext_resource type="Texture2D" uid="uid://bll52ovyxy2yu" path="res://assets/scene10/orange_color.png" id="12_rwldm"]
 [ext_resource type="Texture2D" uid="uid://bnit5kxcj03y2" path="res://assets/scene10/back_button.png" id="14_v23yx"]
 [ext_resource type="Texture2D" uid="uid://cub88co05g3t8" path="res://assets/scene10/shell_bubble.png" id="15_xoqos"]
+[ext_resource type="Texture2D" uid="uid://bmukkc4cduuqs" path="res://assets/scene10/hintDialogBox.png" id="22_x4x8l"]
+[ext_resource type="Texture2D" uid="uid://c8qemetkq1ji5" path="res://assets/scene10/hint_scene10.png" id="23_3noia"]
 [ext_resource type="AudioStream" uid="uid://6s78q1t1o2gf" path="res://assets/Audio/drag-correct.mp3" id="23_y7gv6"]
+[ext_resource type="Texture2D" uid="uid://wlcgd6wch1la" path="res://assets/scene10/whiteForShell.png" id="24_2cfd2"]
 [ext_resource type="AudioStream" uid="uid://dqkody17uay2q" path="res://assets/Audio/drag-wrong.mp3" id="24_70ri3"]
+
+[sub_resource type="Animation" id="Animation_wde5x"]
+resource_name = "hintAnimation"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../hint_player/HintDialogBox:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 5.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1015.24, 543), Vector2(878, 543), Vector2(878, 543), Vector2(878, 543), Vector2(1015.24, 543)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../hint_player/HintDialogBox:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 5.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.000555877, 0.265625), Vector2(0.479722, 0.265625), Vector2(0.479722, 0.265625), Vector2(0.479722, 0.265625), Vector2(-0.000555877, 0.265625)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../hint_player/HintScene10:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 5.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1041.43, 542.057), Vector2(827.758, 542.057), Vector2(827.758, 542.057), Vector2(827.758, 542.057), Vector2(1041.43, 542.057)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../hint_player/HintScene10:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 5.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.00111356, 0.819644), Vector2(0.569029, 0.819644), Vector2(0.569029, 0.819644), Vector2(0.569029, 0.819644), Vector2(-0.00111356, 0.819644)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c73ev"]
+_data = {
+"hintAnimation": SubResource("Animation_wde5x")
+}
 
 [node name="scene10" type="Node2D"]
 script = ExtResource("1_pc0gs")
@@ -225,7 +285,28 @@ texture_normal = ExtResource("14_v23yx")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="shell_button" type="TextureButton" parent="."]
+[node name="hint_player" type="AnimationPlayer" parent="."]
+root_node = NodePath("../WhiteTextBox")
+libraries = {
+"": SubResource("AnimationLibrary_c73ev")
+}
+
+[node name="HintDialogBox" type="Sprite2D" parent="hint_player"]
+position = Vector2(1015.24, 543)
+scale = Vector2(-0.000555877, 0.265625)
+texture = ExtResource("22_x4x8l")
+
+[node name="HintScene10" type="Sprite2D" parent="hint_player"]
+position = Vector2(1041.43, 542.057)
+scale = Vector2(-0.00111356, 0.819644)
+texture = ExtResource("23_3noia")
+
+[node name="WhiteForShell" type="Sprite2D" parent="hint_player"]
+position = Vector2(1018, 543.5)
+scale = Vector2(0.125, 0.154989)
+texture = ExtResource("24_2cfd2")
+
+[node name="shell_button" type="TextureButton" parent="hint_player"]
 offset_left = 972.0
 offset_top = 509.0
 offset_right = 1056.0
@@ -262,4 +343,4 @@ stream = ExtResource("24_70ri3")
 [connection signal="pressed" from="green_button" to="." method="_on_green_button_pressed"]
 [connection signal="pressed" from="red_button" to="." method="_on_red_button_pressed"]
 [connection signal="pressed" from="orange_button" to="." method="_on_orange_button_pressed"]
-[connection signal="pressed" from="shell_button" to="." method="_on_shell_button_pressed"]
+[connection signal="pressed" from="hint_player/shell_button" to="." method="_on_shell_button_pressed"]

@@ -21,3 +21,8 @@ func _on_wrong_button_high_pressed():
 func _on_wrong_button_low_pressed():
 	$"wrong".play()
 	pass # Replace with function body.
+
+
+func _on_shell_button_pressed():
+	$hint_player.play("hintAnimation")
+	pass # Replace with function body.

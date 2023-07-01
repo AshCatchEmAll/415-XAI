@@ -40,8 +40,9 @@ func _process(delta):
 
 
 func _on_shell_button_pressed():
-	hint_box.visible = true
-	hint_text.visible = true
+	#hint_box.visible = true
+	#hint_text.visible = true
+	$hint_player.play("hintAnimation")
 	pass # Replace with function body.
 
 

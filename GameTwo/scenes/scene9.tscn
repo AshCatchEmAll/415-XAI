@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://lbultt0q42rm"]
+[gd_scene load_steps=26 format=3 uid="uid://lbultt0q42rm"]
 
 [ext_resource type="Script" path="res://GameTwo/scripts/scene9.gd" id="1_cfo7w"]
 [ext_resource type="Texture2D" uid="uid://bnp3qxtkhlehf" path="res://assets/scene10/purple_color.png" id="2_gj5lh"]
@@ -18,8 +18,68 @@
 [ext_resource type="Texture2D" uid="uid://dfodv3hpuy3e4" path="res://assets/scene9/jellyfish_father.png" id="12_rd045"]
 [ext_resource type="AudioStream" uid="uid://6s78q1t1o2gf" path="res://assets/Audio/drag-correct.mp3" id="14_nxb46"]
 [ext_resource type="AudioStream" uid="uid://dqkody17uay2q" path="res://assets/Audio/drag-wrong.mp3" id="14_rhi6e"]
+[ext_resource type="Texture2D" uid="uid://bf5qxskq1cwc2" path="res://assets/scene9/hintDialogBox.png" id="20_1ilji"]
 [ext_resource type="Texture2D" uid="uid://bnit5kxcj03y2" path="res://assets/scene10/back_button.png" id="20_nyje7"]
 [ext_resource type="Texture2D" uid="uid://cub88co05g3t8" path="res://assets/scene10/shell_bubble.png" id="21_ok3t6"]
+[ext_resource type="Texture2D" uid="uid://bmdgdgeufkwvy" path="res://assets/scene9/hint_scene9.png" id="21_yweux"]
+[ext_resource type="Texture2D" uid="uid://e62vsnuv2nmt" path="res://assets/scene9/whiteForShell.png" id="22_t4vps"]
+
+[sub_resource type="Animation" id="Animation_25wgh"]
+resource_name = "hintAnimation"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HintDialogBox:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 5.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1015.23, 543.75), Vector2(886.5, 543.75), Vector2(886.5, 543.75), Vector2(886.5, 543.75), Vector2(1015.23, 543.75)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HintDialogBox:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 5.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.000533051, 0.259766), Vector2(0.460023, 0.259766), Vector2(0.460023, 0.259766), Vector2(0.460023, 0.259766), Vector2(-0.000533051, 0.259766)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HintScene9:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 5.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1043.27, 543.5), Vector2(840.125, 543.5), Vector2(840.125, 543.5), Vector2(840.125, 543.5), Vector2(1043.27, 543.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HintScene9:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 5.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.00104836, 0.718749), Vector2(0.535714, 0.718749), Vector2(0.535714, 0.718749), Vector2(0.535714, 0.718749), Vector2(-0.00104836, 0.718749)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_auie7"]
+_data = {
+"hintAnimation": SubResource("Animation_25wgh")
+}
 
 [node name="scene9" type="Node2D"]
 script = ExtResource("1_cfo7w")
@@ -219,16 +279,6 @@ texture_normal = ExtResource("20_nyje7")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="shell_button" type="TextureButton" parent="."]
-unique_name_in_owner = true
-offset_left = 972.0
-offset_top = 509.0
-offset_right = 1056.0
-offset_bottom = 580.0
-texture_normal = ExtResource("21_ok3t6")
-ignore_texture_size = true
-stretch_mode = 0
-
 [node name="instructionText" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
 offset_left = 727.0
@@ -240,6 +290,37 @@ theme_override_font_sizes/normal_font_size = 12
 text = "If you don't know the answer, click on this shell and it will prompt you!
 "
 
+[node name="hint_player" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_auie7")
+}
+
+[node name="HintDialogBox" type="Sprite2D" parent="."]
+position = Vector2(1015.23, 543.75)
+scale = Vector2(-0.000533051, 0.259766)
+texture = ExtResource("20_1ilji")
+
+[node name="HintScene9" type="Sprite2D" parent="."]
+position = Vector2(1043.27, 543.5)
+scale = Vector2(-0.00104836, 0.718749)
+texture = ExtResource("21_yweux")
+
+[node name="WhiteForShell" type="Sprite2D" parent="."]
+position = Vector2(1018, 543.813)
+scale = Vector2(0.121527, 0.153662)
+texture = ExtResource("22_t4vps")
+
+[node name="shell_button" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 972.0
+offset_top = 509.0
+offset_right = 1056.0
+offset_bottom = 580.0
+texture_normal = ExtResource("21_ok3t6")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="wrong_button_high" to="." method="_on_wrong_button_high_pressed"]
 [connection signal="pressed" from="wrong_button_low" to="." method="_on_wrong_button_low_pressed"]
 [connection signal="pressed" from="yellow_button" to="." method="_on_yellow_button_pressed"]
+[connection signal="pressed" from="shell_button" to="." method="_on_shell_button_pressed"]

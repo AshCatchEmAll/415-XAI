@@ -1,4 +1,12 @@
-res://GameThree/scenes/scene19.tscn
+res://GameTwo/scenes/scene12.tscn
 res://GameOne/scenes/scene3.tscn
 res://GameOne/scenes/scene2.tscn
-res://GameTwo/scenes/scene12.tscn
+res://GameThree/scenes/scene19.tscn
+res://GameTwo/scenes/scene11.tscn
+res://GameTwo/scripts/scene11.gd
+res://GameTwo/scenes/scene13.tscn
+res://GameTwo/scenes/scene10.tscn
+res://GameTwo/scenes/scene9.tscn
+res://GameTwo/scripts/scene10.gd
+res://GameTwo/scenes/scene8.tscn
+res://GameTwo/scripts/scene9.gd

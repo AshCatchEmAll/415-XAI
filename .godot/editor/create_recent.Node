@@ -1,6 +1,7 @@
+AnimationPlayer
+AnimationTree
 RichTextLabel
 Sprite2D
-AnimationPlayer
 TextureButton
 AudioStreamPlayer2D
 AudioListener2D
