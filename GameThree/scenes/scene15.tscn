@@ -1,0 +1,242 @@
+[gd_scene load_steps=12 format=3 uid="uid://bfhd51dufatyq"]
+
+[ext_resource type="Script" path="res://GameThree/scripts/scene15.gd" id="1_g5ei5"]
+[ext_resource type="Texture2D" uid="uid://befsg5od16d82" path="res://assets/GameThreeAssets/coding_scene_background.png" id="1_iefh4"]
+[ext_resource type="Texture2D" uid="uid://dayo1rjuf641x" path="res://assets/GameThreeAssets/turtle.png" id="2_ffiwg"]
+[ext_resource type="Texture2D" uid="uid://dyclyufpercc0" path="res://assets/scene10/whiteTextBox.png" id="3_4v7ml"]
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="4_llhwa"]
+[ext_resource type="Texture2D" uid="uid://b5ddc6p6cnygf" path="res://assets/GameThreeAssets/barnacle.png" id="5_04hn1"]
+[ext_resource type="Texture2D" uid="uid://c52uj8dmbak6j" path="res://assets/scene12/textBoxBlueDesign.png" id="6_s35r4"]
+[ext_resource type="Texture2D" uid="uid://caiuikgnls5rn" path="res://assets/GameThreeAssets/shovel.png" id="8_26o2f"]
+[ext_resource type="Texture2D" uid="uid://ccxqh1ho3plj2" path="res://assets/GameThreeAssets/bubble.png" id="8_hu8q4"]
+
+[sub_resource type="Animation" id="Animation_1xbvi"]
+resource_name = "ShellAnimation"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("shovelAnimation/Shovel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.566666, 0.481482), Vector2(0.766467, 0.758961), Vector2(0.566666, 0.481482)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8xq22"]
+_data = {
+"ShellAnimation": SubResource("Animation_1xbvi")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_g5ei5")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.174545, 0.174522)
+texture = ExtResource("1_iefh4")
+
+[node name="Turtle" type="Sprite2D" parent="."]
+position = Vector2(275, 329)
+scale = Vector2(0.628999, 0.675084)
+texture = ExtResource("2_ffiwg")
+
+[node name="QuestionTextbox" type="Sprite2D" parent="."]
+position = Vector2(795, 160)
+scale = Vector2(0.149648, 0.056)
+texture = ExtResource("3_4v7ml")
+
+[node name="question_text4" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 620.0
+offset_top = 135.0
+offset_right = 979.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_llhwa")
+theme_override_font_sizes/normal_font_size = 18
+text = "How to perform intersection operations on the two sets?
+"
+
+[node name="question_text3" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 620.0
+offset_top = 135.0
+offset_right = 979.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_llhwa")
+theme_override_font_sizes/normal_font_size = 18
+text = "Delete key value pairs with specific keys in the dictionary?
+"
+
+[node name="question_text2" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 620.0
+offset_top = 135.0
+offset_right = 979.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_llhwa")
+theme_override_font_sizes/normal_font_size = 18
+text = "Find the maximum, minimum, and the total values of this list
+"
+
+[node name="question_text1" type="RichTextLabel" parent="."]
+offset_left = 620.0
+offset_top = 135.0
+offset_right = 979.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_llhwa")
+theme_override_font_sizes/normal_font_size = 18
+text = "Reverse the order of this tuple and print it out
+"
+
+[node name="PromptTextbox" type="Sprite2D" parent="."]
+position = Vector2(795, 68)
+scale = Vector2(0.150462, 0.0560942)
+texture = ExtResource("3_4v7ml")
+
+[node name="prompt_text" type="RichTextLabel" parent="."]
+offset_left = 681.0
+offset_top = 55.0
+offset_right = 917.0
+offset_bottom = 82.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_llhwa")
+theme_override_font_sizes/normal_font_size = 18
+text = "Randomly generated tuple
+"
+
+[node name="CodeWritingArea" type="Sprite2D" parent="."]
+position = Vector2(795, 400)
+scale = Vector2(0.150462, 0.291607)
+texture = ExtResource("3_4v7ml")
+
+[node name="code_text" type="RichTextLabel" parent="."]
+offset_left = 585.0
+offset_top = 239.0
+offset_right = 944.0
+offset_bottom = 288.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_llhwa")
+theme_override_font_sizes/normal_font_size = 18
+text = "Code writing area...
+"
+
+[node name="Barnacle_4" type="TextureButton" parent="."]
+offset_left = 776.0
+offset_top = 91.0
+offset_right = 832.0
+offset_bottom = 146.0
+rotation = 0.891863
+pivot_offset = Vector2(-517.957, -357.4)
+texture_normal = ExtResource("5_04hn1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Barnacle_3" type="TextureButton" parent="."]
+offset_left = 315.0
+offset_top = 226.0
+offset_right = 371.0
+offset_bottom = 281.0
+rotation = 0.242601
+pivot_offset = Vector2(-517.957, -357.4)
+texture_normal = ExtResource("5_04hn1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Barnacle_2" type="TextureButton" parent="."]
+offset_left = 222.0
+offset_top = 253.0
+offset_right = 278.0
+offset_bottom = 308.0
+pivot_offset = Vector2(-517.957, -357.4)
+texture_normal = ExtResource("5_04hn1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Barnacle_1" type="TextureButton" parent="."]
+offset_left = 179.089
+offset_top = 523.946
+offset_right = 235.089
+offset_bottom = 578.946
+rotation = -0.404916
+pivot_offset = Vector2(-517.957, -357.4)
+texture_normal = ExtResource("5_04hn1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RunCodeButton" type="TextureButton" parent="."]
+offset_left = 660.0
+offset_top = 535.0
+offset_right = 956.0
+offset_bottom = 583.0
+texture_normal = ExtResource("6_s35r4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="complie_text" type="RichTextLabel" parent="."]
+offset_left = 756.0
+offset_top = 543.0
+offset_right = 858.0
+offset_bottom = 575.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("4_llhwa")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 1
+text = "Compile"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(12, 520)
+scale = Vector2(0.510791, 0.5)
+texture = ExtResource("8_hu8q4")
+centered = false
+
+[node name="shovelAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8xq22")
+}
+
+[node name="Shovel" type="Sprite2D" parent="shovelAnimation"]
+position = Vector2(90, 579)
+scale = Vector2(0.566666, 0.481482)
+texture = ExtResource("8_26o2f")
+
+[node name="title_text" type="RichTextLabel" parent="."]
+offset_left = 103.0
+offset_top = 19.0
+offset_right = 382.0
+offset_bottom = 86.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("4_llhwa")
+theme_override_font_sizes/normal_font_size = 21
+text = "Click on a barnacle to solve the corresponding problem"
+
+[node name="help_text" type="RichTextLabel" parent="."]
+offset_left = 162.0
+offset_top = 573.0
+offset_right = 434.0
+offset_bottom = 600.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_llhwa")
+theme_override_font_sizes/normal_font_size = 18
+text = "Click on the shovel to get help
+"
+
+[node name="help_button" type="TextureButton" parent="."]
+offset_left = 52.0
+offset_top = 543.0
+offset_right = 130.0
+offset_bottom = 615.0
+
+[connection signal="pressed" from="Barnacle_4" to="." method="_on_barnacle_4_pressed"]
+[connection signal="pressed" from="Barnacle_3" to="." method="_on_barnacle_3_pressed"]
+[connection signal="pressed" from="Barnacle_2" to="." method="_on_barnacle_2_pressed"]
+[connection signal="pressed" from="Barnacle_1" to="." method="_on_barnacle_1_pressed"]
+[connection signal="pressed" from="help_button" to="." method="_on_help_button_pressed"]
