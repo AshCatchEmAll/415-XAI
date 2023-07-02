@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://x35dqtkx46t5"]
+[gd_scene load_steps=30 format=3 uid="uid://x35dqtkx46t5"]
 
 [ext_resource type="Script" path="res://GameTwo/scripts/scene11.gd" id="1_1t0ri"]
 [ext_resource type="Texture2D" uid="uid://c7g6sqnbtii8d" path="res://assets/scene10/white.png" id="2_galky"]
@@ -22,8 +22,11 @@
 [ext_resource type="AudioStream" uid="uid://dqkody17uay2q" path="res://assets/Audio/drag-wrong.mp3" id="20_bjopa"]
 [ext_resource type="AudioStream" uid="uid://6s78q1t1o2gf" path="res://assets/Audio/drag-correct.mp3" id="20_gh2s0"]
 [ext_resource type="Texture2D" uid="uid://dgsdts3fm3u3d" path="res://assets/scene11/hintDialogBox.png" id="21_6xhm7"]
+[ext_resource type="Texture2D" uid="uid://cyv5s1bl4nkgw" path="res://assets/scene12/TextBox1.png" id="22_3dro2"]
 [ext_resource type="Texture2D" uid="uid://blq10wwbbte2m" path="res://assets/scene11/hint_scene11.png" id="22_excp4"]
+[ext_resource type="Texture2D" uid="uid://djjie4fvlti3e" path="res://assets/scene12/white.png" id="23_6n6tf"]
 [ext_resource type="Texture2D" uid="uid://caug62pjpsk54" path="res://assets/scene11/whiteForShell.png" id="23_cb6d8"]
+[ext_resource type="Texture2D" uid="uid://e1sdpaiuuu6i" path="res://assets/scene12/readyButton.png" id="24_qr1pa"]
 
 [sub_resource type="Animation" id="Animation_gbgk3"]
 resource_name = "hintAnimation"
@@ -311,6 +314,52 @@ texture_normal = ExtResource("13_bk3aa")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="errorDialogBox" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(538, 226.062)
+scale = Vector2(0.169268, 0.107499)
+texture = ExtResource("22_3dro2")
+
+[node name="White2" type="Sprite2D" parent="errorDialogBox"]
+position = Vector2(-0.738485, 28.6406)
+scale = Vector2(4.22936, 4.59198)
+texture = ExtResource("23_6n6tf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="errorDialogBox/White2"]
+offset_left = -206.56
+offset_top = -194.763
+offset_right = 198.44
+offset_bottom = -121.763
+theme_override_colors/default_color = Color(0.309804, 0.701961, 0.945098, 1)
+theme_override_fonts/normal_font = ExtResource("7_gmohb")
+theme_override_font_sizes/normal_font_size = 50
+text = "Wrong Selection"
+metadata/_edit_use_anchors_ = true
+
+[node name="explanation" type="RichTextLabel" parent="errorDialogBox/White2"]
+offset_left = -372.587
+offset_top = -115.665
+offset_right = 368.413
+offset_bottom = 74.3354
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_gmohb")
+theme_override_font_sizes/normal_font_size = 28
+text = "The selected color is not the right choice. You have to select the printed colors in right order. 
+
+First select the color with lowest index and proceed sequentially"
+metadata/_edit_use_anchors_ = true
+
+[node name="closeDialogButton" type="TextureButton" parent="errorDialogBox/White2"]
+offset_left = -163.257
+offset_top = 92.9005
+offset_right = 150.743
+offset_bottom = 183.901
+texture_normal = ExtResource("24_qr1pa")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="blue_button" to="." method="_on_blue_button_pressed"]
 [connection signal="pressed" from="yellow_button" to="." method="_on_yellow_button_pressed"]
 [connection signal="pressed" from="pink_button" to="." method="_on_pink_button_pressed"]
@@ -318,3 +367,4 @@ stretch_mode = 0
 [connection signal="pressed" from="red_button" to="." method="_on_red_button_pressed"]
 [connection signal="pressed" from="orange_button" to="." method="_on_orange_button_pressed"]
 [connection signal="pressed" from="shell_button" to="." method="_on_shell_button_pressed"]
+[connection signal="pressed" from="errorDialogBox/White2/closeDialogButton" to="." method="_on_close_dialog_button_pressed"]

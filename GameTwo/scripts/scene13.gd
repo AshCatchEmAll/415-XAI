@@ -14,5 +14,11 @@ func _process(delta):
 
 func _on_texture_button_pressed():
 	Click.play()
-	SceneTransition.change_scene_to_file("res://GameOne/scenes/scene14.tscn")
+	var params = {
+   
+	"show_route_two": false,
+	"show_route_one":false,
+	"show_route_three": true
+	}
+	SceneTransition.change_to_map_scene( params)
 	pass # Replace with function body.

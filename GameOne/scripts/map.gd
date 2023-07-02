@@ -30,7 +30,7 @@ func _on_game_two_btn_pressed():
 
 
 func _on_game_three_btn_pressed():
-	if(show_route_three==false):return
+	SceneTransition.change_scene_to_file("res://GameThree/scenes/scene14.tscn")
 	pass # Replace with function body.
 
 
@@ -48,3 +48,13 @@ func start_animations():
 		%AnimationPlayer.play("location_three")
 	if(show_route_four==true):
 		%AnimationPlayer.play("location_four")
+
+
+
+func _on_texture_button_toggled(button_pressed):
+	if $"/root/BgMusic".playing:
+		musicPosition = $"/root/BgMusic".get_playback_position();
+		$"/root/BgMusic".stop()
+	else:
+		$"/root/BgMusic".play(musicPosition)
+		

@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=3 uid="uid://b87tveonpkxq4"]
+
+[ext_resource type="Texture2D" uid="uid://cv2fymma755qt" path="res://assets/scene14/background.png" id="1_3adk2"]
+[ext_resource type="Texture2D" uid="uid://1n3efigr77ie" path="res://assets/scene14/background2.png" id="2_k4lq0"]
+[ext_resource type="Texture2D" uid="uid://d2s0rj882wkaq" path="res://assets/scene14/coral2.png" id="3_bpjus"]
+[ext_resource type="Texture2D" uid="uid://dw0nno7gsx5np" path="res://assets/scene14/boy.png" id="4_xands"]
+[ext_resource type="Texture2D" uid="uid://dra3hwtllrdkv" path="res://assets/scene14/turtle.png" id="5_cdjbu"]
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="6_8slp3"]
+[ext_resource type="Script" path="res://GameTwo/scripts/scene13Description.gd" id="7_t3v88"]
+[ext_resource type="Texture2D" uid="uid://rahk3lufhlyt" path="res://assets/scene14/bubble_shovel.png" id="8_eeg32"]
+[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/Fonts/Varela_Round/VarelaRound-Regular.ttf" id="9_8cevw"]
+[ext_resource type="Script" path="res://GameTwo/scripts/scene13ClickNext.gd" id="10_li85b"]
+
+[node name="scene14" type="Node2D"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_left = -118.0
+offset_top = -2.0
+offset_right = 1228.0
+offset_bottom = 703.0
+texture = ExtResource("1_3adk2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 496.0
+offset_right = 1256.0
+offset_bottom = 739.0
+texture = ExtResource("2_k4lq0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 370.0
+offset_right = 829.0
+offset_bottom = 690.0
+texture = ExtResource("3_bpjus")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="img_boy" type="TextureRect" parent="."]
+offset_left = -52.0
+offset_top = 139.0
+offset_right = 492.0
+offset_bottom = 753.0
+texture = ExtResource("4_xands")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="img_turtle" type="TextureRect" parent="."]
+offset_left = 851.0
+offset_top = 204.0
+offset_right = 1132.0
+offset_bottom = 389.0
+texture = ExtResource("5_cdjbu")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="text_1" type="RichTextLabel" parent="."]
+offset_left = 54.0
+offset_top = 40.0
+offset_right = 1038.0
+offset_bottom = 234.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_8slp3")
+theme_override_font_sizes/normal_font_size = 28
+text = "Hello warrior, I am very happy to see you here. My body is covered in barnacles, which makes me very uncomfortable. Can you use this to help me shovel it off?
+This is a magical shovel that can help you remove the barnacle. Thank you very much for your help.
+"
+script = ExtResource("7_t3v88")
+
+[node name="bubble_button" type="TextureButton" parent="."]
+offset_left = 473.0
+offset_top = 298.0
+offset_right = 768.0
+offset_bottom = 495.0
+texture_normal = ExtResource("8_eeg32")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="text_2" type="RichTextLabel" parent="."]
+offset_left = 721.0
+offset_top = 422.0
+offset_right = 950.0
+offset_bottom = 481.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("9_8cevw")
+theme_override_font_sizes/normal_font_size = 22
+text = "Click on the shovel to 
+       help the turtle
+"
+scroll_active = false
+script = ExtResource("10_li85b")
