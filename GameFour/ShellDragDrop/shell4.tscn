@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy1wvqxm6wqn2"]
+
+[ext_resource type="Script" path="res://GameOne/scripts/DraggableNode.gd" id="1_hal8j"]
+[ext_resource type="Texture2D" uid="uid://db55m0ud8i030" path="res://assets/scene21/shell4.png" id="2_xsu2p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_flkou"]
+radius = 15.9999
+height = 47.9996
+
+[node name="CrabLeg4" type="Node2D"]
+script = ExtResource("1_hal8j")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+modulate = Color(0.886275, 0.913725, 0.556863, 1)
+position = Vector2(2.05715e-17, 0)
+rotation = 1.57483
+shape = SubResource("CapsuleShape2D_flkou")
+debug_color = Color(0.592157, 0.317647, 0.521569, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+modulate = Color(0.858824, 1, 1, 1)
+scale = Vector2(0.995816, 0.908)
+texture = ExtResource("2_xsu2p")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

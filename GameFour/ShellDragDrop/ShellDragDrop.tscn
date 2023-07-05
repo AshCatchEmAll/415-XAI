@@ -1,0 +1,162 @@
+[gd_scene load_steps=16 format=3 uid="uid://bcnr76yllo3vp"]
+
+[ext_resource type="Texture2D" uid="uid://btxbl1ju3x57e" path="res://assets/scene21/sculpture.png" id="1_m2kia"]
+[ext_resource type="PackedScene" uid="uid://c282vwtesent" path="res://GameFour/ShellDragDrop/ShellDropZone.tscn" id="2_8sasx"]
+[ext_resource type="PackedScene" uid="uid://bkkkwhqjg2odv" path="res://GameOne/components/DropZone.tscn" id="2_22cra"]
+[ext_resource type="PackedScene" uid="uid://k32ntesmfvha" path="res://GameFour/ShellDragDrop/shell1.tscn" id="4_hwe5i"]
+[ext_resource type="PackedScene" uid="uid://kmpd4j4yduqw" path="res://GameFour/ShellDragDrop/shell2.tscn" id="5_ih2ix"]
+[ext_resource type="PackedScene" uid="uid://byn4we7e0a7or" path="res://GameFour/ShellDragDrop/shell3.tscn" id="6_ttktu"]
+[ext_resource type="AudioStream" uid="uid://6s78q1t1o2gf" path="res://assets/Audio/drag-correct.mp3" id="7_7s6uc"]
+[ext_resource type="PackedScene" uid="uid://cy1wvqxm6wqn2" path="res://GameFour/ShellDragDrop/shell4.tscn" id="7_jbwyd"]
+[ext_resource type="AudioStream" uid="uid://dqkody17uay2q" path="res://assets/Audio/drag-wrong.mp3" id="8_akquy"]
+[ext_resource type="PackedScene" path="res://GameOne/components/Snackbar.tscn" id="9_l8typ"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4owpg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33wcr"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="Animation" id="Animation_alwg8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Container/FadeOut:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_db6f4"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Container/FadeOut:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5u0mq"]
+_data = {
+"RESET": SubResource("Animation_alwg8"),
+"fade_out": SubResource("Animation_db6f4")
+}
+
+[node name="ShellDragAndDrop" type="Node2D"]
+material = SubResource("CanvasItemMaterial_4owpg")
+
+[node name="Container" type="Panel" parent="."]
+offset_top = 2.0
+offset_right = 1148.0
+offset_bottom = 649.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_33wcr")
+
+[node name="Image-removebg-preview" type="Sprite2D" parent="Container"]
+position = Vector2(549.693, 345.859)
+scale = Vector2(0.175205, 0.189854)
+texture = ExtResource("1_m2kia")
+
+[node name="leg-1-reset" parent="Container" instance=ExtResource("2_22cra")]
+position = Vector2(880, 118.1)
+gizmo_extents = 0.1
+id = -1
+
+[node name="leg-2-reset" parent="Container" instance=ExtResource("2_22cra")]
+position = Vector2(881, 252.1)
+gizmo_extents = 0.1
+id = -2
+
+[node name="leg-3-reset" parent="Container" instance=ExtResource("2_22cra")]
+position = Vector2(881.1, 408)
+gizmo_extents = 0.1
+id = -3
+
+[node name="leg-4-reset" parent="Container" instance=ExtResource("2_22cra")]
+position = Vector2(884, 554.1)
+gizmo_extents = 0.1
+id = -4
+
+[node name="shell1_dropzone" parent="Container" instance=ExtResource("2_8sasx")]
+position = Vector2(538.693, 251)
+
+[node name="shell4_dropzone" parent="Container" instance=ExtResource("2_8sasx")]
+position = Vector2(537.693, 464)
+scale = Vector2(0.993579, 1)
+id = 4
+
+[node name="shell3_dropzone" parent="Container" instance=ExtResource("2_8sasx")]
+position = Vector2(535.693, 395)
+id = 3
+
+[node name="shell2_dropzone" parent="Container" instance=ExtResource("2_8sasx")]
+position = Vector2(538.693, 324)
+id = 2
+
+[node name="shell1" parent="Container" instance=ExtResource("4_hwe5i")]
+position = Vector2(879, 118.1)
+scale = Vector2(0.75, 0.75)
+
+[node name="shell2" parent="Container" instance=ExtResource("5_ih2ix")]
+position = Vector2(880, 252.1)
+scale = Vector2(0.7, 0.7)
+correct_drop_zone = 2
+
+[node name="shell3" parent="Container" instance=ExtResource("6_ttktu")]
+position = Vector2(881.1, 407)
+correct_drop_zone = 3
+
+[node name="shell4" parent="Container" instance=ExtResource("7_jbwyd")]
+position = Vector2(883, 555.1)
+scale = Vector2(0.8, 0.8)
+correct_drop_zone = 4
+
+[node name="success" type="AudioStreamPlayer2D" parent="Container"]
+unique_name_in_owner = true
+stream = ExtResource("7_7s6uc")
+
+[node name="fail" type="AudioStreamPlayer2D" parent="Container"]
+unique_name_in_owner = true
+stream = ExtResource("8_akquy")
+volume_db = -9.043
+pitch_scale = 1.26
+max_distance = 3000.0
+
+[node name="Snackbar" parent="Container" instance=ExtResource("9_l8typ")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 414.0
+offset_top = 472.0
+offset_right = 773.0
+offset_bottom = 612.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="FadeOut" type="CanvasModulate" parent="Container"]
+unique_name_in_owner = true
+position = Vector2(5, 27)
+
+[node name="FadeOutAnimation" type="AnimationPlayer" parent="Container"]
+unique_name_in_owner = true
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_5u0mq")
+}
