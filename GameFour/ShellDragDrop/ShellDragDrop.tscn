@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://bcnr76yllo3vp"]
+[gd_scene load_steps=17 format=3 uid="uid://bcnr76yllo3vp"]
 
 [ext_resource type="Texture2D" uid="uid://btxbl1ju3x57e" path="res://assets/scene21/sculpture.png" id="1_m2kia"]
 [ext_resource type="PackedScene" uid="uid://c282vwtesent" path="res://GameFour/ShellDragDrop/ShellDropZone.tscn" id="2_8sasx"]
 [ext_resource type="PackedScene" uid="uid://bkkkwhqjg2odv" path="res://GameOne/components/DropZone.tscn" id="2_22cra"]
 [ext_resource type="PackedScene" uid="uid://k32ntesmfvha" path="res://GameFour/ShellDragDrop/shell1.tscn" id="4_hwe5i"]
 [ext_resource type="PackedScene" uid="uid://kmpd4j4yduqw" path="res://GameFour/ShellDragDrop/shell2.tscn" id="5_ih2ix"]
+[ext_resource type="Script" path="res://GameFour/ShellDragDrop/ShellDraggableNode.gd" id="5_od148"]
 [ext_resource type="PackedScene" uid="uid://byn4we7e0a7or" path="res://GameFour/ShellDragDrop/shell3.tscn" id="6_ttktu"]
 [ext_resource type="AudioStream" uid="uid://6s78q1t1o2gf" path="res://assets/Audio/drag-correct.mp3" id="7_7s6uc"]
 [ext_resource type="PackedScene" uid="uid://cy1wvqxm6wqn2" path="res://GameFour/ShellDragDrop/shell4.tscn" id="7_jbwyd"]
@@ -116,20 +117,24 @@ id = 4
 [node name="shell1" parent="Container" instance=ExtResource("4_hwe5i")]
 position = Vector2(879, 118.1)
 scale = Vector2(0.75, 0.75)
+script = ExtResource("5_od148")
 failed_msg = ["failed msg"]
 
 [node name="shell2" parent="Container" instance=ExtResource("5_ih2ix")]
 position = Vector2(880, 252.1)
 scale = Vector2(0.7, 0.7)
+script = ExtResource("5_od148")
 correct_drop_zone = 2
 
 [node name="shell3" parent="Container" instance=ExtResource("6_ttktu")]
 position = Vector2(881.1, 407)
+script = ExtResource("5_od148")
 correct_drop_zone = 3
 
 [node name="shell4" parent="Container" instance=ExtResource("7_jbwyd")]
 position = Vector2(883, 555.1)
 scale = Vector2(0.8, 0.8)
+script = ExtResource("5_od148")
 correct_drop_zone = 4
 
 [node name="success" type="AudioStreamPlayer2D" parent="Container"]
