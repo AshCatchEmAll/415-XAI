@@ -1,3 +1,181 @@
-[gd_scene format=3 uid="uid://o73d1k4be35o"]
+[gd_scene load_steps=5 format=3 uid="uid://o73d1k4be35o"]
+
+[ext_resource type="PackedScene" uid="uid://bcnr76yllo3vp" path="res://GameFour/ShellDragDrop/ShellDragDrop.tscn" id="1_mrnxp"]
+[ext_resource type="Texture2D" uid="uid://b1174vta4ct08" path="res://assets/scene10/TextBox1.png" id="2_rrodm"]
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="3_gk2g1"]
+[ext_resource type="Texture2D" uid="uid://da2xdfpxvugq2" path="res://assets/scene21/arrow.png" id="4_86qra"]
 
 [node name="scene21" type="Node2D"]
+
+[node name="ShellDragAndDrop" parent="." instance=ExtResource("1_mrnxp")]
+
+[node name="hole1_textbox" type="Sprite2D" parent="."]
+position = Vector2(169.906, 100.586)
+scale = Vector2(0.0882915, 0.0272731)
+texture = ExtResource("2_rrodm")
+
+[node name="hole1_text" type="RichTextLabel" parent="."]
+offset_left = 30.0
+offset_top = 78.0
+offset_right = 318.0
+offset_bottom = 125.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_gk2g1")
+theme_override_font_sizes/normal_font_size = 18
+text = "I can perform intersection, union, and difference operations
+"
+
+[node name="hole1_textbox2" type="Sprite2D" parent="."]
+position = Vector2(169.906, 251.586)
+scale = Vector2(0.0882915, 0.0495263)
+texture = ExtResource("2_rrodm")
+
+[node name="hole1_text2" type="RichTextLabel" parent="."]
+offset_left = 30.0
+offset_top = 207.0
+offset_right = 318.0
+offset_bottom = 299.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_gk2g1")
+theme_override_font_sizes/normal_font_size = 18
+text = "I can store a password book with ciphertext and one by one correspondence with the original text"
+
+[node name="hole1_textbox3" type="Sprite2D" parent="."]
+position = Vector2(169.906, 404.586)
+scale = Vector2(0.0882915, 0.0272731)
+texture = ExtResource("2_rrodm")
+
+[node name="hole1_text3" type="RichTextLabel" parent="."]
+offset_left = 30.0
+offset_top = 382.0
+offset_right = 318.0
+offset_bottom = 429.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_gk2g1")
+theme_override_font_sizes/normal_font_size = 18
+text = "The elements I store need to be sequential and variable
+"
+
+[node name="hole1_textbox4" type="Sprite2D" parent="."]
+position = Vector2(169.906, 533.586)
+scale = Vector2(0.0882915, 0.0272731)
+texture = ExtResource("2_rrodm")
+
+[node name="hole1_text4" type="RichTextLabel" parent="."]
+offset_left = 30.0
+offset_top = 511.0
+offset_right = 318.0
+offset_bottom = 558.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_gk2g1")
+theme_override_font_sizes/normal_font_size = 18
+text = "I can safely store immutable sequences"
+
+[node name="arrow4" type="TextureRect" parent="."]
+offset_left = 307.0
+offset_top = 533.0
+offset_right = 471.0
+offset_bottom = 654.0
+rotation = -0.897099
+texture = ExtResource("4_86qra")
+expand_mode = 1
+
+[node name="arrow3" type="TextureRect" parent="."]
+offset_left = 299.0
+offset_top = 403.0
+offset_right = 463.0
+offset_bottom = 524.0
+rotation = -0.621337
+texture = ExtResource("4_86qra")
+expand_mode = 1
+
+[node name="arrow2" type="TextureRect" parent="."]
+offset_left = 300.0
+offset_top = 267.0
+offset_right = 459.0
+offset_bottom = 393.0
+rotation = -0.427606
+texture = ExtResource("4_86qra")
+expand_mode = 1
+
+[node name="arrow1" type="TextureRect" parent="."]
+offset_left = 307.0
+offset_top = 98.0
+offset_right = 499.0
+offset_bottom = 235.0
+texture = ExtResource("4_86qra")
+expand_mode = 1
+
+[node name="hole1_textbox5" type="Sprite2D" parent="."]
+position = Vector2(1009.75, 120.5)
+scale = Vector2(0.0379652, 0.0171535)
+texture = ExtResource("2_rrodm")
+
+[node name="hole1_text5" type="RichTextLabel" parent="."]
+offset_left = 992.0
+offset_top = 110.0
+offset_right = 1036.0
+offset_bottom = 134.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_gk2g1")
+theme_override_font_sizes/normal_font_size = 18
+text = "LIST
+"
+
+[node name="hole1_textbox6" type="Sprite2D" parent="."]
+position = Vector2(1009.75, 253.5)
+scale = Vector2(0.0379652, 0.0171535)
+texture = ExtResource("2_rrodm")
+
+[node name="hole1_text6" type="RichTextLabel" parent="."]
+offset_left = 978.0
+offset_top = 242.0
+offset_right = 1040.0
+offset_bottom = 266.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_gk2g1")
+theme_override_font_sizes/normal_font_size = 18
+text = "TUPLE
+"
+
+[node name="hole1_textbox7" type="Sprite2D" parent="."]
+position = Vector2(1009.75, 406.5)
+scale = Vector2(0.0379652, 0.0171535)
+texture = ExtResource("2_rrodm")
+
+[node name="hole1_text7" type="RichTextLabel" parent="."]
+offset_left = 989.0
+offset_top = 396.0
+offset_right = 1038.0
+offset_bottom = 420.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_gk2g1")
+theme_override_font_sizes/normal_font_size = 18
+text = "DICT
+"
+
+[node name="hole1_textbox8" type="Sprite2D" parent="."]
+position = Vector2(1009.75, 556.5)
+scale = Vector2(0.0379652, 0.0171535)
+texture = ExtResource("2_rrodm")
+
+[node name="hole1_text8" type="RichTextLabel" parent="."]
+offset_left = 993.0
+offset_top = 546.0
+offset_right = 1042.0
+offset_bottom = 570.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_gk2g1")
+theme_override_font_sizes/normal_font_size = 18
+text = "SET"
+
+[node name="description" type="RichTextLabel" parent="."]
+offset_left = 297.0
+offset_top = 21.0
+offset_right = 885.0
+offset_bottom = 50.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_gk2g1")
+theme_override_font_sizes/normal_font_size = 18
+text = "Drag the shell to the corresponding position to open the sculpture！
+"

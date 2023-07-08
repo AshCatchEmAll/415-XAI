@@ -70,44 +70,53 @@ scale = Vector2(0.175205, 0.189854)
 texture = ExtResource("1_m2kia")
 
 [node name="leg-1-reset" parent="Container" instance=ExtResource("2_22cra")]
+visible = false
 position = Vector2(880, 118.1)
 gizmo_extents = 0.1
 id = -1
 
 [node name="leg-2-reset" parent="Container" instance=ExtResource("2_22cra")]
+visible = false
 position = Vector2(881, 252.1)
 gizmo_extents = 0.1
 id = -2
 
 [node name="leg-3-reset" parent="Container" instance=ExtResource("2_22cra")]
+visible = false
 position = Vector2(881.1, 408)
 gizmo_extents = 0.1
 id = -3
 
 [node name="leg-4-reset" parent="Container" instance=ExtResource("2_22cra")]
+visible = false
 position = Vector2(884, 554.1)
 gizmo_extents = 0.1
 id = -4
 
 [node name="shell1_dropzone" parent="Container" instance=ExtResource("2_8sasx")]
-position = Vector2(538.693, 251)
-
-[node name="shell4_dropzone" parent="Container" instance=ExtResource("2_8sasx")]
-position = Vector2(537.693, 464)
-scale = Vector2(0.993579, 1)
-id = 4
-
-[node name="shell3_dropzone" parent="Container" instance=ExtResource("2_8sasx")]
-position = Vector2(535.693, 395)
-id = 3
+visible = false
+position = Vector2(538, 391)
 
 [node name="shell2_dropzone" parent="Container" instance=ExtResource("2_8sasx")]
-position = Vector2(538.693, 324)
+visible = false
+position = Vector2(538, 464)
 id = 2
+
+[node name="shell3_dropzone" parent="Container" instance=ExtResource("2_8sasx")]
+visible = false
+position = Vector2(537, 323)
+id = 3
+
+[node name="shell4_dropzone" parent="Container" instance=ExtResource("2_8sasx")]
+visible = false
+position = Vector2(538, 251)
+scale = Vector2(0.993579, 1)
+id = 4
 
 [node name="shell1" parent="Container" instance=ExtResource("4_hwe5i")]
 position = Vector2(879, 118.1)
 scale = Vector2(0.75, 0.75)
+failed_msg = ["failed msg"]
 
 [node name="shell2" parent="Container" instance=ExtResource("5_ih2ix")]
 position = Vector2(880, 252.1)
