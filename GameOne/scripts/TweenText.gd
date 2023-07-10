@@ -6,6 +6,7 @@ var typing_animation_done = false
 
 var total_time:float = 1.0
 
+var play_typing_sound = true
 @onready var audio = %Scene5Keyboard
 
 func start_text_animation(audio_pitch:float):
@@ -15,9 +16,10 @@ func start_text_animation(audio_pitch:float):
 #
 func start_typing_text(audio_pitch:float):
 	print("called")
-	audio.seek(0.6) 
-	audio.pitch_scale =audio_pitch
-	audio.play()
+	if play_typing_sound==true:
+		audio.seek(0.6) 
+		audio.pitch_scale =audio_pitch
+		audio.play()
 	var time_passed = 0.0
 	while time_passed < total_time:
 		
@@ -25,7 +27,8 @@ func start_typing_text(audio_pitch:float):
 		time_passed+= text_speed * get_process_delta_time()
 		await delay(text_speed)
 	self.visible_ratio = 1.0  # Ensure that the text is fully visible
-	audio.stop()
+	if play_typing_sound==true:
+		audio.stop()
 	typing_animation_done = true
 
 func delay(wait_time):

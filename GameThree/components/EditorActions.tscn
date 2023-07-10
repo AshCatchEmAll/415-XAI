@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=3 uid="uid://cb2ogdqcfkjbn"]
+
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="1_ih1ep"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w8k76"]
+bg_color = Color(0.109804, 0.109804, 0.0980392, 1)
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u13d"]
+bg_color = Color(0.12549, 0.113725, 0.0980392, 1)
+corner_radius_bottom_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhbqr"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.376471, 0.309804, 0.803922, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34kws"]
+bg_color = Color(0.403922, 0.380392, 0.458824, 0.603922)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c1toh"]
+bg_color = Color(0.27451, 0.568627, 0.454902, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ly6mq"]
+bg_color = Color(0.407843, 0.729412, 0.45098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1115.0
+offset_bottom = 43.0
+scale = Vector2(1.03176, 1.01616)
+
+[node name="ActionRow1" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1117.0
+offset_bottom = 45.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w8k76")
+
+[node name="ActionRow2" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 591.225
+offset_right = 1118.22
+offset_bottom = 45.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8u13d")
+
+[node name="SubmitBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 401.258
+offset_top = 4.92
+offset_right = 496.258
+offset_bottom = 39.92
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_bhbqr")
+text = "Submit"
+
+[node name="TestBtn" type="Button" parent="."]
+custom_minimum_size = Vector2(73, 27)
+layout_mode = 0
+offset_left = 295.613
+offset_top = 4.9205
+offset_right = 390.613
+offset_bottom = 39.9205
+theme_override_fonts/font = ExtResource("1_ih1ep")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_34kws")
+text = "Run Tests"
+
+[node name="SubmittedBtn" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 401.258
+offset_top = 4.92
+offset_right = 496.258
+offset_bottom = 39.92
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_ih1ep")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_c1toh")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ly6mq")
+disabled = true
+text = "Submitted"

@@ -1,0 +1,327 @@
+[gd_scene load_steps=23 format=3 uid="uid://dt3awoubwcpfd"]
+
+[ext_resource type="Script" path="res://GameThree/components/CodeEditor.gd" id="1_ebw1c"]
+[ext_resource type="FontFile" uid="uid://twvo7ar3jg2d" path="res://assets/Fonts/Fira_Code/static/FiraCode-Medium.ttf" id="2_qgkkw"]
+[ext_resource type="Script" path="res://GameThree/components/CodeEditorField.gd" id="3_8q64i"]
+[ext_resource type="PackedScene" path="res://GameOne/components/Snackbar.tscn" id="5_nlbwe"]
+[ext_resource type="Texture2D" uid="uid://ym2ouqihbau3" path="res://assets/GameThreeAssets/results.png" id="6_iep4u"]
+[ext_resource type="Texture2D" uid="uid://dffceye3w6kgq" path="res://assets/GameThreeAssets/instruction.png" id="7_p5kb6"]
+[ext_resource type="FontFile" uid="uid://boa803h28mplh" path="res://assets/Fonts/Fira_Code/static/FiraCode-SemiBold.ttf" id="9_rwua3"]
+[ext_resource type="PackedScene" uid="uid://d34mtfrfnwekc" path="res://Backend/CodeParser.tscn" id="10_521c2"]
+[ext_resource type="PackedScene" uid="uid://cb2ogdqcfkjbn" path="res://GameThree/components/EditorActions.tscn" id="11_io6y3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pho4"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhyvf"]
+bg_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpum7"]
+bg_color = Color(0.152941, 0.141176, 0.117647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekmtv"]
+bg_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_si571"]
+number_color = Color(0.894118, 0.478431, 0.419608, 1)
+symbol_color = Color(0.713726, 0.788235, 0.968627, 1)
+function_color = Color(0.929412, 0.682353, 0.219608, 1)
+member_variable_color = Color(0.807843, 0.117647, 0.470588, 1)
+
+[sub_resource type="Animation" id="Animation_us6mt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CodeEditorField:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5, 58)]
+}
+
+[sub_resource type="Animation" id="Animation_74jxh"]
+resource_name = "check_mark"
+length = 2.0
+loop_mode = 1
+
+[sub_resource type="Animation" id="Animation_b8g1g"]
+resource_name = "shake_editor"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CodeEditorField:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-5, 58), Vector2(11, 58), Vector2(-28, 58), Vector2(4, 58), Vector2(-17, 58), Vector2(-5, 58)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3a88q"]
+_data = {
+"RESET": SubResource("Animation_us6mt"),
+"check_mark": SubResource("Animation_74jxh"),
+"shake_editor": SubResource("Animation_b8g1g")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4obc"]
+bg_color = Color(0.34902, 0.34902, 0.34902, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l42lu"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3owam"]
+bg_color = Color(0.898039, 0.972549, 0.94902, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0d6xf"]
+bg_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+
+[node name="CodeEditorControlNode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -1146.0
+offset_bottom = -642.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ebw1c")
+
+[node name="ColorRect" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -6.0
+offset_right = 1148.0
+offset_bottom = 643.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8pho4")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 664.0
+offset_top = 59.0
+offset_right = 1141.0
+offset_bottom = 591.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rhyvf")
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 662.0
+offset_top = -5.0
+offset_right = 1147.0
+offset_bottom = 57.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_mpum7")
+text = "Prompt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -6.0
+offset_right = 651.0
+offset_bottom = 56.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_mpum7")
+text = "main.py"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 663.0
+offset_top = -6.0
+offset_right = 1148.0
+offset_bottom = 56.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_mpum7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CodeEditorField" type="TextEdit" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = -5.0
+offset_top = 58.0
+offset_right = 651.0
+offset_bottom = 591.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_qgkkw")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ekmtv")
+wrap_mode = 1
+highlight_current_line = true
+draw_tabs = true
+syntax_highlighter = SubResource("CodeHighlighter_si571")
+script = ExtResource("3_8q64i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_3a88q")
+}
+
+[node name="Snackbar" parent="." instance=ExtResource("5_nlbwe")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_left = 373.0
+offset_top = 443.0
+offset_right = 373.0
+offset_bottom = 443.0
+
+[node name="InstructionsBtn" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 698.0
+offset_top = 10.0
+offset_right = 858.0
+offset_bottom = 46.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_m4obc")
+text = "Instructions"
+
+[node name="Sprite2D" type="Sprite2D" parent="InstructionsBtn"]
+position = Vector2(18, 17)
+scale = Vector2(0.0341797, 0.0341797)
+texture = ExtResource("7_p5kb6")
+
+[node name="ResultBtn" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 895.0
+offset_top = 9.0
+offset_right = 1017.0
+offset_bottom = 44.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_m4obc")
+text = "Results"
+
+[node name="Sprite2D" type="Sprite2D" parent="ResultBtn"]
+position = Vector2(15.0001, 16)
+scale = Vector2(0.0400391, 0.0400391)
+texture = ExtResource("6_iep4u")
+
+[node name="Instructions" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 675.0
+offset_top = 60.0
+offset_right = 1130.0
+offset_bottom = 593.0
+theme_override_fonts/normal_font = ExtResource("2_qgkkw")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_l42lu")
+bbcode_enabled = true
+
+[node name="FailureBar" type="Label" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 664.0
+offset_top = 59.0
+offset_right = 1147.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.921569, 0.341176, 0.341176, 1)
+theme_override_fonts/font = ExtResource("9_rwua3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3owam")
+text = "11 Test failed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SucessBar" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 664.0
+offset_top = 59.0
+offset_right = 1147.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.262745, 0.709804, 0.576471, 1)
+theme_override_fonts/font = ExtResource("9_rwua3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3owam")
+text = "All Tests Passed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Results" type="ScrollContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 672.0
+offset_top = 129.0
+offset_right = 1143.0
+offset_bottom = 593.0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Results"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 300
+
+[node name="CodeParser" parent="." instance=ExtResource("10_521c2")]
+unique_name_in_owner = true
+
+[node name="EditorActions" parent="." instance=ExtResource("11_io6y3")]
+unique_name_in_owner = true
+offset_left = -9.0
+offset_top = 597.0
+offset_right = 1113.0
+offset_bottom = 644.0
+
+[node name="TestCount" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 684.0
+offset_top = 66.0
+offset_right = 867.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_0d6xf")
+text = "11 Tests Failed"
+
+[connection signal="gui_input" from="CodeEditorField" to="." method="_on_code_editor_field_gui_input"]
+[connection signal="text_changed" from="CodeEditorField" to="." method="_on_code_editor_field_text_changed"]
+[connection signal="pressed" from="InstructionsBtn" to="." method="_on_instructions_btn_pressed"]
+[connection signal="pressed" from="ResultBtn" to="." method="_on_result_btn_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bfhd51dufatyq"]
+[gd_scene load_steps=17 format=3 uid="uid://dnf15dnhwahp0"]
 
 [ext_resource type="Script" path="res://GameThree/scripts/scene15.gd" id="1_g5ei5"]
 [ext_resource type="Texture2D" uid="uid://befsg5od16d82" path="res://assets/GameThreeAssets/coding_scene_background.png" id="1_iefh4"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://c52uj8dmbak6j" path="res://assets/scene12/textBoxBlueDesign.png" id="6_s35r4"]
 [ext_resource type="Texture2D" uid="uid://caiuikgnls5rn" path="res://assets/GameThreeAssets/shovel.png" id="8_26o2f"]
 [ext_resource type="Texture2D" uid="uid://ccxqh1ho3plj2" path="res://assets/GameThreeAssets/bubble.png" id="8_hu8q4"]
+[ext_resource type="PackedScene" uid="uid://dt3awoubwcpfd" path="res://GameThree/components/CodeEditor.tscn" id="10_6knie"]
+[ext_resource type="Texture2D" uid="uid://bbn7ru5saj1mb" path="res://assets/Backgrounds-Scene3/NextButton.svg" id="11_8sl0f"]
 
 [sub_resource type="Animation" id="Animation_1xbvi"]
 resource_name = "ShellAnimation"
@@ -32,7 +34,44 @@ _data = {
 "ShellAnimation": SubResource("Animation_1xbvi")
 }
 
+[sub_resource type="Animation" id="Animation_ax2id"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NextBtn:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 0.8)]
+}
+
+[sub_resource type="Animation" id="Animation_p1ag0"]
+resource_name = "btn_bounce"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NextBtn:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(0.9, 0.9), Vector2(0.5, 0.5), Vector2(0.8, 0.8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1k148"]
+_data = {
+"RESET": SubResource("Animation_ax2id"),
+"btn_bounce": SubResource("Animation_p1ag0")
+}
+
 [node name="Node2D" type="Node2D"]
+rotation = 0.000900548
 script = ExtResource("1_g5ei5")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -98,11 +137,13 @@ text = "Reverse the order of this tuple and print it out
 "
 
 [node name="PromptTextbox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(795, 68)
 scale = Vector2(0.150462, 0.0560942)
 texture = ExtResource("3_4v7ml")
 
 [node name="prompt_text" type="RichTextLabel" parent="."]
+visible = false
 offset_left = 681.0
 offset_top = 55.0
 offset_right = 917.0
@@ -114,11 +155,13 @@ text = "Randomly generated tuple
 "
 
 [node name="CodeWritingArea" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(795, 400)
 scale = Vector2(0.150462, 0.291607)
 texture = ExtResource("3_4v7ml")
 
 [node name="code_text" type="RichTextLabel" parent="."]
+visible = false
 offset_left = 585.0
 offset_top = 239.0
 offset_right = 944.0
@@ -166,31 +209,33 @@ offset_left = 179.089
 offset_top = 523.946
 offset_right = 235.089
 offset_bottom = 578.946
-rotation = -0.404916
+rotation = -0.395544
 pivot_offset = Vector2(-517.957, -357.4)
 texture_normal = ExtResource("5_04hn1")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="RunCodeButton" type="TextureButton" parent="."]
-offset_left = 660.0
-offset_top = 535.0
-offset_right = 956.0
-offset_bottom = 583.0
+visible = false
+offset_left = 700.0
+offset_top = 564.0
+offset_right = 827.0
+offset_bottom = 609.0
 texture_normal = ExtResource("6_s35r4")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="complie_text" type="RichTextLabel" parent="."]
-offset_left = 756.0
-offset_top = 543.0
-offset_right = 858.0
-offset_bottom = 575.0
+visible = false
+offset_left = 721.0
+offset_top = 571.0
+offset_right = 811.0
+offset_bottom = 602.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("4_llhwa")
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 1
-text = "Compile"
+text = "Submit"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(12, 520)
@@ -235,8 +280,38 @@ offset_top = 543.0
 offset_right = 130.0
 offset_bottom = 615.0
 
+[node name="CodeEditor" parent="." instance=ExtResource("10_6knie")]
+unique_name_in_owner = true
+offset_left = 518.0
+offset_top = 236.0
+offset_right = 518.0
+offset_bottom = 236.0
+scale = Vector2(0.5, 0.5)
+question = "How to write code to output the tuple in reverse order?"
+comment_lines = ["Please help write one line code to get the given tuple in reverse order"]
+snackbar_success_text = ["Good ! Slice notation to the rescue"]
+tasks_end_msg = "Awesome ! Slice notation in Python allows you to extract a portion of a sequence by specifying the start, stop, and step values within square brackets."
+
+[node name="NextBtn" type="TextureButton" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 1021.0
+offset_top = 564.0
+offset_right = 1082.0
+offset_bottom = 626.0
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("11_8sl0f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+autoplay = "RESET"
+libraries = {
+"": SubResource("AnimationLibrary_1k148")
+}
+
 [connection signal="pressed" from="Barnacle_4" to="." method="_on_barnacle_4_pressed"]
 [connection signal="pressed" from="Barnacle_3" to="." method="_on_barnacle_3_pressed"]
 [connection signal="pressed" from="Barnacle_2" to="." method="_on_barnacle_2_pressed"]
 [connection signal="pressed" from="Barnacle_1" to="." method="_on_barnacle_1_pressed"]
 [connection signal="pressed" from="help_button" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="NextBtn" to="." method="_on_next_btn_pressed"]

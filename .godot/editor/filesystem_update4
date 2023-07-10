@@ -1,3 +1,6 @@
+res://Backend/CodeParser.tscn
+res://Backend/CodeParser.gd
+res://GameThree/scenes/scene15.tscn
 res://GameOne/scenes/scene3.tscn
 res://GameOne/scenes/scene2.tscn
 res://GameTwo/scenes/scene13.tscn
@@ -6,7 +9,10 @@ res://GameTwo/scenes/scene8.tscn
 res://GameThree/scenes/scene19.tscn
 res://GameTwo/scenes/scene11.tscn
 res://GameTwo/scenes/scene12.tscn
-res://GameTwo/scripts/scene13.gd
 res://GameOne/scenes/map.tscn
-res://GameOne/scripts/map.gd
 res://GameTwo/scenes/scene10.tscn
+res://GameThree/scenes/scene14.tscn
+res://GameThree/components/CodeEditor.tscn
+res://GameThree/components/CodeResults.tscn
+res://Backend/Logger.tscn
+res://GameThree/components/EditorActions.tscn
