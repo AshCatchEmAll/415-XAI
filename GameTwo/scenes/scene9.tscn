@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://lbultt0q42rm"]
+[gd_scene load_steps=29 format=3 uid="uid://lbultt0q42rm"]
 
 [ext_resource type="Script" path="res://GameTwo/scripts/scene9.gd" id="1_cfo7w"]
 [ext_resource type="Texture2D" uid="uid://bnp3qxtkhlehf" path="res://assets/scene10/purple_color.png" id="2_gj5lh"]
@@ -23,6 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://cub88co05g3t8" path="res://assets/scene10/shell_bubble.png" id="21_ok3t6"]
 [ext_resource type="Texture2D" uid="uid://bmdgdgeufkwvy" path="res://assets/scene9/hint_scene9.png" id="21_yweux"]
 [ext_resource type="Texture2D" uid="uid://e62vsnuv2nmt" path="res://assets/scene9/whiteForShell.png" id="22_t4vps"]
+[ext_resource type="Texture2D" uid="uid://cyv5s1bl4nkgw" path="res://assets/scene12/TextBox1.png" id="24_q57vo"]
+[ext_resource type="Texture2D" uid="uid://djjie4fvlti3e" path="res://assets/scene12/white.png" id="25_xldi6"]
+[ext_resource type="Texture2D" uid="uid://e1sdpaiuuu6i" path="res://assets/scene12/readyButton.png" id="26_i7fqd"]
 
 [sub_resource type="Animation" id="Animation_25wgh"]
 resource_name = "hintAnimation"
@@ -191,11 +194,11 @@ offset_top = 312.0
 offset_right = 90.0
 offset_bottom = 514.0
 
-[node name="wrong" type="AudioStreamPlayer2D" parent="."]
+[node name="wrong_sound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(19, 146)
 stream = ExtResource("14_rhi6e")
 
-[node name="correct" type="AudioStreamPlayer2D" parent="."]
+[node name="correct_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_nxb46")
 
 [node name="purple_button" type="TextureButton" parent="."]
@@ -320,7 +323,60 @@ texture_normal = ExtResource("21_ok3t6")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="errorDialogBox" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(538, 226.062)
+scale = Vector2(0.169268, 0.107499)
+texture = ExtResource("24_q57vo")
+
+[node name="White2" type="Sprite2D" parent="errorDialogBox"]
+position = Vector2(-0.738485, 28.6406)
+scale = Vector2(4.22936, 4.59198)
+texture = ExtResource("25_xldi6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="errorDialogBox/White2"]
+offset_left = -206.56
+offset_top = -194.763
+offset_right = 198.44
+offset_bottom = -121.763
+theme_override_colors/default_color = Color(0.309804, 0.701961, 0.945098, 1)
+theme_override_fonts/normal_font = ExtResource("9_0jgh3")
+theme_override_font_sizes/normal_font_size = 50
+text = "Wrong Selection"
+metadata/_edit_use_anchors_ = true
+
+[node name="explanation" type="RichTextLabel" parent="errorDialogBox/White2"]
+offset_left = -372.587
+offset_top = -115.665
+offset_right = 368.413
+offset_bottom = 74.3354
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("9_0jgh3")
+theme_override_font_sizes/normal_font_size = 28
+text = "The selected color is not the right choice. You have to select the printed colors in right order. 
+
+First select the color with lowest index and proceed sequentially"
+metadata/_edit_use_anchors_ = true
+
+[node name="closeDialogButton" type="TextureButton" parent="errorDialogBox/White2"]
+offset_left = -163.257
+offset_top = 92.9005
+offset_right = 150.743
+offset_bottom = 183.901
+texture_normal = ExtResource("26_i7fqd")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="wrong_button_high" to="." method="_on_wrong_button_high_pressed"]
 [connection signal="pressed" from="wrong_button_low" to="." method="_on_wrong_button_low_pressed"]
+[connection signal="pressed" from="purple_button" to="." method="_on_purple_button_pressed"]
+[connection signal="pressed" from="blue_button" to="." method="_on_blue_button_pressed"]
 [connection signal="pressed" from="yellow_button" to="." method="_on_yellow_button_pressed"]
+[connection signal="pressed" from="pink_button" to="." method="_on_pink_button_pressed"]
+[connection signal="pressed" from="green_button" to="." method="_on_green_button_pressed"]
+[connection signal="pressed" from="red_button" to="." method="_on_red_button_pressed"]
+[connection signal="pressed" from="orange_button" to="." method="_on_orange_button_pressed"]
 [connection signal="pressed" from="shell_button" to="." method="_on_shell_button_pressed"]
+[connection signal="pressed" from="errorDialogBox/White2/closeDialogButton" to="." method="_on_close_dialog_button_pressed"]
