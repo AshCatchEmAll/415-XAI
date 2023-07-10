@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c52uj8dmbak6j" path="res://assets/scene12/textBoxBlueDesign.png" id="6_s35r4"]
 [ext_resource type="Texture2D" uid="uid://caiuikgnls5rn" path="res://assets/GameThreeAssets/shovel.png" id="8_26o2f"]
 [ext_resource type="Texture2D" uid="uid://ccxqh1ho3plj2" path="res://assets/GameThreeAssets/bubble.png" id="8_hu8q4"]
-[ext_resource type="PackedScene" uid="uid://dt3awoubwcpfd" path="res://GameThree/components/CodeEditor.tscn" id="10_6knie"]
+[ext_resource type="PackedScene" uid="uid://dgxb3pamqsge5" path="res://GameThree/components/CodeEditor.tscn" id="10_6knie"]
 [ext_resource type="Texture2D" uid="uid://bbn7ru5saj1mb" path="res://assets/Backgrounds-Scene3/NextButton.svg" id="11_8sl0f"]
 
 [sub_resource type="Animation" id="Animation_1xbvi"]

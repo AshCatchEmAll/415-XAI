@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dr13j8ivr6f5s"]
+[gd_scene load_steps=6 format=3 uid="uid://cxgxlnxlgahfo"]
 
-[ext_resource type="Script" path="res://GameThree/components/CodeResults.gd" id="1_7g66n"]
 [ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="1_i1hs3"]
+[ext_resource type="Script" path="res://GameThree/scripts/CodeResults.gd" id="1_xjvr3"]
 [ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/Fonts/Varela_Round/VarelaRound-Regular.ttf" id="2_ot45w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aur6u"]
@@ -30,7 +30,7 @@ offset_left = 1.0
 offset_top = 15.0
 offset_right = 499.0
 offset_bottom = 486.0
-script = ExtResource("1_7g66n")
+script = ExtResource("1_xjvr3")
 
 [node name="Container" type="Panel" parent="."]
 layout_mode = 2

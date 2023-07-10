@@ -1,8 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://dt3awoubwcpfd"]
+[gd_scene load_steps=23 format=3 uid="uid://dgxb3pamqsge5"]
 
-[ext_resource type="Script" path="res://GameThree/components/CodeEditor.gd" id="1_ebw1c"]
+[ext_resource type="Script" path="res://GameThree/scripts/CodeEditor.gd" id="1_umofb"]
 [ext_resource type="FontFile" uid="uid://twvo7ar3jg2d" path="res://assets/Fonts/Fira_Code/static/FiraCode-Medium.ttf" id="2_qgkkw"]
-[ext_resource type="Script" path="res://GameThree/components/CodeEditorField.gd" id="3_8q64i"]
+[ext_resource type="Script" path="res://GameThree/scripts/CodeEditorField.gd" id="3_cuxi1"]
 [ext_resource type="PackedScene" path="res://GameOne/components/Snackbar.tscn" id="5_nlbwe"]
 [ext_resource type="Texture2D" uid="uid://ym2ouqihbau3" path="res://assets/GameThreeAssets/results.png" id="6_iep4u"]
 [ext_resource type="Texture2D" uid="uid://dffceye3w6kgq" path="res://assets/GameThreeAssets/instruction.png" id="7_p5kb6"]
@@ -122,7 +122,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_ebw1c")
+script = ExtResource("1_umofb")
 
 [node name="ColorRect" type="Panel" parent="."]
 layout_mode = 0
@@ -194,7 +194,7 @@ wrap_mode = 1
 highlight_current_line = true
 draw_tabs = true
 syntax_highlighter = SubResource("CodeHighlighter_si571")
-script = ExtResource("3_8q64i")
+script = ExtResource("3_cuxi1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
