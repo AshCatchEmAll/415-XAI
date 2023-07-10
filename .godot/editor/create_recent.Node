@@ -1,10 +1,10 @@
+Label
+Sprite2D
 AnimationPlayer
 TextureButton
 Button
-Sprite2D
 CPUParticles2D
 Control
-Label
 BoxContainer
 MarginContainer
 HTTPRequest

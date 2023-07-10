@@ -1,61 +1,50 @@
-[gd_scene load_steps=11 format=3 uid="uid://boc4mfjbyw8jr"]
+[gd_scene load_steps=24 format=3 uid="uid://boc4mfjbyw8jr"]
 
 [ext_resource type="Script" path="res://GameOne/scripts/map.gd" id="1_ntx2s"]
+[ext_resource type="Texture2D" uid="uid://bw5avcyaeonuo" path="res://assets/Map Background.png" id="2_p6lu6"]
+[ext_resource type="Texture2D" uid="uid://db04mj10vcfly" path="res://Whale_Animation/Whale.png" id="3_386aw"]
+[ext_resource type="Texture2D" uid="uid://4g8jbbndbgsw" path="res://Whale_Animation/Whale_tilt_5.png" id="4_6x1y3"]
+[ext_resource type="Texture2D" uid="uid://cc4fc4k5khojy" path="res://assets/Drop_pin.png" id="4_olkpd"]
+[ext_resource type="Texture2D" uid="uid://5f5ibwky7fea" path="res://Whale_Animation/Whale_tilt_10.png" id="5_edjd8"]
+[ext_resource type="Texture2D" uid="uid://b5yrtcpr7k8fx" path="res://assets/Drop_Pin_Hover.png" id="5_ml1fl"]
+[ext_resource type="Texture2D" uid="uid://gx20rom604rg" path="res://Whale_Animation/Whale_tilt_15.png" id="6_ph7gm"]
+[ext_resource type="Texture2D" uid="uid://bau4w5usujw4k" path="res://Whale_Animation/Whale_tilt_20.png" id="7_kwhg0"]
+[ext_resource type="Texture2D" uid="uid://c6ygv7nk8l1od" path="res://Whale_Animation/Whale_tilt_cw5.png" id="8_aptpv"]
+[ext_resource type="Texture2D" uid="uid://bbs1nbbhpqm22" path="res://Whale_Animation/Whale_tilt_cw10.png" id="9_htnvd"]
+[ext_resource type="Texture2D" uid="uid://dr34y34l8ctc0" path="res://Whale_Animation/Whale_tilt_cw15.png" id="10_iuk6q"]
+[ext_resource type="Texture2D" uid="uid://dxv7ovkc6rmx4" path="res://Whale_Animation/Whale_tilt_cw20.png" id="11_27ave"]
 [ext_resource type="Script" path="res://GameOne/scripts/WhaleAnimation.gd" id="12_ntd2h"]
+[ext_resource type="Texture2D" uid="uid://25gpwj8t27nv" path="res://assets/Whale.png" id="15_r5u20"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_doihv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("3_386aw")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("4_6x1y3")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("5_edjd8")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("6_ph7gm")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("7_kwhg0")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("8_aptpv")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("9_htnvd")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("10_iuk6q")
 }, {
 "duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
+"texture": ExtResource("11_27ave")
 }],
 "loop": true,
 "name": &"default",
@@ -63,7 +52,7 @@ animations = [{
 }]
 
 [sub_resource type="Animation" id="Animation_mnc81"]
-length = 0.001
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -111,6 +100,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(39, 480)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Sprite2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.00077374, 0.0523599, 0.0872665, 0.0872665, 3.48787e-16, -0.0523599, -0.0523599, -0.0523599, -0.0523599]
 }
 
 [sub_resource type="Animation" id="Animation_oldna"]
@@ -196,13 +197,16 @@ script = ExtResource("1_ntx2s")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 648.0
+texture = ExtResource("2_p6lu6")
 expand_mode = 1
 
 [node name="WhaleAnimation" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(583, 282)
 scale = Vector2(0.154184, 0.172455)
 sprite_frames = SubResource("SpriteFrames_doihv")
-frame_progress = 0.789242
+frame = 4
+frame_progress = 0.782931
 script = ExtResource("12_ntd2h")
 
 [node name="CrabGeneralButton" type="TextureButton" parent="."]
@@ -210,6 +214,9 @@ offset_left = 1011.0
 offset_top = 430.0
 offset_right = 1065.98
 offset_bottom = 524.998
+rotation = 0.0013658
+texture_normal = ExtResource("4_olkpd")
+texture_hover = ExtResource("5_ml1fl")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -218,6 +225,8 @@ offset_left = 905.0
 offset_top = 150.0
 offset_right = 960.0
 offset_bottom = 245.0
+texture_normal = ExtResource("4_olkpd")
+texture_hover = ExtResource("5_ml1fl")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -226,6 +235,8 @@ offset_left = 236.0
 offset_top = 27.0
 offset_right = 291.0
 offset_bottom = 122.0
+texture_normal = ExtResource("4_olkpd")
+texture_hover = ExtResource("5_ml1fl")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -234,6 +245,9 @@ offset_left = 39.0
 offset_top = 480.0
 offset_right = 94.0
 offset_bottom = 574.999
+rotation = 0.00171352
+texture_normal = ExtResource("4_olkpd")
+texture_hover = ExtResource("5_ml1fl")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -252,6 +266,12 @@ offset_bottom = 63.0
 toggle_mode = true
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 300)
+rotation = -0.0523599
+scale = Vector2(0.199539, 0.199539)
+texture = ExtResource("15_r5u20")
 
 [connection signal="pressed" from="CrabGeneralButton" to="." method="_on_game_one_btn_pressed"]
 [connection signal="pressed" from="TurtleGeneralButton" to="." method="_on_game_three_btn_pressed"]

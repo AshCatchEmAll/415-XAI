@@ -16,3 +16,6 @@ res://GameThree/components/CodeEditor.tscn
 res://GameThree/components/CodeResults.tscn
 res://Backend/Logger.tscn
 res://GameThree/components/EditorActions.tscn
+res://GameThree/scripts/CodeEditor.gd
+res://GameThree/scripts/scene15.gd
+res://GameThree/scripts/CodeEditorField.gd

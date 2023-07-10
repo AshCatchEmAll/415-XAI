@@ -3,7 +3,7 @@ extends TextEdit
 
 
 var comment_color := Color(0.4, 0.4, 0.6, 1) # Blue-grey
-var print_color := Color("#166534")
+var print_color := Color("#45CD00")
 var blue_color :=Color("#55A7F9")
 
 

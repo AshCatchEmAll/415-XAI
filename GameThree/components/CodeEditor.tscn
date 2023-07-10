@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dgxb3pamqsge5"]
+[gd_scene load_steps=25 format=3 uid="uid://dgxb3pamqsge5"]
 
 [ext_resource type="Script" path="res://GameThree/scripts/CodeEditor.gd" id="1_umofb"]
 [ext_resource type="FontFile" uid="uid://twvo7ar3jg2d" path="res://assets/Fonts/Fira_Code/static/FiraCode-Medium.ttf" id="2_qgkkw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" path="res://GameOne/components/Snackbar.tscn" id="5_nlbwe"]
 [ext_resource type="Texture2D" uid="uid://ym2ouqihbau3" path="res://assets/GameThreeAssets/results.png" id="6_iep4u"]
 [ext_resource type="Texture2D" uid="uid://dffceye3w6kgq" path="res://assets/GameThreeAssets/instruction.png" id="7_p5kb6"]
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="8_5ck8o"]
 [ext_resource type="FontFile" uid="uid://boa803h28mplh" path="res://assets/Fonts/Fira_Code/static/FiraCode-SemiBold.ttf" id="9_rwua3"]
 [ext_resource type="PackedScene" uid="uid://d34mtfrfnwekc" path="res://Backend/CodeParser.tscn" id="10_521c2"]
 [ext_resource type="PackedScene" uid="uid://cb2ogdqcfkjbn" path="res://GameThree/components/EditorActions.tscn" id="11_io6y3"]
@@ -102,6 +103,11 @@ content_margin_bottom = 10.0
 bg_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3owam"]
+bg_color = Color(0.992157, 0.917647, 0.917647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irjil"]
 bg_color = Color(0.898039, 0.972549, 0.94902, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -256,6 +262,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_l42lu")
 bbcode_enabled = true
 
 [node name="FailureBar" type="Label" parent="."]
+unique_name_in_owner = true
 visible = false
 layout_mode = 2
 offset_left = 664.0
@@ -270,16 +277,17 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SucessBar" type="Label" parent="."]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 664.0
 offset_top = 59.0
 offset_right = 1147.0
-offset_bottom = 90.0
+offset_bottom = 91.0
 theme_override_colors/font_color = Color(0.262745, 0.709804, 0.576471, 1)
-theme_override_fonts/font = ExtResource("9_rwua3")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3owam")
-text = "All Tests Passed"
+theme_override_fonts/font = ExtResource("8_5ck8o")
+theme_override_styles/normal = SubResource("StyleBoxFlat_irjil")
+text = "Sucess"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -287,7 +295,7 @@ vertical_alignment = 1
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 672.0
-offset_top = 129.0
+offset_top = 95.0
 offset_right = 1143.0
 offset_bottom = 593.0
 vertical_scroll_mode = 2

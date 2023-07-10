@@ -171,20 +171,23 @@ func parser_request_completed(response):
 
 	label.modulate = Color(1, 1, 1, 0)
 	vbox.add_child(label)
-	%TestCount.visible = true
+	
 	if testFailCount!=0:
+		%FailureBar.visible = true
 		%EditorActions/SubmitBtn.disabled = true
-		%TestCount.add_theme_color_override("font_color",Color(235/255.0, 87/255.0, 87/255.0, 1))
-		%TestCount.text = str(testFailCount) + " tests failed"
+#		%TestCount.add_theme_color_override("font_color",Color(235/255.0, 87/255.0, 87/255.0, 1))
+		%FailureBar.text = str(testFailCount) + " tests failed"
 	else:
+		%SucessBar.visible = true
 		%EditorActions/SubmitBtn.disabled = false
-		%TestCount.add_theme_color_override("font_color",Color(67/255.0,181/255.0,147/255.0,1))
-		%TestCount.text = "All tests passed"
+#		%TestCount.add_theme_color_override("font_color",Color(67/255.0,181/255.0,147/255.0,1))
+		%SucessBar.text = "All tests passed"
 
 
 func on_submit_btn_pressed():
 	%EditorActions/SubmitBtn.visible = false
 	%EditorActions/SubmittedBtn.visible = true
+	
 	
 	
 func on_test_btn_pressed():
@@ -194,6 +197,8 @@ func on_test_btn_pressed():
 
 
 func clear_vbox_children():
+	%FailureBar.visible = false
+	%SucessBar.visible = false
 	for child in vbox.get_children():
 		vbox.remove_child(child)
 		child.queue_free()
