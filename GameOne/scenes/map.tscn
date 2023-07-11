@@ -269,7 +269,7 @@ stretch_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(578, 300)
-rotation = -0.0523599
+rotation = -0.00077374
 scale = Vector2(0.199539, 0.199539)
 texture = ExtResource("15_r5u20")
 

@@ -92,7 +92,7 @@ func setup_editor_three():
 	
 	var instructions = """[b][color=orange]Instruction[/color][/b]
 
-Use an inbuilt function in [color=green]python[/color] for dictionaries to delete keys in 'k1' and 'k2' in the given dictionary d.
+Use an inbuilt function in [color=green]python[/color] for dictionaries to delete keys in 'k2' and 'k3' in the given dictionary d.
 
 [code] 
 	d = {
