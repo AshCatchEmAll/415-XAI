@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://kpo4xa2iaonh"]
+
+[ext_resource type="Texture2D" uid="uid://bney24cx5l2d1" path="res://GameFour/assets/background.png" id="1_t645m"]
+[ext_resource type="Texture2D" uid="uid://41o0hq6wx7bg" path="res://GameFour/assets/boy.png" id="2_qkvot"]
+[ext_resource type="Texture2D" uid="uid://baivl5llfb8f6" path="res://GameFour/assets/whale_sculpture.png" id="3_i20oj"]
+[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/Fonts/Varela_Round/VarelaRound-Regular.ttf" id="4_1m2lj"]
+[ext_resource type="Script" path="res://GameTwo/scripts/scene13ClickNext.gd" id="5_opf7r"]
+
+[node name="scene20" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(571, 432.25)
+scale = Vector2(0.177284, 0.177284)
+texture = ExtResource("1_t645m")
+
+[node name="Boy" type="Sprite2D" parent="."]
+position = Vector2(259, 343)
+scale = Vector2(0.375234, 0.375234)
+texture = ExtResource("2_qkvot")
+
+[node name="WhaleSculpture" type="Sprite2D" parent="."]
+position = Vector2(576, 271.594)
+scale = Vector2(0.190541, 0.190541)
+texture = ExtResource("3_i20oj")
+
+[node name="text_2" type="RichTextLabel" parent="."]
+top_level = true
+offset_left = 671.0
+offset_top = 342.0
+offset_right = 983.0
+offset_bottom = 395.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("4_1m2lj")
+theme_override_font_sizes/normal_font_size = 20
+text = "Click on the sculpture to place the shell to open the sculpture
+"
+scroll_active = false
+script = ExtResource("5_opf7r")
+theme_override_font_sizes/normal_font_size = 20
