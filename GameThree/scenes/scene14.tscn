@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b87tveonpkxq4"]
+[gd_scene load_steps=9 format=3 uid="uid://b87tveonpkxq4"]
 
 [ext_resource type="Texture2D" uid="uid://cv2fymma755qt" path="res://assets/scene14/background.png" id="1_3adk2"]
 [ext_resource type="Texture2D" uid="uid://1n3efigr77ie" path="res://assets/scene14/background2.png" id="2_k4lq0"]
@@ -8,8 +8,6 @@
 [ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="6_8slp3"]
 [ext_resource type="Script" path="res://GameTwo/scripts/scene13Description.gd" id="7_t3v88"]
 [ext_resource type="Texture2D" uid="uid://rahk3lufhlyt" path="res://assets/scene14/bubble_shovel.png" id="8_eeg32"]
-[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/Fonts/Varela_Round/VarelaRound-Regular.ttf" id="9_8cevw"]
-[ext_resource type="Script" path="res://GameTwo/scripts/scene13ClickNext.gd" id="10_li85b"]
 
 [node name="scene14" type="Node2D"]
 
@@ -82,16 +80,11 @@ texture_normal = ExtResource("8_eeg32")
 ignore_texture_size = true
 stretch_mode = 4
 
-[node name="text_2" type="RichTextLabel" parent="."]
-offset_left = 721.0
-offset_top = 422.0
-offset_right = 950.0
-offset_bottom = 481.0
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("9_8cevw")
-theme_override_font_sizes/normal_font_size = 22
+[node name="text_description" type="RichTextLabel" parent="."]
+offset_left = 727.0
+offset_top = 433.0
+offset_right = 921.0
+offset_bottom = 491.0
 text = "Click on the shovel to 
        help the turtle
 "
-scroll_active = false
-script = ExtResource("10_li85b")
