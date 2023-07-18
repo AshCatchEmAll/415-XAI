@@ -1,0 +1,124 @@
+[gd_scene load_steps=13 format=3 uid="uid://cr11awxa2lmsi"]
+
+[ext_resource type="Texture2D" uid="uid://3je75su6nh66" path="res://Forest Game - 11~15/assets/background.jpg" id="1_dar1k"]
+[ext_resource type="Texture2D" uid="uid://cbiuhlqywt3g" path="res://Forest Game - 11~15/assets/bubble_map.png" id="2_5755s"]
+[ext_resource type="Texture2D" uid="uid://bp1e2t74x31sg" path="res://Forest Game - 11~15/assets/labels.png" id="3_htshj"]
+[ext_resource type="Texture2D" uid="uid://bdw1re8y0w5s1" path="res://Forest Game - 11~15/assets/tree4.png" id="4_6rj6n"]
+[ext_resource type="Texture2D" uid="uid://dra18iih1shxc" path="res://Forest Game - 11~15/assets/tree5.png" id="5_dufoo"]
+[ext_resource type="Texture2D" uid="uid://vbsrys1cgece" path="res://Forest Game - 11~15/assets/tree6.png" id="6_lkpeh"]
+[ext_resource type="Texture2D" uid="uid://btru828fumsvo" path="res://Forest Game - 11~15/assets/monster_red.png" id="7_a7an3"]
+[ext_resource type="Texture2D" uid="uid://iobupm5uimh" path="res://Forest Game - 11~15/assets/monster_green.png" id="8_nyy7s"]
+[ext_resource type="Texture2D" uid="uid://da7cncnfbs5vo" path="res://Forest Game - 11~15/assets/monster.png" id="9_8dmps"]
+[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/Fonts/Varela_Round/VarelaRound-Regular.ttf" id="10_pme4q"]
+[ext_resource type="Script" path="res://GameTwo/scripts/scene13ClickNext.gd" id="11_j5k70"]
+[ext_resource type="Texture2D" uid="uid://bfkkrlmc62fdt" path="res://Forest Game - 11~15/assets/click.svg" id="12_ox42x"]
+
+[node name="scene14" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576.333, 320.25)
+scale = Vector2(0.599537, 0.599537)
+texture = ExtResource("1_dar1k")
+
+[node name="BubbleMap" type="Sprite2D" parent="."]
+position = Vector2(1081, 58)
+scale = Vector2(0.133855, 0.133855)
+texture = ExtResource("2_5755s")
+
+[node name="Labels3" type="Sprite2D" parent="."]
+position = Vector2(798, 536)
+scale = Vector2(0.166792, 0.166792)
+texture = ExtResource("3_htshj")
+
+[node name="Labels2" type="Sprite2D" parent="."]
+position = Vector2(749, 277)
+scale = Vector2(0.162377, 0.162377)
+texture = ExtResource("3_htshj")
+
+[node name="Labels" type="Sprite2D" parent="."]
+position = Vector2(210, 385)
+scale = Vector2(0.15808, 0.15808)
+texture = ExtResource("3_htshj")
+
+[node name="Tree4" type="Sprite2D" parent="."]
+position = Vector2(154.687, 246.71)
+scale = Vector2(0.177606, 0.177606)
+texture = ExtResource("4_6rj6n")
+
+[node name="Tree5" type="Sprite2D" parent="."]
+position = Vector2(769, 127)
+scale = Vector2(0.165962, 0.165962)
+texture = ExtResource("5_dufoo")
+
+[node name="Tree6" type="Sprite2D" parent="."]
+position = Vector2(987, 436)
+scale = Vector2(0.159428, 0.159428)
+texture = ExtResource("6_lkpeh")
+
+[node name="MonsterRed" type="Sprite2D" parent="."]
+position = Vector2(233, 291)
+scale = Vector2(0.168089, 0.168089)
+texture = ExtResource("7_a7an3")
+
+[node name="MonsterGreen" type="Sprite2D" parent="."]
+position = Vector2(677, 161)
+scale = Vector2(0.159122, 0.159122)
+texture = ExtResource("8_nyy7s")
+
+[node name="Monster" type="Sprite2D" parent="."]
+position = Vector2(1061, 509)
+scale = Vector2(0.084449, 0.084449)
+texture = ExtResource("9_8dmps")
+
+[node name="text_3" type="RichTextLabel" parent="."]
+top_level = true
+offset_left = 128.0
+offset_top = 370.0
+offset_right = 336.0
+offset_bottom = 402.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_pme4q")
+theme_override_font_sizes/normal_font_size = 22
+text = "Spicy Fruit Monster"
+scroll_active = false
+script = ExtResource("11_j5k70")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_pme4q")
+theme_override_font_sizes/normal_font_size = 22
+
+[node name="text_2" type="RichTextLabel" parent="."]
+top_level = true
+offset_left = 664.0
+offset_top = 262.0
+offset_right = 872.0
+offset_bottom = 294.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_pme4q")
+theme_override_font_sizes/normal_font_size = 22
+text = "Bitter Fruit Monster"
+scroll_active = false
+script = ExtResource("11_j5k70")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_pme4q")
+theme_override_font_sizes/normal_font_size = 22
+
+[node name="text_2" type="RichTextLabel" parent="text_2"]
+top_level = true
+offset_left = 713.0
+offset_top = 521.0
+offset_right = 921.0
+offset_bottom = 553.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_pme4q")
+theme_override_font_sizes/normal_font_size = 22
+text = "Sour Fruit Monster"
+scroll_active = false
+script = ExtResource("11_j5k70")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_pme4q")
+theme_override_font_sizes/normal_font_size = 22
+
+[node name="Click" type="Sprite2D" parent="."]
+position = Vector2(831, 322)
+scale = Vector2(0.585859, 0.585859)
+texture = ExtResource("12_ox42x")
