@@ -35,7 +35,7 @@ func _on_game_three_btn_pressed():
 
 
 func _on_game_four_btn_pressed():
-	if(show_route_four==false):return
+	SceneTransition.change_scene_to_file("res://GameFour/scenes/scene21.tscn")
 	pass # Replace with function body.
 
 

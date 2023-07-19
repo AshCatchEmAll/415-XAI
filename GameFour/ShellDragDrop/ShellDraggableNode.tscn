@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://qsvh2qu1g8as"]
+
+[ext_resource type="Script" path="res://GameOne/scripts/DraggableNode.gd" id="1_n8w4k"]
+[ext_resource type="Texture2D" uid="uid://b2o6tabuon0vb" path="res://assets/crab-body/crab-leg-1.png" id="2_kihcg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_flkou"]
+radius = 15.9999
+height = 63.9995
+
+[node name="DraggableNode" type="Node2D"]
+script = ExtResource("1_n8w4k")
+
+[node name="DragNodeIcon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -24.0
+offset_right = 40.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="DragNodeIcon"]
+position = Vector2(40, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragNodeIcon/Area2D"]
+modulate = Color(0.886275, 0.913725, 0.556863, 1)
+position = Vector2(0, 1.90735e-06)
+rotation = 1.57483
+shape = SubResource("CapsuleShape2D_flkou")
+debug_color = Color(0.592157, 0.317647, 0.521569, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="DragNodeIcon/Area2D"]
+position = Vector2(-40, 24)
+scale = Vector2(0.5, 0.25)
+texture = ExtResource("2_kihcg")
+
+[connection signal="input_event" from="DragNodeIcon/Area2D" to="." method="_on_area_2d_input_event"]
