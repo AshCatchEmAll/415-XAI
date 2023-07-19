@@ -1,5 +1,5 @@
-res://GameThree/components/EditorActions.tscn
-res://GameThree/scenes/scene15.tscn
+res://GameSweetFruitForest/scenes/scene6.tscn
+res://GameSweetFruitForest/scripts/scene6.gd
 res://GameOne/scenes/scene3.tscn
 res://GameOne/scenes/scene2.tscn
 res://GameTwo/scenes/scene13.tscn
@@ -11,8 +11,11 @@ res://GameTwo/scenes/scene12.tscn
 res://GameOne/scenes/map.tscn
 res://GameTwo/scenes/scene10.tscn
 res://GameThree/scenes/scene14.tscn
-res://GameThree/components/CodeEditor.tscn
+res://GameThree/scenes/scene15.tscn
 res://Backend/CodeParser.tscn
 res://GameThree/components/CodeResults.tscn
 res://Backend/Logger.tscn
-res://GameThree/scripts/scene15.gd
+res://GameThree/components/EditorActions.tscn
+res://GameSweetFruitForest/scenes/fm_scene_6.tscn
+res://GameSweetFruitForest/scripts/fm_scene_6.gd
+res://GameThree/components/CodeEditor.tscn

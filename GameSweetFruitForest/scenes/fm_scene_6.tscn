@@ -1,0 +1,239 @@
+[gd_scene load_steps=18 format=3 uid="uid://5ounq76atjom"]
+
+[ext_resource type="Texture2D" uid="uid://b8f8yh2sq3hp0" path="res://assets/sweet_fruit_forest/monster.png" id="1_0kw3r"]
+[ext_resource type="Script" path="res://GameSweetFruitForest/scripts/fm_scene_6.gd" id="1_0ll6i"]
+[ext_resource type="Texture2D" uid="uid://bauoiiqifjj3u" path="res://assets/sweet_fruit_forest/lemon.png" id="2_83k6f"]
+[ext_resource type="Texture2D" uid="uid://x506g4qn8xpg" path="res://assets/sweet_fruit_forest/clock.png" id="3_acbiu"]
+[ext_resource type="PackedScene" uid="uid://dgxb3pamqsge5" path="res://GameThree/components/CodeEditor.tscn" id="4_7cqmy"]
+[ext_resource type="Texture2D" uid="uid://d6uyl50atss1" path="res://assets/sweet_fruit_forest/magic_wand.png" id="6_gauxf"]
+[ext_resource type="Texture2D" uid="uid://bbl1tinji15c2" path="res://assets/sweet_fruit_forest/monster_attacked.png" id="7_68nrj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkiq1"]
+bg_color = Color(0.698039, 0.780392, 0.439216, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ia0rd"]
+bg_color = Color(0.803922, 0.317647, 0.172549, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1cmxe"]
+bg_color = Color(0.698039, 0.780392, 0.439216, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kh0bk"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2v3q"]
+bg_color = Color(0.698039, 0.780392, 0.439216, 1)
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibtl6"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_jlrhg"]
+resource_name = "time"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("panel_red:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 60),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 40), Vector2(889, 40)]
+}
+
+[sub_resource type="Animation" id="Animation_thaqi"]
+resource_name = "sucess"
+length = 8.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iid7r"]
+_data = {
+"sucess": SubResource("Animation_thaqi"),
+"time": SubResource("Animation_jlrhg")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7dku"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="scene6" type="Node2D"]
+script = ExtResource("1_0ll6i")
+
+[node name="panel_green" type="Panel" parent="."]
+offset_left = 176.0
+offset_top = 40.0
+offset_right = 1093.0
+offset_bottom = 102.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nkiq1")
+
+[node name="panel_red" type="Panel" parent="."]
+offset_left = 188.0
+offset_top = 51.0
+offset_right = 1077.0
+offset_bottom = 91.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ia0rd")
+
+[node name="monster" type="Sprite2D" parent="."]
+position = Vector2(176, 76)
+texture = ExtResource("1_0kw3r")
+
+[node name="lemon1" type="Sprite2D" parent="."]
+position = Vector2(344, 64)
+texture = ExtResource("2_83k6f")
+
+[node name="lemon2" type="Sprite2D" parent="."]
+position = Vector2(888, 64)
+texture = ExtResource("2_83k6f")
+
+[node name="lemon3" type="Sprite2D" parent="."]
+position = Vector2(600, 64)
+texture = ExtResource("2_83k6f")
+
+[node name="panel_green_instruction" type="Panel" parent="."]
+offset_left = 158.0
+offset_top = 164.0
+offset_right = 553.0
+offset_bottom = 373.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1cmxe")
+
+[node name="panel_white_instruction" type="Panel" parent="."]
+offset_left = 171.0
+offset_top = 176.0
+offset_right = 541.0
+offset_bottom = 362.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kh0bk")
+
+[node name="Instruction" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 188.0
+offset_top = 191.0
+offset_right = 522.0
+offset_bottom = 347.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "The following two floating point are respectively the height and weight of the sour fruit monster. How to write the corresponding decimal form according to the exponential form of these two floating point?"
+autowrap_mode = 2
+
+[node name="panel_green_instruction2" type="Panel" parent="."]
+offset_left = 160.0
+offset_top = 399.0
+offset_right = 555.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1cmxe")
+
+[node name="panel_white_instruction2" type="Panel" parent="."]
+offset_left = 173.0
+offset_top = 411.0
+offset_right = 543.0
+offset_bottom = 597.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kh0bk")
+
+[node name="Example_Label" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 221.0
+offset_top = 477.0
+offset_right = 504.0
+offset_bottom = 529.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 2
+
+[node name="panel_green_time" type="Panel" parent="."]
+offset_left = 715.0
+offset_top = 165.0
+offset_right = 963.0
+offset_bottom = 295.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p2v3q")
+
+[node name="panel_clock_white" type="Panel" parent="."]
+offset_left = 659.0
+offset_top = 199.0
+offset_right = 746.0
+offset_bottom = 261.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ibtl6")
+
+[node name="panel_clock_white2" type="Panel" parent="."]
+offset_left = 647.0
+offset_top = 179.0
+offset_right = 734.0
+offset_bottom = 241.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ibtl6")
+
+[node name="panel_clock_white3" type="Panel" parent="."]
+offset_left = 653.0
+offset_top = 226.0
+offset_right = 736.0
+offset_bottom = 281.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ibtl6")
+
+[node name="clock" type="Sprite2D" parent="."]
+position = Vector2(681, 226)
+scale = Vector2(0.84901, 0.849011)
+texture = ExtResource("3_acbiu")
+
+[node name="Time_Label" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 766.0
+offset_top = 179.0
+offset_right = 948.0
+offset_bottom = 283.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Pay attention to the time! You're almost getting the acid barrier magic!"
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_iid7r")
+}
+
+[node name="CodeEditor" parent="." instance=ExtResource("4_7cqmy")]
+unique_name_in_owner = true
+offset_left = 587.0
+offset_top = 348.0
+offset_right = 587.0
+offset_bottom = 348.0
+scale = Vector2(0.4, 0.4)
+
+[node name="SucessPanel" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 75.0
+offset_top = 149.0
+offset_right = 1117.0
+offset_bottom = 637.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o7dku")
+
+[node name="Label" type="Label" parent="SucessPanel"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 43.0
+offset_right = 427.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Good job! You have successfully obtained the Acid Barrier Magic! The health of the sour fruit monster has been reduced!​"
+autowrap_mode = 2
+
+[node name="wand" type="Sprite2D" parent="SucessPanel"]
+position = Vector2(300, 330)
+texture = ExtResource("6_gauxf")
+
+[node name="success_image" type="Sprite2D" parent="SucessPanel"]
+unique_name_in_owner = true
+position = Vector2(772, 211)
+texture = ExtResource("7_68nrj")
