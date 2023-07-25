@@ -317,7 +317,7 @@ stretch_mode = 0
 [node name="errorDialogBox" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 visible = false
-position = Vector2(538, 226.062)
+position = Vector2(578, 310)
 scale = Vector2(0.169268, 0.107499)
 texture = ExtResource("22_3dro2")
 

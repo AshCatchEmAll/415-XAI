@@ -28,7 +28,7 @@ func _on_back_button_pressed():
 func _on_green_button_pressed():
 	if errorDialogBox.visible != true && helpDialogBox.visible != true:
 		if greenHalfJelly.visible == false:
-			$"/root/Success".play()
+			$correct_sound.play()
 			greenHalfJelly.visible = true
 		else: 
 			errorDialogBox.visible = true
@@ -39,7 +39,7 @@ func _on_green_button_pressed():
 func _on_orange_button_pressed():
 	if errorDialogBox.visible != true && helpDialogBox.visible != true:
 		if greenHalfJelly.visible == true && orangeHalfJelly.visible == false:
-			$"/root/Success".play()
+			$correct_sound.play()
 			orangeHalfJelly.visible = true
 			await get_tree().create_timer(1.0).timeout
 			Click.play()

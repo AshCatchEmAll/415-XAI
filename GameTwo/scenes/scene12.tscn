@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://kpmlor52ly0"]
+[gd_scene load_steps=35 format=3 uid="uid://kpmlor52ly0"]
 
 [ext_resource type="Script" path="res://GameTwo/scripts/scene12.gd" id="1_3v4lc"]
 [ext_resource type="Texture2D" uid="uid://djjie4fvlti3e" path="res://assets/scene12/white.png" id="1_5hf1s"]
@@ -28,6 +28,8 @@
 [ext_resource type="Texture2D" uid="uid://bnit5kxcj03y2" path="res://assets/scene10/back_button.png" id="22_4pkmt"]
 [ext_resource type="Texture2D" uid="uid://bll52ovyxy2yu" path="res://assets/scene10/orange_color.png" id="22_tl68m"]
 [ext_resource type="Texture2D" uid="uid://e1sdpaiuuu6i" path="res://assets/scene12/readyButton.png" id="23_8kbge"]
+[ext_resource type="AudioStream" uid="uid://6s78q1t1o2gf" path="res://assets/Audio/drag-correct.mp3" id="29_2a5j0"]
+[ext_resource type="AudioStream" uid="uid://dqkody17uay2q" path="res://assets/Audio/drag-wrong.mp3" id="30_jv1p8"]
 
 [sub_resource type="Animation" id="Animation_a3ney"]
 resource_name = "hintBoxPosition"
@@ -266,9 +268,8 @@ offset_right = 1051.0
 offset_bottom = 575.0
 
 [node name="helpDialogBox" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(538, 317)
-scale = Vector2(0.169268, 0.191817)
+position = Vector2(578, 317)
+scale = Vector2(0.168816, 0.191817)
 texture = ExtResource("5_6w5i2")
 
 [node name="White2" type="Sprite2D" parent="helpDialogBox"]
@@ -313,7 +314,7 @@ stretch_mode = 0
 [node name="errorDialogBox" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 visible = false
-position = Vector2(538, 226.062)
+position = Vector2(578, 310)
 scale = Vector2(0.169268, 0.107499)
 texture = ExtResource("5_6w5i2")
 
@@ -431,6 +432,12 @@ offset_bottom = 80.0
 texture_normal = ExtResource("22_4pkmt")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="correct_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_2a5j0")
+
+[node name="wrong_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_jv1p8")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="helpDialogBox/White2/helpDialogButton" to="." method="_on_help_dialog_button_pressed"]

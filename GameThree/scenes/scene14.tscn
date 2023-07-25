@@ -88,3 +88,5 @@ offset_bottom = 491.0
 text = "Click on the shovel to 
        help the turtle
 "
+
+[connection signal="pressed" from="bubble_button" to="text_1" method="_on_bubble_button_pressed"]

@@ -5,20 +5,23 @@ Scene 5:
 	- Map button on scene 5 doesn't work
 	- Option to skip dialog animation?
 Scene 7:
-	- Map button looks offset
+	- Map button text looks pixelated --FIXED--
 	- User can go straight to map without collecting shell first
 Scene 9:
-	- Error dialog box not centered
+	- Error dialog box not centered --FIXED--
 Scene 10:
+	- Error dialog box not centered --FIXED--
 	- Hint is the same as scene 9
 Scene 11:
+	- Error dialog box not centered --FIXED--
 	- Hint text is pixelated and doesn't match with other hints
 Scene 12:
-	- Success sound is different from scene 9-11
+	- Error dialog box not centered --FIXED--
+	- Success sound is different from scene 9-11 --FIXED--
 Scene 13:
 	- User can go to map without getting the shell
 Scene 14: 
-	- Shovel button not working
+	- Shovel button not working --FIXED--
 Scene 15:
 	- Hint button not working
 Scene 19:

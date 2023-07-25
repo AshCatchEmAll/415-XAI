@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cmhdbyax6f3fl"]
+[gd_scene load_steps=37 format=3 uid="uid://cmhdbyax6f3fl"]
 
 [ext_resource type="Script" path="res://GameOne/scripts/Scene7.gd" id="1_p0ve2"]
 [ext_resource type="Texture2D" uid="uid://wfbjc58us1un" path="res://assets/scene7/scene7.png" id="2_mr88t"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://5lwkauul6bdr" path="res://assets/Audio/gibberish.mp3" id="5_jxsrr"]
 [ext_resource type="Texture2D" uid="uid://cuvvllp01ycg5" path="res://assets/scene7/game-1-shell.png" id="6_pduuv"]
 [ext_resource type="AudioStream" uid="uid://esb40fx8l4wq" path="res://assets/Audio/shellpicked.mp3" id="7_4c2re"]
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="8_imv3y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ogtb"]
 bg_color = Color(1, 1, 1, 1)
@@ -353,18 +354,6 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_njvst")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_lyoca")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qe0xs")
 
-[node name="maplabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1090.0
-offset_top = 70.0
-offset_right = 1123.0
-offset_bottom = 92.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_7psla")
-theme_override_font_sizes/font_size = 15
-text = "Map"
-
 [node name="ShellFade" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 root_node = NodePath("../Shell1")
@@ -402,6 +391,15 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_mkemj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hcru3")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_0kqya")
 theme_override_styles/focus = SubResource("StyleBoxTexture_fj76a")
+
+[node name="mapText" type="RichTextLabel" parent="."]
+offset_left = 1087.0
+offset_top = 68.0
+offset_right = 1127.0
+offset_bottom = 93.0
+theme_override_fonts/normal_font = ExtResource("8_imv3y")
+theme_override_font_sizes/normal_font_size = 18
+text = "Map"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="shellbtn" to="." method="_on_shellbtn_pressed"]
