@@ -393,6 +393,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_0kqya")
 theme_override_styles/focus = SubResource("StyleBoxTexture_fj76a")
 
 [node name="mapText" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 1087.0
 offset_top = 68.0
 offset_right = 1127.0

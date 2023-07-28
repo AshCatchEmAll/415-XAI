@@ -1,12 +1,12 @@
 Scene: Map
 	- Whale sculpture animation not working
-	- No mute music button on map
-Scene 5:
+	- No mute music button on map 
+Scene 5: 
 	- Map button on scene 5 doesn't work
 	- Option to skip dialog animation?
 Scene 7:
 	- Map button text looks pixelated --FIXED--
-	- User can go straight to map without collecting shell first
+	- User can go straight to map without collecting shell first --remove map, bold shell text--
 Scene 9:
 	- Error dialog box not centered --FIXED--
 Scene 10:
@@ -14,16 +14,15 @@ Scene 10:
 	- Hint is the same as scene 9
 Scene 11:
 	- Error dialog box not centered --FIXED--
-	- Hint text is pixelated and doesn't match with other hints
 Scene 12:
 	- Error dialog box not centered --FIXED--
 	- Success sound is different from scene 9-11 --FIXED--
 Scene 13:
-	- User can go to map without getting the shell
+	- User can go to map without getting the shell --remove map, bold shell text--
 Scene 14: 
 	- Shovel button not working --FIXED--
 Scene 15:
-	- Hint button not working
+	- Hint button not working --won't fix--
 Scene 19:
 	- Map button is pixelated
 	- Cannot collect shells

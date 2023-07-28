@@ -325,7 +325,6 @@ scale = Vector2(0.129952, 0.0436479)
 texture = ExtResource("4_jk1ys")
 
 [node name="hint_text" type="RichTextLabel" parent="."]
-visible = false
 offset_left = 685.0
 offset_top = 519.0
 offset_right = 1055.0
