@@ -49,8 +49,8 @@ func _process(delta):
 		%ShellBounce.play("bounce")
 	
 	if shell_collected == true:
-		click_label_visible = false
-		get_node("%Click-To-Enter-Panel").visible = false
+		click_label_visible = true
+		get_node("%Click-To-Enter-Panel").visible = true
 	
 
 
@@ -67,7 +67,13 @@ func _on_shellbtn_pressed():
 	shell_picked_audio.play()
 	shell_collected = true
 	%ShellFade.play("shell_fade")
-	print("pres")
+	
+	await get_tree().create_timer(1.0).timeout
+	var params = {
+	"show_route_two": true,
+	"show_route_one":false
+	}
+	SceneTransition.change_to_map_scene( params)
 	
 
 
@@ -96,12 +102,7 @@ func on_fade_in_complete(anim_name):
 
 	
 func _on_go_to_map_btn_pressed():
-	var params = {
-   
-	"show_route_two": true,
-	"show_route_one":false
-	}
-	SceneTransition.change_to_map_scene( params)
+	pass
 	
 
 

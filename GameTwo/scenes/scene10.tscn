@@ -325,13 +325,14 @@ scale = Vector2(0.129952, 0.0436479)
 texture = ExtResource("4_jk1ys")
 
 [node name="hint_text" type="RichTextLabel" parent="."]
-offset_left = 685.0
-offset_top = 519.0
-offset_right = 1055.0
-offset_bottom = 552.0
+visible = false
+offset_left = 693.0
+offset_top = 528.0
+offset_right = 1063.0
+offset_bottom = 561.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 19
-text = "The first element in a list has index of 0!"
+text = "This jellyfish has 2 colors!"
 
 [node name="correct_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_y7gv6")
