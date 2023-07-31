@@ -7,6 +7,7 @@ extends Node2D
 
 @onready var http_request = %EventLogger
 
+@export var current_token = ""
 
 
 func _ready():
