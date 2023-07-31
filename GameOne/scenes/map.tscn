@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://boc4mfjbyw8jr"]
+[gd_scene load_steps=24 format=3 uid="uid://boc4mfjbyw8jr"]
 
 [ext_resource type="Script" path="res://GameOne/scripts/map.gd" id="1_ntx2s"]
 [ext_resource type="Texture2D" uid="uid://bw5avcyaeonuo" path="res://assets/Map Background.png" id="2_p6lu6"]
@@ -14,9 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dr34y34l8ctc0" path="res://Whale_Animation/Whale_tilt_cw15.png" id="10_iuk6q"]
 [ext_resource type="Texture2D" uid="uid://dxv7ovkc6rmx4" path="res://Whale_Animation/Whale_tilt_cw20.png" id="11_27ave"]
 [ext_resource type="Script" path="res://GameOne/scripts/WhaleAnimation.gd" id="12_ntd2h"]
-[ext_resource type="Texture2D" uid="uid://din1qiqptj0kg" path="res://assets/Audio/Bgm/sound-full-icon.svg" id="15_h88fh"]
 [ext_resource type="Texture2D" uid="uid://25gpwj8t27nv" path="res://assets/Whale.png" id="15_r5u20"]
-[ext_resource type="Texture2D" uid="uid://oh0jlhvmweu4" path="res://assets/Audio/Bgm/sound-off-icon.svg" id="16_cvs7t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_doihv"]
 animations = [{
@@ -266,8 +264,6 @@ offset_top = 12.0
 offset_right = 86.0
 offset_bottom = 63.0
 toggle_mode = true
-texture_normal = ExtResource("15_h88fh")
-texture_pressed = ExtResource("16_cvs7t")
 ignore_texture_size = true
 stretch_mode = 0
 

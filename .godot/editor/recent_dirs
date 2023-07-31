@@ -1,4 +1,10 @@
-res://assets/sweet_fruit_forest
+res://GameFive/scripts
+res://assets/scene26
+res://assets/scene24
+res://assets/Fonts/VarelaRound-Regular
+res://GameFive/scenes
+res://GameFour/scripts
+res://GameFour/scenes
 res://Whale_Animation
 res://assets
 res://GameThree/scenes
@@ -7,4 +13,3 @@ res://Backend
 res://assets/Fonts/Varela_Round
 res://assets/GameThreeAssets
 res://GameThree/scripts
-res://assets/Fonts/VarelaRound-Regular

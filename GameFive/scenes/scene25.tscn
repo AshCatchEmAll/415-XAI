@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=3 uid="uid://dlm10kw8isg32"]
+
+[ext_resource type="Script" path="res://GameFive/scripts/scene25.gd" id="1_ud41u"]
+[ext_resource type="Texture2D" uid="uid://b27depmdn6gl8" path="res://assets/scene25/background.jpg" id="1_vrb2e"]
+[ext_resource type="Texture2D" uid="uid://dad057t0m1d7y" path="res://assets/scene25/textbox.png" id="2_12li5"]
+[ext_resource type="Texture2D" uid="uid://brrk55vrefupe" path="res://assets/scene25/logoBox.png" id="3_ok7rg"]
+[ext_resource type="Texture2D" uid="uid://cx12wkkfb6lhu" path="res://assets/scene25/flask.png" id="4_yd7p0"]
+[ext_resource type="Texture2D" uid="uid://bro8ggrkhjdaj" path="res://assets/scene25/mapLogo.png" id="5_ghw6c"]
+[ext_resource type="Texture2D" uid="uid://bjh6yybjoh7p4" path="res://assets/scene25/hand.png" id="6_phd5e"]
+[ext_resource type="Texture2D" uid="uid://dgdlo0ykq2qw8" path="res://assets/scene25/sadAngel.png" id="7_ppiyp"]
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="8_cpjjp"]
+[ext_resource type="Texture2D" uid="uid://iy5bxn2eixcl" path="res://assets/scene24/nextButton.png" id="9_52ihv"]
+[ext_resource type="Script" path="res://GameFive/scripts/scene25labelText.gd" id="10_doe4r"]
+
+[node name="scene25" type="Node2D"]
+script = ExtResource("1_ud41u")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_vrb2e")
+
+[node name="Textbox" type="Sprite2D" parent="."]
+position = Vector2(575, 138.375)
+scale = Vector2(0.173776, 0.191773)
+texture = ExtResource("2_12li5")
+
+[node name="LogoBox2" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(603.25, 440.062)
+scale = Vector2(0.238546, 0.231789)
+texture = ExtResource("3_ok7rg")
+
+[node name="Flask" type="Sprite2D" parent="."]
+position = Vector2(286.625, 440.5)
+scale = Vector2(0.187115, 0.178681)
+texture = ExtResource("4_yd7p0")
+
+[node name="MapLogo" type="Sprite2D" parent="."]
+position = Vector2(601.5, 434.688)
+scale = Vector2(0.695473, 0.649612)
+texture = ExtResource("5_ghw6c")
+
+[node name="Hand" type="Sprite2D" parent="."]
+position = Vector2(387.5, 544.25)
+scale = Vector2(0.510101, 0.528986)
+texture = ExtResource("6_phd5e")
+
+[node name="SadAngel" type="Sprite2D" parent="."]
+position = Vector2(965.813, 455)
+scale = Vector2(0.15625, 0.160863)
+texture = ExtResource("7_ppiyp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 40.0
+offset_top = 44.0
+offset_right = 1110.0
+offset_bottom = 250.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("8_cpjjp")
+theme_override_font_sizes/normal_font_size = 26
+text = "Please use Python's knowledge of data types to solve the problem and defeat three fruit monsters to obtain three types of sweet fruit juice. Sprinkle them on each of the three forest areas to restore the sweet fruit forest to its original appearance, while also obtaining three types of sour, bitter, and spicy fruits. Finally, convert these three fruits into sweet fruits to synthesize the second treasure you want.
+"
+script = ExtResource("10_doe4r")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 1028.0
+offset_top = 191.0
+offset_right = 1090.0
+offset_bottom = 252.0
+texture_normal = ExtResource("9_52ihv")
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
