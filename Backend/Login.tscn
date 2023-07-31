@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnf78rpyv3r7t"]
+
+[ext_resource type="Script" path="res://Backend/LoginHTTPNode.gd" id="1_f0740"]
+[ext_resource type="PackedScene" uid="uid://berajly5bi6pa" path="res://Backend/AuthScreen.tscn" id="2_gguh8"]
+
+[node name="Login" type="Node2D"]
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_f0740")
+
+[node name="AuthScreen" parent="." instance=ExtResource("2_gguh8")]
+unique_name_in_owner = true
+
+[connection signal="request_completed" from="HTTPRequest" to="HTTPRequest" method="_on_request_completed"]
+[connection signal="pressed" from="AuthScreen/LoginBtn" to="HTTPRequest" method="_on_login_btn_pressed"]
+[connection signal="pressed" from="AuthScreen/RegisterBtn" to="HTTPRequest" method="_on_register_btn_pressed"]
+
+[editable path="AuthScreen"]

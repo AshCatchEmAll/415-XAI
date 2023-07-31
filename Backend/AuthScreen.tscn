@@ -1,0 +1,228 @@
+[gd_scene load_steps=14 format=3 uid="uid://berajly5bi6pa"]
+
+[ext_resource type="Script" path="res://Backend/AuthScreen.gd" id="1_hb45x"]
+[ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="1_lqi4y"]
+[ext_resource type="FontFile" uid="uid://jbvpcueiec88" path="res://assets/Fonts/Fira_Code/static/FiraCode-Bold.ttf" id="2_bq8fy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2jo3"]
+bg_color = Color(0.0862745, 0.0784314, 0.121569, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0k1gj"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.0862745, 0.0784314, 0.121569, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0myjf"]
+bg_color = Color(0.14902, 0.290196, 0.34902, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jns4s"]
+bg_color = Color(0.298039, 0.172549, 0.462745, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fplgd"]
+bg_color = Color(0.156863, 0.156863, 0.156863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_rx2ao"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Loading"]
+}
+
+[sub_resource type="Animation" id="Animation_xhwls"]
+resource_name = "loading"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": ["Loading", "Loading.", "Loading..", "Loading..."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2riub"]
+_data = {
+"RESET": SubResource("Animation_rx2ao"),
+"loading": SubResource("Animation_xhwls")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_as677"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sstpf"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.556863, 0.0117647, 0.254902, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="ColorRect" type="ColorRect"]
+offset_right = 1153.0
+offset_bottom = 647.0
+color = Color(0.0862745, 0.113725, 0.298039, 1)
+script = ExtResource("1_hb45x")
+
+[node name="EmailLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 160.0
+offset_right = 507.0
+offset_bottom = 188.0
+theme_override_fonts/font = ExtResource("1_lqi4y")
+theme_override_font_sizes/font_size = 20
+text = "Email"
+
+[node name="PassLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 289.0
+offset_right = 545.0
+offset_bottom = 317.0
+theme_override_fonts/font = ExtResource("1_lqi4y")
+theme_override_font_sizes/font_size = 20
+text = "Password"
+
+[node name="Email" type="LineEdit" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 448.0
+offset_top = 192.0
+offset_right = 768.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("1_lqi4y")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_i2jo3")
+alignment = 1
+
+[node name="Password" type="LineEdit" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 448.0
+offset_top = 320.0
+offset_right = 768.0
+offset_bottom = 384.0
+theme_override_fonts/font = ExtResource("1_lqi4y")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0k1gj")
+alignment = 1
+secret = true
+
+[node name="LoginBtn" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 448.0
+offset_top = 448.0
+offset_right = 768.0
+offset_bottom = 512.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0myjf")
+text = "Login"
+
+[node name="RegisterBtn" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 448.0
+offset_top = 448.0
+offset_right = 768.0
+offset_bottom = 512.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jns4s")
+text = "Register"
+
+[node name="TitleLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 412.0
+offset_top = 58.0
+offset_right = 808.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("2_bq8fy")
+theme_override_font_sizes/font_size = 30
+text = "EMBARK ON YOUR JOURNEY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Loading" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 447.0
+offset_top = 447.0
+offset_right = 769.0
+offset_bottom = 511.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fplgd")
+text = "Loading."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_2riub")
+}
+
+[node name="SwitchBtn" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 452.0
+offset_top = 524.0
+offset_right = 596.0
+offset_bottom = 549.0
+theme_override_colors/font_color = Color(0, 0.607843, 0.933333, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_as677")
+text = "Already have an account? Login here "
+
+[node name="ResponseLabel" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 343.0
+offset_top = 503.0
+offset_right = 895.0
+offset_bottom = 592.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_sstpf")
+text = "Authentication worked"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="SwitchBtn" to="." method="_on_switch_btn_pressed"]
