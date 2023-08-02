@@ -23,6 +23,6 @@ func _process(delta):
 	pass
 
 
-func _on_texture_button_pressed():
-	SceneTransition.change_scene_to_file("res://GameFive/scenes/scene28.tscn")
+func _on_bubble_potion_pressed():
+	SceneTransition.change_scene_to_file("res://GameSweetFruitForest/scenes/scene13.tscn")
 	pass # Replace with function body.

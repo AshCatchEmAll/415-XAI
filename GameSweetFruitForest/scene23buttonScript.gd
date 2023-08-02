@@ -12,5 +12,5 @@ func _process(delta):
 
 
 func _on_pressed():
-	SceneTransition.change_scene_to_file("res://GameFive/scenes/scene24.tscn")
+	SceneTransition.change_scene_to_file("res://GameSweetFruitForest/scenes/scene24.tscn")
 	pass # Replace with function body.

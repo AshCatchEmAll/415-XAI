@@ -15,5 +15,10 @@ func _process(delta):
 
 
 func _on_texture_button_pressed():
-	SceneTransition.change_scene_to_file("res://GameFive/scenes/scene27.tscn")
+	SceneTransition.change_scene_to_file("res://GameSweetFruitForest/scenes/scene27.tscn")
+	pass # Replace with function body.
+
+
+func _on_button_box_3_pressed():
+	SceneTransition.change_scene_to_file("res://GameSweetFruitForest/scenes/scene15.tscn")
 	pass # Replace with function body.
