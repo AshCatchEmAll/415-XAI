@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://djv4xqrhx1svh"]
+
+[ext_resource type="Texture2D" uid="uid://dp7ydhki3xynf" path="res://Forest Game - 11~15/assets/main_back.png" id="1_6rqui"]
+[ext_resource type="Texture2D" uid="uid://csa601tqmwkwo" path="res://Forest Game - 11~15/assets/trees7.png" id="2_8nlm1"]
+[ext_resource type="Texture2D" uid="uid://iobupm5uimh" path="res://Forest Game - 11~15/assets/monster_green.png" id="3_erd21"]
+[ext_resource type="Texture2D" uid="uid://cu2ylbxsbriuc" path="res://Forest Game - 11~15/assets/textbox.png" id="4_mnlin"]
+[ext_resource type="Texture2D" uid="uid://be4awmm82gjtv" path="res://Forest Game - 11~15/assets/dialog.svg" id="5_h3fye"]
+[ext_resource type="FontFile" uid="uid://bxv38wu2mryhg" path="res://assets/Fonts/Varela_Round/VarelaRound-Regular.ttf" id="6_phbru"]
+[ext_resource type="Script" path="res://GameTwo/scripts/scene13ClickNext.gd" id="7_i5v7b"]
+
+[node name="scene15" type="Node2D"]
+
+[node name="MainBack" type="Sprite2D" parent="."]
+position = Vector2(577.502, 347)
+scale = Vector2(0.563254, 0.563254)
+texture = ExtResource("1_6rqui")
+
+[node name="Trees7" type="Sprite2D" parent="."]
+position = Vector2(554, 138)
+scale = Vector2(0.155788, 0.155788)
+texture = ExtResource("2_8nlm1")
+
+[node name="MonsterGreen" type="Sprite2D" parent="."]
+position = Vector2(338, 453)
+scale = Vector2(0.292905, 0.292905)
+texture = ExtResource("3_erd21")
+
+[node name="Textbox" type="Sprite2D" parent="."]
+position = Vector2(569.125, 107.625)
+scale = Vector2(0.175247, 0.175247)
+texture = ExtResource("4_mnlin")
+
+[node name="Dialog" type="Sprite2D" parent="."]
+position = Vector2(674.832, 367.187)
+scale = Vector2(0.518077, 0.518077)
+texture = ExtResource("5_h3fye")
+
+[node name="text_3" type="RichTextLabel" parent="."]
+top_level = true
+offset_left = 532.0
+offset_top = 313.0
+offset_right = 858.0
+offset_bottom = 419.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_phbru")
+theme_override_font_sizes/normal_font_size = 19
+text = "I don't care who you are！it's impossible for my forest to become a sweet fruit forest. Accept my bitter fruit attack！
+"
+scroll_active = false
+script = ExtResource("7_i5v7b")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_phbru")
+theme_override_font_sizes/normal_font_size = 19
+
+[node name="text_2" type="RichTextLabel" parent="."]
+top_level = true
+offset_left = 66.0
+offset_top = 35.0
+offset_right = 1014.0
+offset_bottom = 164.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_phbru")
+theme_override_font_sizes/normal_font_size = 22
+text = "Hurry up! The Bitter Fruit Monster wants to launch a Bitter Fruit attack on you. You need to use a Sweet Fruit Basket to catch the Bitter Fruit returned by the program with a value of Ture, and use the next step to obtain magic to turn these collected Bitter Fruits into Sweet Fruits to counter and defeat the Bitter Fruit Monster. 
+"
+scroll_active = false
+script = ExtResource("7_i5v7b")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_phbru")
+theme_override_font_sizes/normal_font_size = 22
