@@ -650,6 +650,7 @@ theme_override_font_sizes/normal_font_size = 27
 text = "How dangerous! Sour Fruit Monster Wants to Use Sour Juice to Corrode the Forest! Quickly answer the question and obtain the acid blocking magic to resist it!
 
 "
+scroll_active = false
 
 [node name="TextureButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
