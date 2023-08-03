@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://o73d1k4be35o"]
+[gd_scene load_steps=5 format=3 uid="uid://c3ovfn5w6bpw6"]
 
 [ext_resource type="PackedScene" uid="uid://bcnr76yllo3vp" path="res://GameFour/ShellDragDrop/ShellDragDrop.tscn" id="1_mrnxp"]
 [ext_resource type="Texture2D" uid="uid://b1174vta4ct08" path="res://assets/scene10/TextBox1.png" id="2_rrodm"]

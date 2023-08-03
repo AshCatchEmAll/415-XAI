@@ -35,7 +35,7 @@ func _on_game_three_btn_pressed():
 
 
 func _on_game_four_btn_pressed():
-	SceneTransition.change_scene_to_file("res://GameFour/scenes/scene21.tscn")
+	SceneTransition.change_scene_to_file("res://GameFour/scenes/scene20.tscn")
 	pass # Replace with function body.
 
 
@@ -58,3 +58,10 @@ func _on_texture_button_toggled(button_pressed):
 	else:
 		$"/root/BgMusic".play(musicPosition)
 		
+
+
+func _on_sweet_fruit_forest_button_pressed():
+	SceneTransition.change_scene_to_file("res://GameSweetFruitForest/scenes/scene1.tscn")
+	pass # Replace with function body.
+
+	pass # Replace with function body.

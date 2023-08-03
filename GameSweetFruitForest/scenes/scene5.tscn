@@ -1,13 +1,13 @@
 [gd_scene load_steps=82 format=3 uid="uid://omq572ouas31"]
 
-[ext_resource type="Script" path="res://GameSweetFruitForest/scene27.gd" id="1_oc8vc"]
+[ext_resource type="Script" path="res://GameSweetFruitForest/scripts/scene5.gd" id="1_08mw1"]
 [ext_resource type="Texture2D" uid="uid://cdye43n6jny5e" path="res://assets/scene24/tree4SpriteImage.png" id="2_gx6yc"]
 [ext_resource type="Texture2D" uid="uid://db0lpweg8q2jf" path="res://assets/scene27/background.png" id="3_dxkdp"]
 [ext_resource type="Texture2D" uid="uid://cysev0ai5u234" path="res://assets/scene27/textBox.png" id="4_4gk7i"]
 [ext_resource type="Texture2D" uid="uid://bs4efgbpn13oc" path="res://assets/scene27/textBox2.png" id="5_qofds"]
 [ext_resource type="Texture2D" uid="uid://5d6lq40gdl6i" path="res://assets/scene27/monster1.png" id="6_nfcc6"]
 [ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="7_3buk0"]
-[ext_resource type="Script" path="res://GameSweetFruitForest/scene27labelText.gd" id="8_qpvip"]
+[ext_resource type="Script" path="res://GameSweetFruitForest/scripts/scene5labelText.gd" id="8_rr0ct"]
 [ext_resource type="Texture2D" uid="uid://iy5bxn2eixcl" path="res://assets/scene24/nextButton.png" id="9_sekyj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q70hk"]
@@ -521,7 +521,7 @@ animations = [{
 }]
 
 [node name="scene27" type="Node2D"]
-script = ExtResource("1_oc8vc")
+script = ExtResource("1_08mw1")
 
 [node name="tree4Animation12" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
@@ -636,7 +636,7 @@ theme_override_fonts/normal_font = ExtResource("7_3buk0")
 theme_override_font_sizes/normal_font_size = 24
 text = "The Sweet Fruit Fairy actually sent you as a brave warrior to retake the forest area! No way, this forest area belongs to me!
 "
-script = ExtResource("8_qpvip")
+script = ExtResource("8_rr0ct")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 unique_name_in_owner = true

@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://kpo4xa2iaonh"]
+[gd_scene load_steps=7 format=3 uid="uid://43om0e8rrhu8"]
 
+[ext_resource type="Script" path="res://GameFour/scripts/scene20.gd" id="1_3tt7s"]
 [ext_resource type="Texture2D" uid="uid://bney24cx5l2d1" path="res://GameFour/assets/background.png" id="1_t645m"]
 [ext_resource type="Texture2D" uid="uid://41o0hq6wx7bg" path="res://GameFour/assets/boy.png" id="2_qkvot"]
 [ext_resource type="Texture2D" uid="uid://baivl5llfb8f6" path="res://GameFour/assets/whale_sculpture.png" id="3_i20oj"]
@@ -7,6 +8,7 @@
 [ext_resource type="Script" path="res://GameTwo/scripts/scene13ClickNext.gd" id="5_opf7r"]
 
 [node name="scene20" type="Node2D"]
+script = ExtResource("1_3tt7s")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(571, 432.25)
@@ -37,3 +39,18 @@ text = "Click on the sculpture to place the shell to open the sculpture
 scroll_active = false
 script = ExtResource("5_opf7r")
 theme_override_font_sizes/normal_font_size = 20
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 458.0
+offset_top = 214.0
+offset_right = 647.0
+offset_bottom = 461.0
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = 321.0
+offset_top = 53.0
+offset_right = 828.0
+offset_bottom = 217.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_pressed"]

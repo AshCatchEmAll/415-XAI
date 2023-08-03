@@ -251,6 +251,12 @@ texture_hover = ExtResource("5_ml1fl")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="SweetFruitForestButton" type="TextureButton" parent="."]
+offset_left = 467.0
+offset_top = 405.0
+offset_right = 670.0
+offset_bottom = 448.0
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 root_node = NodePath("../WhaleAnimation")
@@ -277,4 +283,5 @@ texture = ExtResource("15_r5u20")
 [connection signal="pressed" from="TurtleGeneralButton" to="." method="_on_game_three_btn_pressed"]
 [connection signal="pressed" from="JellyfishGeneralButton" to="." method="_on_game_two_btn_pressed"]
 [connection signal="pressed" from="WhaleSculptureButton" to="." method="_on_game_four_btn_pressed"]
+[connection signal="pressed" from="SweetFruitForestButton" to="." method="_on_sweet_fruit_forest_button_pressed"]
 [connection signal="toggled" from="TextureButton" to="." method="_on_texture_button_toggled"]

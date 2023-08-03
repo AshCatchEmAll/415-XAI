@@ -854,3 +854,9 @@ texture = ExtResource("6_akyud")
 position = Vector2(919, 374)
 scale = Vector2(0.143988, 0.143988)
 texture = ExtResource("7_5hfom")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 1154.0
+offset_bottom = 650.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

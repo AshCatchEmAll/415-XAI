@@ -96,7 +96,7 @@ func lerp_to_closest_dropzone():
 	if(all_correctly_selected()==true):
 		print("ALl done")
 		await get_tree().create_timer(1.0).timeout
-		SceneTransition.change_scene_to_file("res://GameTwo/scenes/scene22.tscn")
+		SceneTransition.change_scene_to_file("res://GameFour/scenes/scene22.tscn")
 		
 
 func all_correctly_selected():

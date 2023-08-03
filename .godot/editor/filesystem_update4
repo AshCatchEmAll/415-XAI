@@ -1,32 +1,24 @@
-res://Forest Game - 11~15/scenes/scene12.tscn
-res://Forest Game - 11~15/scenes/scene11.tscn
-res://Forest Game - 11~15/scenes/scene11.gd
-res://GameFive/scenes/scene23.tscn
-res://GameFive/scenes/scene25.tscn
-res://GameFive/scenes/scene26.tscn
-res://GameFive/scenes/scene27.tscn
-res://GameFive/scenes/scene24.tscn
-res://GameOne/scenes/scene1.tscn
+res://GameSweetFruitForest/scenes/scene1.tscn
+res://GameSweetFruitForest/scripts/scene23buttonScript.gd
 res://GameOne/scenes/map.tscn
-res://GameOne/scenes/scene3.tscn
-res://Forest Game - 11~15/scenes/scene13.tscn
-res://Forest Game - 11~15/scenes/scene14.tscn
-res://Forest Game - 11~15/scenes/scene15.tscn
-res://Forest Game - 11~15/scenes/scene15.gd
-res://GameFive/scripts/scene26.gd
-res://GameSweetFruitForest/scenes/scene23.tscn
-res://GameSweetFruitForest/scenes/scene25.tscn
-res://GameSweetFruitForest/scenes/scene26.tscn
-res://GameSweetFruitForest/scenes/scene27.tscn
-res://GameSweetFruitForest/scenes/scene24.tscn
+res://GameSweetFruitForest/scenes/fm_scene_6.tscn
+res://GameSweetFruitForest/scripts/scene1buttonScript.gd
+res://GameSweetFruitForest/scenes/scene2.tscn
+res://GameSweetFruitForest/scripts/scene2.gd
+res://GameSweetFruitForest/scripts/scene24.gd
+res://GameSweetFruitForest/scripts/scene2_labelText.gd
+res://GameSweetFruitForest/scenes/scene3.tscn
+res://GameSweetFruitForest/scripts/scene3.gd
+res://GameSweetFruitForest/scripts/scene3labelText.gd
+res://GameSweetFruitForest/scenes/scene4.tscn
+res://GameSweetFruitForest/scripts/scene4.gd
+res://GameSweetFruitForest/scenes/scene5.tscn
+res://GameSweetFruitForest/scripts/scene5.gd
 res://GameSweetFruitForest/scenes/scene11.tscn
-res://GameSweetFruitForest/scenes/scene12.tscn
+res://GameSweetFruitForest/scripts/scene11.gd
 res://GameSweetFruitForest/scenes/scene13.tscn
+res://GameSweetFruitForest/scripts/scene13.gd
+res://GameTwo/scripts/scene13ClickNext.gd
+res://GameSweetFruitForest/scenes/scene12.tscn
 res://GameSweetFruitForest/scenes/scene14.tscn
 res://GameSweetFruitForest/scenes/scene15.tscn
-res://GameSweetFruitForest/scripts/scene12.gd
-res://GameSweetFruitForest/scripts/scene13.gd
-res://GameFive/scripts/scene23buttonScript.gd
-res://GameFive/scripts/scene24.gd
-res://GameFive/scripts/scene25.gd
-res://GameFive/scripts/scene27.gd

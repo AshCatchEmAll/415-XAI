@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://ckon0sf8xyt21"]
 
-[ext_resource type="Script" path="res://GameSweetFruitForest/scene25.gd" id="1_6iwu3"]
+[ext_resource type="Script" path="res://GameSweetFruitForest/scripts/scene3.gd" id="1_o18p3"]
 [ext_resource type="Texture2D" uid="uid://b27depmdn6gl8" path="res://assets/scene25/background.jpg" id="2_uu8d3"]
 [ext_resource type="Texture2D" uid="uid://dad057t0m1d7y" path="res://assets/scene25/textbox.png" id="3_cd5uv"]
 [ext_resource type="Texture2D" uid="uid://brrk55vrefupe" path="res://assets/scene25/logoBox.png" id="4_5i8el"]
@@ -9,11 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://bjh6yybjoh7p4" path="res://assets/scene25/hand.png" id="7_jp8vd"]
 [ext_resource type="Texture2D" uid="uid://dgdlo0ykq2qw8" path="res://assets/scene25/sadAngel.png" id="8_xik3p"]
 [ext_resource type="FontFile" uid="uid://0q7lokh17m18" path="res://assets/Fonts/VarelaRound-Regular/VarelaRound-Regular.ttf" id="9_hjyie"]
-[ext_resource type="Script" path="res://GameSweetFruitForest/scene25labelText.gd" id="10_7o2es"]
+[ext_resource type="Script" path="res://GameSweetFruitForest/scripts/scene3labelText.gd" id="10_y07we"]
 [ext_resource type="Texture2D" uid="uid://iy5bxn2eixcl" path="res://assets/scene24/nextButton.png" id="11_a5o81"]
 
 [node name="scene25" type="Node2D"]
-script = ExtResource("1_6iwu3")
+script = ExtResource("1_o18p3")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
@@ -61,7 +61,7 @@ theme_override_fonts/normal_font = ExtResource("9_hjyie")
 theme_override_font_sizes/normal_font_size = 26
 text = "Please use Python's knowledge of data types to solve the problem and defeat three fruit monsters to obtain three types of sweet fruit juice. Sprinkle them on each of the three forest areas to restore the sweet fruit forest to its original appearance, while also obtaining three types of sour, bitter, and spicy fruits. Finally, convert these three fruits into sweet fruits to synthesize the second treasure you want.
 "
-script = ExtResource("10_7o2es")
+script = ExtResource("10_y07we")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
